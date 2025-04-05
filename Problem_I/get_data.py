@@ -81,6 +81,11 @@ misc_df = pd.DataFrame(tables["stats_misc"][1:], columns=tables["stats_misc"][0]
 
 
 DFs = [Player_df, goalkeep_df, shooting_df, passing_df, GCA_df, defense_df, possession_df, misc_df]
+
+
+
+
+
 Player_df.columns = [f"Standard_{col}" if col != "Player" else col for col in Player_df.columns]
 goalkeep_df.columns = [f"Goalkeeping_{col}" if col != "Player" else col for col in goalkeep_df.columns]
 shooting_df.columns = [f"Shooting_{col}" if col != "Player" else col for col in shooting_df.columns]
@@ -94,8 +99,6 @@ misc_df.columns = [f"Misc_{col}" if col != "Player" else col for col in misc_df.
 
 for df in DFs:
     df.columns = rename_duplicates(df.columns)
-
-
 
 header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Standard_Age','Standard_MP', 'Standard_Starts','Standard_Min',
@@ -119,7 +122,7 @@ header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
 # Initialize the resulting DataFrame
-df = pd.DataFrame(columns=header)
+result_df = pd.DataFrame(columns=header)
 
 # Iterate through each player in Player_df
 for row_idx, row in Player_df.iterrows():
@@ -137,10 +140,8 @@ for row_idx, row in Player_df.iterrows():
                         player_data[col] = "N/a"
 
 
-    df = pd.concat([df, pd.DataFrame([player_data])], ignore_index=True)
-# Save the resulting DataFrame to a CSV file
-df.to_csv("result.csv", index=False)
-#rename header
+    result_df.loc[len(result_df)] = player_data
+
 newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Standard_Age','Standard_MP', 'Standard_Starts','Standard_Min',
 'Standard_Gls', 'Standard_Ast','Standard_CrdY', 'Standard_CrdR',
@@ -163,8 +164,12 @@ newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
 # Read and modify the CSV file
-stats_standard.columns = newheader[:len(stats_standard.columns)]  # Rename columns
-stats_standard.to_csv("result.csv", index=False)
+stats_standard.columns = newheader[:len(stats_standard.columns)] 
+
+# Save the resulting DataFrame to a CSV file
+result_df.to_csv("result.csv", index=False)
+
+
 print("Header updated and data saved successfully!")
 
 
