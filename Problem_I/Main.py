@@ -59,13 +59,26 @@ for link, id in links.items():
 
 stats_standard = pd.DataFrame(columns=tables["stats_standard"][0])
 
+
 min_index = tables["stats_standard"][0].index("Min")
+age_index = tables['stats_standard'][0].index("Age")
+
+
 
 tables["stats_standard"].sort(key = lambda row: (row[0].split()[0]))
 
+
+
 for row in tables["stats_standard"]:
     min_played = row[min_index].replace(",", "")
+    str_age = row[age_index]
+    def calc_age(str_age):
+        year = int(str_age.split("-")[0])
+        day = int(str_age.split("-")[1])
+        return round(year+(day/365),2)
     if min_played.isdigit() and int(min_played) > 90:
+        row[min_index] = int(min_played)
+        row[age_index] = calc_age(str_age)
         stats_standard.loc[len(stats_standard)] = row
 
 
@@ -100,6 +113,7 @@ misc_df.columns = [f"Misc_{col}" if col != "Player" else col for col in misc_df.
 for df in DFs:
     df.columns = rename_duplicates(df.columns)
 
+#list all the stat need to find
 header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Standard_Age','Standard_MP', 'Standard_Starts','Standard_Min',
 'Standard_Gls', 'Standard_Ast','Standard_CrdY', 'Standard_CrdR',
