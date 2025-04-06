@@ -27,7 +27,7 @@ for k in n_clusters:
     pca_stats = pca.fit_transform(scaled_stats)
 
     # Plot the clustered data in 2D space
-    plt.scatter(pca_stats[:, 0], pca_stats[:, 1], c=kmeans.labels_, cmap='viridis')
+    plt.scatter(pca_stats[:, 0], pca_stats[:, 1], c=kmeans.labels_, cmap='viridis') 
     plt.title(f"K-means Clustering of Players (k={k}, PCA 2D Projection)")  
     plt.xlabel("Principal Component 1")
     plt.ylabel("Principal Component 2")
