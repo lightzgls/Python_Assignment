@@ -83,7 +83,7 @@ for row in tables["stats_standard"]:
 
 
 # Read dataframes directly from the scraped tables
-Player_df = stats_standard
+standard_df = stats_standard
 goalkeep_df = pd.DataFrame(tables["stats_keeper"][1:], columns=tables["stats_keeper"][0])
 shooting_df = pd.DataFrame(tables["stats_shooting"][1:], columns=tables["stats_shooting"][0])
 passing_df = pd.DataFrame(tables["stats_passing"][1:], columns=tables["stats_passing"][0])
@@ -93,13 +93,13 @@ possession_df = pd.DataFrame(tables["stats_possession"][1:], columns=tables["sta
 misc_df = pd.DataFrame(tables["stats_misc"][1:], columns=tables["stats_misc"][0])
 
 
-DFs = [Player_df, goalkeep_df, shooting_df, passing_df, GCA_df, defense_df, possession_df, misc_df]
+DFs = [standard_df, goalkeep_df, shooting_df, passing_df, GCA_df, defense_df, possession_df, misc_df]
 
 
 
 
 
-Player_df.columns = [f"Standard_{col}" if col != "Player" else col for col in Player_df.columns]
+standard_df.columns = [f"Standard_{col}" if col != "Player" else col for col in standard_df.columns]
 goalkeep_df.columns = [f"Goalkeeping_{col}" if col != "Player" else col for col in goalkeep_df.columns]
 shooting_df.columns = [f"Shooting_{col}" if col != "Player" else col for col in shooting_df.columns]
 passing_df.columns = [f"Passing_{col}" if col != "Player" else col for col in passing_df.columns]
@@ -109,7 +109,7 @@ possession_df.columns = [f"Possession_{col}" if col != "Player" else col for col
 misc_df.columns = [f"Misc_{col}" if col != "Player" else col for col in misc_df.columns]
 
 
-
+#go through every df and rename the columns
 for df in DFs:
     df.columns = rename_duplicates(df.columns)
 
@@ -138,22 +138,35 @@ header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 # Initialize the resulting DataFrame
 result_df = pd.DataFrame(columns=header)
 
-# Iterate through each player in Player_df
-for row_idx, row in Player_df.iterrows():
+# Create a dictionary for quick lookup of DataFrames by player
+player_data_dict = {}
+for file in DFs:
+    if "Player" in file.columns:
+        for _, row in file.iterrows():
+            player = row["Player"]
+            if player not in player_data_dict:
+                player_data_dict[player] = {}
+            for col in file.columns:
+                if pd.notna(row[col]) and str(row[col]).strip() != "":
+                    player_data_dict[player][col] = row[col]
+
+# Iterate through each player in Player_df and populate result_df
+for _, row in standard_df.iterrows():
     player = row["Player"]
-    player_data = {col:"N/a" for col in header}
-    for file in DFs:
-        if "Player" in file.columns and player in file["Player"].values:
-            matching_row = file.loc[file["Player"] == player]
-            for col in header:
-                if col in file.columns:
-                    value = matching_row[col].values
-                    if len(value) > 0 and pd.notna(value[0]) and str(value[0]).strip() != "":
-                        player_data[col] = value[0]
-                    else:
-                        player_data[col] = "N/a"
-
-
+    player_data = {col: "N/a" for col in header}
+    
+    # Add data from Player_df itself
+    for col in standard_df.columns:
+        if col in header and pd.notna(row[col]) and str(row[col]).strip() != "":
+            player_data[col] = row[col]
+    
+    # Add data from other DataFrames using the dictionary
+    if player in player_data_dict:
+        for col in header:
+            if col in player_data_dict[player]:
+                player_data[col] = player_data_dict[player][col]
+    
+    # Append the player's data to result_df
     result_df.loc[len(result_df)] = player_data
 
 newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
@@ -183,8 +196,6 @@ stats_standard.columns = newheader[:len(stats_standard.columns)]
 # Save the resulting DataFrame to a CSV file
 result_df.to_csv("result.csv", index=False)
 
-
-print("Header updated and data saved successfully!")
 
 
 
