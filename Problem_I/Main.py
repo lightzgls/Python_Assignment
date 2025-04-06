@@ -191,7 +191,7 @@ newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
 # Read and modify the CSV file
-stats_standard.columns = newheader[:len(stats_standard.columns)] 
+result_df.columns = newheader[:len(result_df.columns)] 
 
 # Save the resulting DataFrame to a CSV file
 result_df.to_csv("result.csv", index=False)
