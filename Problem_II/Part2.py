@@ -13,11 +13,9 @@ def make_header(criterias):
 df = pd.read_csv("result.csv")
 criterias = df.columns[4:]
 
-#get teams name
-teams_name = set(df["Standard_Squad"])
 
 
-# Group rows by 'Standard_Squad' and assign them to the corresponding team's DataFrame
+
     
 #initialize DataFrame
 header = make_header(criterias)
@@ -43,6 +41,7 @@ for criteria in criterias:
 #add the row to DataFrame
 result_df.loc[len(result_df)] = row0
 
+# Group rows by 'Standard_Squad' and assign them to the corresponding team's DataFrame
 grouped = df.groupby("Standard_Squad")
 for team, group in grouped:
     row = [team]

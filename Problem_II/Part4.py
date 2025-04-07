@@ -1,20 +1,26 @@
 import pandas as pd
-from collections import Counter
-df = pd.read_csv("result2.csv",skiprows=1,index_col=False)
 
-criterias = df.columns[1:]
+# Read the CSV file
+df = pd.read_csv("result2.csv", skiprows=1, index_col=False)
 
-highest_per_criteria = []
+# Get the criteria columns (starting from the 8th column)
+criterias = df.columns[8:]
 
-for criteria in criterias:
+# Initialize a dictionary to store the scores for each team
+score_check = {}
 
-    numeric_column = pd.to_numeric(df[criteria], errors='coerce')
-    if numeric_column.any():
-        # Get the index of the maximum value
-        highest_index = numeric_column.idxmax()
+# Iterate over the rows of the DataFrame
+for index, row in df.iterrows():
+    team_name = row.iloc[1]  # Replace with the actual column name for the team
+    if team_name not in score_check:
+        score_check[team_name] = 0  # Initialize the team's score
 
-        # Get the team name from the first column
-        team_name = df.iloc[highest_index,1]
-        highest_per_criteria.append(team_name)
+    # Sum the numeric values for the criteria columns
+    for criteria in criterias:
+        numeric_value = pd.to_numeric(row[criteria], errors='coerce')  # Convert to numeric
+        if not pd.isna(numeric_value):  # Ignore NaN values
+            score_check[team_name] += numeric_value
 
-print(f"The best perfoming team in the 2024-2025 Premier League season is {max(Counter(highest_per_criteria))}")
+# Find the best-performing team
+best_team = max(score_check, key=score_check.get)
+print(f"The best-performing team in the 2024-2025 Premier League season is {best_team}")

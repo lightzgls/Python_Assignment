@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
-from rename import rename_duplicates
+from ultils import rename_duplicates
 import csv
 # Set up Chrome options for headless mode
 options = webdriver.ChromeOptions()
@@ -17,7 +17,7 @@ options.add_argument("--disable-dev-shm-usage")  # Prevents memory issues
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
-# Links to scrape
+# Links and id to scrape
 links = {
     "https://fbref.com/en/comps/9/stats/Premier-League-Stats#all_stats_standard": "stats_standard",
     "https://fbref.com/en/comps/9/keepers/Premier-League-Stats#all_stats_keeper": "stats_keeper",
@@ -41,16 +41,17 @@ for link, id in links.items():
         print(f"Table with id '{id}' not found.")
         continue
 
-    table_data = []
-    rows = table.find_all("tr")
+    table_data = [] #initialize an array to store each table
+
+    rows = table.find_all("tr") #extract all the row in the table 
     for row_idx, row in enumerate(rows):
-        cells = row.find_all(["th", "td"])
-        row_data = [cell.get_text(strip=True) for cell in cells]
-        if row_idx == 0 or row_data[1] == "Rk":
+        cells = row.find_all(["th", "td"]) #extract all the cells in the table
+        row_data = [cell.get_text(strip=True) for cell in cells] #Format all the data in each cell to string and strip excess space
+        if row_idx == 0 or row_data[1] == "Rk": #skip the duplicate header and the first header
             continue
         else:
             if row_data:
-                table_data.append(row_data[1:])
+                table_data.append(row_data[1:]) #add the row to the current 2d array, skip the ranking
 
     tables[id] = table_data
     print(f"Fetched table {id}")
