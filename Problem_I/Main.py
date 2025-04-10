@@ -5,14 +5,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
 from ultils import rename_duplicates
-import csv
 # Set up Chrome options for headless mode
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")  # Run without GUI
 options.add_argument("--disable-gpu")  # Required for some systems
 options.add_argument("--no-sandbox")  # Helps avoid permission errors in Linux
 options.add_argument("--disable-dev-shm-usage")  # Prevents memory issues
-
+options.add_argument("--ignore-certificate-errors")  # Ignore SSL certificate errors
+options.add_argument("--disable-software-rasterizer")
+options.add_argument("--disable-webgl")  # Disable WebGL to avoid warnings
+options.add_argument("--log-level=3")  # Suppress all logs except fatal errors
 # Create the WebDriver
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
@@ -58,33 +60,8 @@ for link, id in links.items():
 
 
 
-stats_standard = pd.DataFrame(columns=tables["stats_standard"][0])
-
-
-min_index = tables["stats_standard"][0].index("Min")
-age_index = tables['stats_standard'][0].index("Age")
-
-
-
-tables["stats_standard"].sort(key = lambda row: (row[0].split()[0]))
-
-
-
-for row in tables["stats_standard"]:
-    min_played = row[min_index].replace(",", "")
-    str_age = row[age_index]
-    def calc_age(str_age):
-        year = int(str_age.split("-")[0])
-        day = int(str_age.split("-")[1])
-        return round(year+(day/365),2)
-    if min_played.isdigit() and int(min_played) > 90:
-        row[min_index] = int(min_played)
-        row[age_index] = calc_age(str_age)
-        stats_standard.loc[len(stats_standard)] = row
-
-
 # Read dataframes directly from the scraped tables
-standard_df = stats_standard
+standard_df = pd.DataFrame(tables["stats_standard"][1:], columns=tables["stats_standard"][0])
 goalkeep_df = pd.DataFrame(tables["stats_keeper"][1:], columns=tables["stats_keeper"][0])
 shooting_df = pd.DataFrame(tables["stats_shooting"][1:], columns=tables["stats_shooting"][0])
 passing_df = pd.DataFrame(tables["stats_passing"][1:], columns=tables["stats_passing"][0])
@@ -94,20 +71,22 @@ possession_df = pd.DataFrame(tables["stats_possession"][1:], columns=tables["sta
 misc_df = pd.DataFrame(tables["stats_misc"][1:], columns=tables["stats_misc"][0])
 
 
+
+standard_df["Min"] = pd.to_numeric(standard_df["Min"].str.replace(",",""), errors= "coerce")
+standard_df['Age'] = standard_df['Age'].apply(lambda x: round((int(x.split('-')[0]) + int(x.split('-')[1]) / 365),2) if isinstance(x, str) and '-' in x else pd.NA)
+standard_df = standard_df[standard_df["Min"] > 90] 
+
 DFs = [standard_df, goalkeep_df, shooting_df, passing_df, GCA_df, defense_df, possession_df, misc_df]
 
 
-
-
-
-standard_df.columns = [f"Standard_{col}" if col != "Player" else col for col in standard_df.columns]
-goalkeep_df.columns = [f"Goalkeeping_{col}" if col != "Player" else col for col in goalkeep_df.columns]
-shooting_df.columns = [f"Shooting_{col}" if col != "Player" else col for col in shooting_df.columns]
-passing_df.columns = [f"Passing_{col}" if col != "Player" else col for col in passing_df.columns]
-GCA_df.columns = [f"GCA_{col}" if col != "Player" else col for col in GCA_df.columns]
-defense_df.columns = [f"Defense_{col}" if col != "Player" else col for col in defense_df.columns]
-possession_df.columns = [f"Possession_{col}" if col != "Player" else col for col in possession_df.columns]
-misc_df.columns = [f"Misc_{col}" if col != "Player" else col for col in misc_df.columns]
+standard_df.columns = list(standard_df.columns[:4]) + [f"Standard_{col}" for col in standard_df.columns[4:]]
+goalkeep_df.columns = list(goalkeep_df.columns[:4]) + [f"Goalkeeping_{col}" for col in goalkeep_df.columns[4:]]
+shooting_df.columns = list(shooting_df.columns[:4]) + [f"Shooting_{col}" for col in shooting_df.columns[4:]]
+passing_df.columns = list(passing_df.columns[:4]) + [f"Passing_{col}" for col in passing_df.columns[4:]]
+GCA_df.columns = list(GCA_df.columns[:4]) + [f"GCA_{col}" for col in GCA_df.columns[4:]]
+defense_df.columns = list(defense_df.columns[:4]) + [f"Defense_{col}" for col in defense_df.columns[4:]]
+possession_df.columns = list(possession_df.columns[:4]) + [f"Possession_{col}" for col in possession_df.columns[4:]]
+misc_df.columns = list(misc_df.columns[:4]) + [f"Misc_{col}" for col in misc_df.columns[4:]]
 
 
 #go through every df and rename the columns
@@ -115,7 +94,7 @@ for df in DFs:
     df.columns = rename_duplicates(df.columns)
 
 #list all the stat need to find
-header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
+result_header = ['Player', 'Nation', 'Pos', 'Squad',
 'Standard_Age','Standard_MP', 'Standard_Starts','Standard_Min',
 'Standard_Gls', 'Standard_Ast','Standard_CrdY', 'Standard_CrdR',
 'Standard_xG','Standard_xAG','Standard_PrgC', 'Standard_PrgP',
@@ -137,68 +116,58 @@ header = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
 # Initialize the resulting DataFrame
-result_df = pd.DataFrame(columns=header)
+result_df = standard_df
+for df in DFs[1:]:
+    result_df = pd.merge(result_df, df, how="left", on=["Player", "Nation", "Pos", "Squad"])
 
-# Create a dictionary for quick lookup of DataFrames by player
-player_data_dict = {}
-for file in DFs:
-    if "Player" in file.columns:
-        for _, row in file.iterrows():
-            player = row["Player"]
-            if player not in player_data_dict:
-                player_data_dict[player] = {}
-            for col in file.columns:
-                if pd.notna(row[col]) and str(row[col]).strip() != "":
-                    player_data_dict[player][col] = row[col]
+#keep the columns listed in result_header
+result_df = result_df[result_header]
 
-# Iterate through each player in Player_df and populate result_df
-for _, row in standard_df.iterrows():
-    player = row["Player"]
-    player_data = {col: "N/a" for col in header}
-    
-    # Add data from Player_df itself
-    for col in standard_df.columns:
-        if col in header and pd.notna(row[col]) and str(row[col]).strip() != "":
-            player_data[col] = row[col]
-    
-    # Add data from other DataFrames using the dictionary
-    if player in player_data_dict:
-        for col in header:
-            if col in player_data_dict[player]:
-                player_data[col] = player_data_dict[player][col]
-    
-    # Append the player's data to result_df
-    result_df.loc[len(result_df)] = player_data
 
-newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad',
-'Standard_Age','Standard_MP', 'Standard_Starts','Standard_Min',
+
+newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad','Standard_Age',
+             
+'Standard_MP', 'Standard_Starts','Standard_Min',
+
 'Standard_Gls', 'Standard_Ast','Standard_CrdY', 'Standard_CrdR',
+
 'Standard_xG','Standard_xAG','Standard_PrgC', 'Standard_PrgP',
-'Standard_PrgR','Standard_Gls/90', 'Standard_Ast/90','Standard_xG/90', 'Standard_xAG/90',
+'Standard_PrgR',
+
+'Standard_Gls/90', 'Standard_Ast/90','Standard_xG/90', 'Standard_xAG/90',
+
+
 'Goalkeeping_GA90','Goalkeeping_Save%','Goalkeeping_CS%','Goalkeeping_Penalty_Save%',
+
 'Shooting_SoT%','Shooting_SoT/90','Shooting_G/Sh','Shooting_Dist',
+
 'Passing_Cmp','Passing_Total_Cmp%','Passing_TotDist','Passing_Short_Cmp%','Passing_Medium_Cmp%',
 'Passing_Long_Cmp%','Passing_KP', 'Passing_1/3', 'Passing_PPA',
-'Passing_CrsPA', 'Passing_PrgP','GCA_SCA', 'GCA_SCA90','GCA_GCA', 'GCA_GCA90',
+'Passing_CrsPA', 'Passing_PrgP',
+
+'GCA_SCA', 'GCA_SCA90','GCA_GCA', 'GCA_GCA90',
+
 'Defense_Tkl','Defense_TklW','Defense_Att','Defense_Lost',
 'Defense_Blocks', 'Defense_Sh', 'Defense_Pass', 'Defense_Int',
+
 'Possession_Touches', 'Possession_Def Pen', 'Possession_Def 3rd',
 'Possession_Mid 3rd', 'Possession_Att 3rd', 'Possession_Att Pen',
 'Possession_Att','Possession_Succ%','Possession_Tkld%',
 'Possession_Carries', 'Possession_TotDist', 'Possession_PrgDist',
 'Possession_PrgC', 'Possession_1/3', 'Possession_CPA', 'Possession_Mis',
 'Possession_Dis','Possession_Rec', 'Possession_PrgR',
+
 'Misc_Fls', 'Misc_Fld', 'Misc_Off', 'Misc_Crs','Misc_Recov',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
-# Read and modify the CSV file
-result_df.columns = newheader[:len(result_df.columns)] 
+#fill missing value with "N/a"
 
+pd.set_option('future.no_silent_downcasting', True)
+result_df = result_df.replace("","N/a").fillna("N/a")
+#sort player base on their first name
+result_df = result_df.sort_values(by="Player")
 # Save the resulting DataFrame to a CSV file
 result_df.to_csv("result.csv", index=False)
-
-
-
 
 # Close the WebDriver
 driver.quit()

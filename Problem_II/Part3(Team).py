@@ -6,7 +6,7 @@ df = pd.read_csv("result.csv")
 
 criterias = df.columns[4:]  # List of criteria columns
 
-teams_name = set(df['Standard_Squad'])  # Set of all team names
+teams_name = set(df['Squad'])  # Set of all team names
 
 # Iterate over each team and criteria
 for team in teams_name:
@@ -15,7 +15,7 @@ for team in teams_name:
         numeric_col = pd.to_numeric(df[criteria], errors='coerce')
 
         # Filter the data for the specific team and drop NaN values
-        data = numeric_col[df["Standard_Squad"] == team].dropna()
+        data = numeric_col[df["Squad"] == team].dropna()
 
         # Create a new figure for each plot
         plt.figure()

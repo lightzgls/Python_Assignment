@@ -8,19 +8,13 @@ def make_header(criterias):
     return res
 
 
-
-
 df = pd.read_csv("result.csv")
 criterias = df.columns[4:]
-
-
-
 
     
 #initialize DataFrame
 header = make_header(criterias)
 result_df = pd.DataFrame(columns=header)
-
 
 
 #process the first row
@@ -31,18 +25,17 @@ for criteria in criterias:
 
 
     #calculate all the required value
-
     median = round(df[criteria].median(),2)
     mean = round(df[criteria].mean(),2)
     std = round(df[criteria].std(),2)
     
     row0.extend([median,mean,std])
 
-#add the row to DataFrame
+#add the first row to DataFrame
 result_df.loc[len(result_df)] = row0
 
 # Group rows by 'Standard_Squad' and assign them to the corresponding team's DataFrame
-grouped = df.groupby("Standard_Squad")
+grouped = df.groupby("Squad")
 for team, group in grouped:
     row = [team]
     for criteria in criterias:
