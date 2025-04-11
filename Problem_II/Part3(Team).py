@@ -15,7 +15,7 @@ for team in teams_name:
         numeric_col = pd.to_numeric(df[criteria], errors='coerce')
 
         # Filter the data for the specific team and drop NaN values
-        data = numeric_col[df["Squad"] == team].dropna()
+        data = numeric_col[df["Team"] == team].dropna()
 
         # Create a new figure for each plot
         plt.figure()

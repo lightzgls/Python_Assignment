@@ -5,6 +5,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import time
 from ultils import rename_duplicates
+
+
 # Set up Chrome options for headless mode
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")  # Run without GUI
@@ -38,6 +40,7 @@ for link, id in links.items():
     time.sleep(3)
     soup = BeautifulSoup(driver.page_source, "html.parser")
 
+    #find the table by the tag name
     table = soup.find("table", id=id)
     if table is None:
         print(f"Table with id '{id}' not found.")
@@ -71,14 +74,16 @@ possession_df = pd.DataFrame(tables["stats_possession"][1:], columns=tables["sta
 misc_df = pd.DataFrame(tables["stats_misc"][1:], columns=tables["stats_misc"][0])
 
 
-
+#reformat Min and Age to int and float
 standard_df["Min"] = pd.to_numeric(standard_df["Min"].str.replace(",",""), errors= "coerce")
 standard_df['Age'] = standard_df['Age'].apply(lambda x: round((int(x.split('-')[0]) + int(x.split('-')[1]) / 365),2) if isinstance(x, str) and '-' in x else pd.NA)
 standard_df = standard_df[standard_df["Min"] > 90] 
 
+
+
 DFs = [standard_df, goalkeep_df, shooting_df, passing_df, GCA_df, defense_df, possession_df, misc_df]
 
-
+#rename header of dataframes by adding prefix tableid
 standard_df.columns = list(standard_df.columns[:4]) + [f"Standard_{col}" for col in standard_df.columns[4:]]
 goalkeep_df.columns = list(goalkeep_df.columns[:4]) + [f"Goalkeeping_{col}" for col in goalkeep_df.columns[4:]]
 shooting_df.columns = list(shooting_df.columns[:4]) + [f"Shooting_{col}" for col in shooting_df.columns[4:]]
@@ -109,7 +114,7 @@ result_header = ['Player', 'Nation', 'Pos', 'Squad',
 'Possession_Touches', 'Possession_Def Pen', 'Possession_Def 3rd',
 'Possession_Mid 3rd', 'Possession_Att 3rd', 'Possession_Att Pen',
 'Possession_Att','Possession_Succ%','Possession_Tkld%',
-'Possession_Carries', 'Possession_TotDist', 'Possession_PrgDist',
+'Possession_Carries', 'Possession_PrgDist',
 'Possession_PrgC', 'Possession_1/3', 'Possession_CPA', 'Possession_Mis',
 'Possession_Dis','Possession_Rec', 'Possession_PrgR',
 'Misc_Fls', 'Misc_Fld', 'Misc_Off', 'Misc_Crs','Misc_Recov',
@@ -124,8 +129,8 @@ for df in DFs[1:]:
 result_df = result_df[result_header]
 
 
-
-newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad','Standard_Age',
+#list all the header to rename
+newheader = ['Player', 'Nation', 'Pos', 'Team','Age',
              
 'Standard_MP', 'Standard_Starts','Standard_Min',
 
@@ -153,19 +158,24 @@ newheader = ['Player', 'Standard_Nation', 'Standard_Pos', 'Standard_Squad','Stan
 'Possession_Touches', 'Possession_Def Pen', 'Possession_Def 3rd',
 'Possession_Mid 3rd', 'Possession_Att 3rd', 'Possession_Att Pen',
 'Possession_Att','Possession_Succ%','Possession_Tkld%',
-'Possession_Carries', 'Possession_TotDist', 'Possession_PrgDist',
+'Possession_Carries', 'Possession_PrgDist',
 'Possession_PrgC', 'Possession_1/3', 'Possession_CPA', 'Possession_Mis',
 'Possession_Dis','Possession_Rec', 'Possession_PrgR',
 
 'Misc_Fls', 'Misc_Fld', 'Misc_Off', 'Misc_Crs','Misc_Recov',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
-#fill missing value with "N/a"
 
+#fill missing value with "N/a"
 pd.set_option('future.no_silent_downcasting', True)
 result_df = result_df.replace("","N/a").fillna("N/a")
 #sort player base on their first name
+
 result_df = result_df.sort_values(by="Player")
+
+#rename the header
+result_df.columns = newheader[:len(newheader)]
+
 # Save the resulting DataFrame to a CSV file
 result_df.to_csv("result.csv", index=False)
 

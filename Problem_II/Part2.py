@@ -35,13 +35,15 @@ for criteria in criterias:
 result_df.loc[len(result_df)] = row0
 
 # Group rows by 'Standard_Squad' and assign them to the corresponding team's DataFrame
-grouped = df.groupby("Squad")
+grouped = df.groupby("Team")
 for team, group in grouped:
     row = [team]
     for criteria in criterias:
+        #reformat all data to number, and skip NaN
         numeric_column = pd.to_numeric(group[criteria], errors="coerce")
         row.extend([round(numeric_column.median(),2), round(numeric_column.mean(),2), round(numeric_column.std(),2)])
     result_df.loc[len(result_df)] = row
-
+#fill missing value with N/a
+result_df = result_df.replace("","N/a").fillna("N/a")
 #convert Dataframe to csv file
 result_df.to_csv("result2.csv",index=True)
