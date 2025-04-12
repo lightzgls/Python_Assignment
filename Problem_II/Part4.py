@@ -3,17 +3,16 @@ import pandas as pd
 # Read the CSV file
 df = pd.read_csv("result2.csv", index_col=False)
 
-# Get the criteria columns (starting from the 8th column)
+# Get the criteria columns (only get the mean of each criteria)
 criterias = df.columns[3::3]
 
 # Initialize a dictionary to store the scores for each team
-teams_names = set(df.iloc[:,1])
+teams_names = set(df.iloc[1:,1])
 score_check = {team: 0 for team in teams_names}
 highest_per_criteria = {criteria: "" for criteria in criterias}
 
 # Sum the scores for each criteria by finding the index of the maximum per column
 for criteria in criterias:
-
 
     numeric_cols = pd.to_numeric(df[criteria], errors='coerce')  # Convert to numeric
     # Skip this criteria if all values are NaN
@@ -31,7 +30,7 @@ for criteria in criterias:
 for criteria, team in highest_per_criteria.items():
     print(f"Team with the highest {criteria.split()[2]} is {team}")
 
-    
+
 # Find the best-performing team
 best_team = max(score_check, key=score_check.get)
 
