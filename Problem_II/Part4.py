@@ -13,17 +13,27 @@ highest_per_criteria = {criteria: "" for criteria in criterias}
 
 # Sum the scores for each criteria by finding the index of the maximum per column
 for criteria in criterias:
+
+
     numeric_cols = pd.to_numeric(df[criteria], errors='coerce')  # Convert to numeric
     # Skip this criteria if all values are NaN
     if numeric_cols.isna().all():
         continue
+
+
     idx_max = numeric_cols.idxmax()  # Get index of maximum value in the column
     team_name = df.iloc[idx_max, 1]  # Get the team name from the "Team" column at that index
     score_check[team_name] += 1
     highest_per_criteria[criteria] = team_name
+
+
 #print out the team with the highest score per criteria
 for criteria, team in highest_per_criteria.items():
     print(f"Team with the highest {criteria.split()[2]} is {team}")
+
+    
 # Find the best-performing team
 best_team = max(score_check, key=score_check.get)
+
+
 print(f"The best-performing team in the 2024-2025 Premier League season is {best_team}")
