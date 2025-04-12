@@ -20,7 +20,7 @@ result_df = pd.DataFrame(columns=header)
 #process the first row
 row0 = ["all"]
 for criteria in criterias:
-    # Chuyển các giá trị "N/a" thành NaN, rồi tính median
+    # Change all the "N/a" to NaN
     df[criteria] = pd.to_numeric(df[criteria], errors='coerce')
 
 
@@ -41,9 +41,12 @@ for team, group in grouped:
     for criteria in criterias:
         #reformat all data to number, and skip NaN
         numeric_column = pd.to_numeric(group[criteria], errors="coerce")
+
         row.extend([round(numeric_column.median(),2), round(numeric_column.mean(),2), round(numeric_column.std(),2)])
     result_df.loc[len(result_df)] = row
-#fill missing value with N/a
+
+#fill missing value with "N/a"
 result_df = result_df.replace("","N/a").fillna("N/a")
+
 #convert Dataframe to csv file
 result_df.to_csv("result2.csv",index=True)

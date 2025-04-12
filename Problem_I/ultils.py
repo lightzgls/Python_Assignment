@@ -20,7 +20,7 @@ def rename_duplicates(columns):
     
     return new_columns
 
-
+#function to find all the needed table ids
 def find_ids(links):
     # Set up Chrome options for headless mode
     options = webdriver.ChromeOptions()

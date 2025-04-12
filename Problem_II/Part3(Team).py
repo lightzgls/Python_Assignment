@@ -6,7 +6,7 @@ df = pd.read_csv("result.csv")
 
 criterias = df.columns[4:]  # List of criteria columns
 
-teams_name = set(df['Squad'])  # Set of all team names
+teams_name = sorted(set(df['Team']))  # Set of all team names
 
 # Iterate over each team and criteria
 for team in teams_name:
@@ -21,7 +21,8 @@ for team in teams_name:
         plt.figure()
 
         # Plot the histogram for the current team's data for this criteria
-        plt.hist(data, bins=20, edgecolor='black', alpha=1)
+        plt.hist(data, bins=30, edgecolor='black', alpha=1)
+        plt.grid(axis="y",alpha=1,linestyle= "--")
 
         # Set the title, x-label, and y-label
         plt.title(f"Distribution of {criteria} for {team}")

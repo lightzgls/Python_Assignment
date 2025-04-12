@@ -8,14 +8,14 @@ criterias = df.columns[4:]
 
 for criteria in criterias:
 
-    #change all the "N/a" string to NaN
+    #change all the value to to numberic, "N/a" string to NaN
     df[criteria] = pd.to_numeric(df[criteria],errors='coerce').dropna()
 
     #get the data of that column as panda array
     data = df[criteria]
 
     #configure histogram
-    plt.hist(data, bins=20, edgecolor='black', alpha=0.7)
+    plt.hist(data, bins=30, edgecolor='black', alpha=0.7)
 
 
     # Set the title, x-label, and y-label

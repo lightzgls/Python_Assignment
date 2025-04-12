@@ -9,8 +9,9 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv("result.csv")
 df = df.iloc[:, 4:]  # Select columns starting from the 5th column
 
-# Fill NaN values with the column mean
-df = df.fillna(df.mean(numeric_only=True))
+# Drop NaN value
+df.replace("N/a",pd.NA)
+df = df.dropna()
 
 # Select only numeric columns
 X = df.select_dtypes(include=[float, int])
@@ -20,13 +21,13 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Try different values of k
-range_n_clusters = range(2, len(df.columns[4:]))
+range_n_clusters = range(2, len(df.columns))
 
 inertias = []
 silhouette_avgs = []
 
 for k in range_n_clusters:
-    kmeans = KMeans(n_clusters=k, random_state=10).fit(X_scaled)
+    kmeans = KMeans(n_clusters=k).fit(X_scaled)
     cluster_labels = kmeans.labels_
     inertias.append(kmeans.inertia_)
     silhouette_avgs.append(silhouette_score(X_scaled, cluster_labels))
