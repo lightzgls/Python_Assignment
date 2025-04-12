@@ -3,11 +3,15 @@ import pandas as pd
 # Read the CSV file
 df = pd.read_csv("result2.csv", index_col=False)
 
+#remove the "all" rwo and reset the index
+df = df.drop(0).reset_index(drop=True)
+
+
 # Get the criteria columns (only get the mean of each criteria)
 criterias = df.columns[3::3]
 
 # Initialize a dictionary to store the scores for each team
-teams_names = set(df.iloc[1:,1])
+teams_names = set(df.iloc[:,1])
 score_check = {team: 0 for team in teams_names}
 highest_per_criteria = {criteria: "" for criteria in criterias}
 
