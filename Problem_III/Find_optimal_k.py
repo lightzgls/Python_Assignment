@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
 
-# Load your data
+# Load data
 df = pd.read_csv("result.csv")
 df = df.iloc[:, 4:]  # Select columns starting from the 5th column
 
