@@ -11,7 +11,7 @@ df = df.iloc[:, 4:]  # Select columns starting from the 5th column
 
 # Drop NaN value
 df.replace("N/a",pd.NA)
-df = df.dropna()
+df = df.fillna(0)
 
 # Select only numeric columns
 X = df.select_dtypes(include=[float, int])
@@ -27,7 +27,7 @@ inertias = []
 silhouette_avgs = []
 
 for k in range_n_clusters:
-    kmeans = KMeans(n_clusters=k).fit(X_scaled)
+    kmeans = KMeans(n_clusters=k,random_state=k).fit(X_scaled)
     cluster_labels = kmeans.labels_
     inertias.append(kmeans.inertia_)
     silhouette_avgs.append(silhouette_score(X_scaled, cluster_labels))

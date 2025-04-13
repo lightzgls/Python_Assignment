@@ -120,6 +120,7 @@ result_header = ['Player', 'Nation', 'Pos', 'Squad',
 'Misc_Fls', 'Misc_Fld', 'Misc_Off', 'Misc_Crs','Misc_Recov',
 'Misc_Won','Misc_Lost', 'Misc_Won%']
 
+
 # Initialize the resulting DataFrame
 result_df = standard_df
 for df in DFs[1:]:
@@ -140,7 +141,6 @@ newheader = ['Player', 'Nation', 'Pos', 'Team','Age',
 'Standard_PrgR',
 
 'Standard_Gls/90', 'Standard_Ast/90','Standard_xG/90', 'Standard_xAG/90',
-
 
 'Goalkeeping_GA90','Goalkeeping_Save%','Goalkeeping_CS%','Goalkeeping_Penalty_Save%',
 
