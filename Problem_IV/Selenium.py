@@ -29,7 +29,7 @@ lastpage = 14
 # Initialize list for storing table data
 table_data = []
 
-for i in range(1, lastpage + 1):
+for i in range(1, 15):
     if i == 1:
         url = base_url
     else:
@@ -50,45 +50,42 @@ for i in range(1, lastpage + 1):
     for row_idx, row in enumerate(rows):
         cells = row.find_all(["th", "td"])
         row_data = []
-
-        # Extract headers only once
-        if i == 1 and row_idx == 0:
-            headers = [cell.get_text(strip=True) for cell in cells]
-            table_data.append(headers)
-            continue
-
         # Extract row data
         for cell in cells:
-            a_tags = cell.find_all("a")
-            if len(a_tags) == 2:
-                title_lst = [a["title"] for a in a_tags if a.has_attr("title")]
-                from_squad, to_squad = title_lst
-                row_data.append(from_squad + "/" + to_squad)
-            elif len(a_tags) == 1:
-                row_data.append(a_tags[0]["title"] if a_tags[0].has_attr("title") else cell.get_text(strip=True))
+            cell_classes = cell.get("class") or []
+            if "td-player" in cell_classes:
+                span = cell.find("span")
+                if span:
+                    row_data.append(span.get_text(strip=True))
+                else:
+                    row_data.append("")  # fallback in case <span> doesn't exist
             else:
-                row_data.append(cell.get_text(strip=True))
-
-        # Ensure row_data matches the number of headers
-        if len(row_data) == len(table_data[0]):
-            table_data.append(row_data)
+                a_tags = cell.find_all("a")
+                if len(a_tags) == 2:
+                    title_lst = [a["title"] for a in a_tags if a.has_attr("title")]
+                    from_squad, to_squad = title_lst if len(title_lst) == 2 else ("", "")
+                    row_data.append(from_squad + "/" + to_squad)
+                else:
+                    row_data.append(cell.get_text(strip=True))
+                # Ensure row_data matches the number of headers
+        table_data.append(row_data)
 
 # Convert table data to a DataFrame
-df = pd.DataFrame(columns=table_data[0])
-
+df = pd.DataFrame(table_data[1:],columns=table_data[0])
 # Read the player CSV
 player_df = pd.read_csv("result.csv")
 
-# Filter table data by checking if the player is in the CSV file
-for row in table_data[1:]:
-    if len(row) == len(df.columns):
-        player_name = row[0]
-        if player_name in player_df["Player"].values:
-            filtered = player_df.loc[player_df["Player"] == player_name, "Standard_Min"]
-            if not filtered.empty and len(filtered) == 1:
-                played_time = filtered.values[0]
-                if int(played_time) > 900:
-                    df.loc[len(df)] = row
+df.to_csv("900Min.csv")
 
+# Filter players with more than 900 minutes
+player_df_filtered = player_df[player_df['Standard_Min'] > 900]
+
+# Filter transfer list to keep only those players
+players = player_df_filtered['Player'].tolist()
+filtered_df = df[df['Player'].isin(players)]
+
+# Merge transfer data with minute data
+result_df = pd.merge(filtered_df, player_df_filtered[['Player', 'Standard_Min']], on='Player', how='left')
 # Print the resulting dataframe
-print(df)
+print(result_df)
+result_df.to_csv("Prob4.csv")
