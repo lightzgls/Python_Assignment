@@ -17,11 +17,11 @@ stats = stats.fillna(0)
 scaler = StandardScaler()
 scaled_stats = scaler.fit_transform(stats)
 
-n_clusters = [7,8,9,10,11,12] # Ensure n_clusters <= number of samples
+n_clusters = [7,8,9] # Ensure n_clusters <= number of samples
 
 
 for k in n_clusters:
-    kmeans = KMeans(n_clusters=k)   
+    kmeans = KMeans(n_clusters=k,random_state=0)   
     kmeans.fit(scaled_stats)
 
     pca = PCA(n_components=2)

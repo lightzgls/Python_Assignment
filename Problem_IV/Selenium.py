@@ -75,7 +75,6 @@ df = pd.DataFrame(table_data[1:],columns=table_data[0])
 # Read the player CSV
 player_df = pd.read_csv("result.csv")
 
-df.to_csv("900Min.csv")
 
 # Filter players with more than 900 minutes
 player_df_filtered = player_df[player_df['Standard_Min'] > 900]
