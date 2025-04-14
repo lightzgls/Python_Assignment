@@ -67,9 +67,9 @@ for i in range(1, 15):
                     row_data.append(from_squad + "/" + to_squad)
                 else:
                     row_data.append(cell.get_text(strip=True))
-                # Ensure row_data matches the number of headers
+                
         table_data.append(row_data)
-
+driver.quit()
 # Convert table data to a DataFrame
 df = pd.DataFrame(table_data[1:],columns=table_data[0])
 # Read the player CSV
