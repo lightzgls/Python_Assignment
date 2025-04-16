@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 import time
 from ultils import rename_duplicates
 
-
 # Set up Chrome options for headless mode
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")  # Run without GUI
