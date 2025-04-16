@@ -52,10 +52,10 @@
 50,Bryan Mbeumo,25,Brentford FC,2874.0,€57.6M
 51,James Maddison,28,Tottenham,1764.0,€57.3M
 52,Ibrahima Konaté,25,Liverpool FC,2140.0,€57.2M
-53,Dean Huijsen,20,Bournemouth,1874.0,€56.3M
+53,Dean Huijsen,20,Bournemouth,1964.0,€56.3M
 54,Pedro Porro,25,Tottenham,2373.0,€55.9M
 55,Trent Alexander-Arnold,26,Liverpool FC,2145.0,€55.4M
-56,Illia Zabarnyi,22,Bournemouth,2527.0,€55.1M
+56,Illia Zabarnyi,22,Bournemouth,2572.0,€55.1M
 57,Kobbie Mainoo,19,Manchester United,1294.0,€54.8M
 58,Anthony Gordon,24,Newcastle United,2121.0,€52.4M
 59,Noni Madueke,23,Chelsea,1601.0,€52.3M
@@ -80,7 +80,7 @@
 78,Joelinton,28,Newcastle United,2242.0,€45.7M
 79,Jacob Ramsey,23,Aston Villa,1406.0,€45.7M
 80,Anthony Elanga,22,Nottingham Forest,2007.0,€45.6M
-81,Antoine Semenyo,25,Bournemouth,2645.0,€45.4M
+81,Antoine Semenyo,25,Bournemouth,2733.0,€45.4M
 82,Noussair Mazraoui,27,Manchester United,2475.0,€45.3M
 83,Boubacar Kamara,25,Aston Villa,1202.0,€45.2M
 84,Justin Kluivert,25,Bournemouth,1936.0,€44.3M
@@ -88,7 +88,7 @@
 86,Manuel Akanji,29,Manchester City,1707.0,€43.7M
 87,Joshua Zirkzee,23,Manchester United,1402.0,€43.3M
 88,Youri Tielemans,27,Aston Villa,2735.0,€43.3M
-89,Antonee Robinson,27,Fulham FC,2719.0,€42.7M
+89,Antonee Robinson,27,Fulham FC,2809.0,€42.7M
 90,Yankuba Minteh,20,Brighton & Hove Albion,1406.0,€42.6M
 91,Harvey Barnes,27,Newcastle United,1172.0,€42.6M
 92,Matheus Nunes,26,Manchester City,1224.0,€42.3M
@@ -97,7 +97,7 @@
 95,Georginio Rutter,22,Brighton & Hove Albion,1656.0,€41.2M
 96,Nikola Milenković,27,Nottingham Forest,2790.0,€40.6M
 97,Bilal El Khannouss,20,Leicester City,1748.0,€40.6M
-98,Emile Smith Rowe,24,Fulham FC,1805.0,€40.4M
+98,Emile Smith Rowe,24,Fulham FC,1827.0,€40.4M
 99,Mikel Merino,28,Arsenal FC,1345.0,€39.7M
 100,Marc Cucurella,26,Chelsea,2448.0,€39.6M
 101,Max Kilman,27,West Ham United,2808.0,€39.3M
@@ -114,7 +114,7 @@
 112,Vitaliy Mykolenko,25,Everton FC,2542.0,€33.5M
 113,Liam Delap,22,Ipswich Town,2344.0,€33M
 114,Jarrad Branthwaite,22,Everton FC,2078.0,€32.9M
-115,Joachim Andersen,28,Fulham FC,1953.0,€32.9M
+115,Joachim Andersen,28,Fulham FC,2043.0,€32.9M
 116,Matty Cash,27,Aston Villa,1560.0,€32.8M
 117,Bart Verbruggen,22,Brighton & Hove Albion,2700.0,€32M
 118,Tyler Dibling,19,Southampton,1667.0,€32M
@@ -123,14 +123,14 @@
 121,Rodrigo Bentancur,27,Tottenham,1428.0,€31.4M
 122,Yoane Wissa,28,Brentford FC,2380.0,€31.4M
 123,Lucas Bergvall,19,Tottenham,1112.0,€31.3M
-124,Alex Iwobi,28,Fulham FC,2463.0,€31.2M
+124,Alex Iwobi,28,Fulham FC,2553.0,€31.2M
 125,Facundo Buonanotte,20,Leicester City,1399.0,€31.1M
 126,Nathan Collins,23,Brentford FC,2880.0,€30.7M
 127,Wesley Fofana,24,Chelsea,1172.0,€30.4M
 128,Jørgen Strand Larsen,25,Wolves,2314.0,€30.3M
 129,Yves Bissouma,28,Tottenham,1210.0,€30M
 130,Taylor Harwood-Bellis,23,Southampton,2390.0,€29.9M
-131,Calvin Bassey,25,Fulham FC,2534.0,€29.9M
+131,Calvin Bassey,25,Fulham FC,2624.0,€29.9M
 132,Aaron Wan-Bissaka,27,West Ham United,2704.0,€29.7M
 133,Kevin Schade,23,Brentford FC,1845.0,€29.7M
 134,André,23,Wolves,1997.0,€29.4M
@@ -138,12 +138,12 @@
 136,David Raya,29,Arsenal FC,2880.0,€28.7M
 137,Mikkel Damsgaard,24,Brentford FC,2409.0,€28.6M
 138,Leif Davis,25,Ipswich Town,2532.0,€28.4M
-139,Dango Ouattara,23,Bournemouth,1685.0,€28.2M
-140,Sander Berge,27,Fulham FC,1824.0,€27.9M
+139,Dango Ouattara,23,Bournemouth,1775.0,€28.2M
+140,Sander Berge,27,Fulham FC,1882.0,€27.9M
 141,Keane Lewis-Potter,24,Brentford FC,2639.0,€27.3M
 142,Lesley Ugochukwu,21,Southampton,1267.0,€27.1M
 143,Dwight McNeil,25,Everton FC,1145.0,€27M
-144,Evanilson,25,Bournemouth,1723.0,€26.9M
+144,Evanilson,25,Bournemouth,1813.0,€26.9M
 145,Sepp van den Berg,23,Brentford FC,2046.0,€26.4M
 146,Maxence Lacroix,25,Crystal Palace,2486.0,€25.8M
 147,Tomáš Souček,30,West Ham United,2150.0,€25.6M
@@ -155,10 +155,10 @@
 153,Iliman Ndiaye,25,Everton FC,2039.0,€24.9M
 154,Robert Sánchez,27,Chelsea,2340.0,€24.8M
 155,Tosin Adarabioyo,27,Chelsea,1227.0,€24.8M
-156,Tyler Adams,26,Bournemouth,1380.0,€24.5M
+156,Tyler Adams,26,Bournemouth,1470.0,€24.5M
 157,Alisson,32,Liverpool FC,1968.0,€24.5M
 158,Jesper Lindstrøm,25,Everton FC,1239.0,€24.4M
-159,Marcus Tavernier,26,Bournemouth,1505.0,€24.4M
+159,Marcus Tavernier,26,Bournemouth,1531.0,€24.4M
 160,Beto,27,Everton FC,1101.0,€24.4M
 161,Orel Mangala,27,Everton FC,1261.0,€24.4M
 162,Jordan Pickford,31,Everton FC,2880.0,€23.8M
@@ -177,17 +177,17 @@
 175,Andrew Robertson,31,Liverpool FC,2218.0,€20.6M
 176,Kevin De Bruyne,33,Manchester City,1279.0,€20.4M
 177,Wilfred Ndidi,28,Leicester City,1885.0,€20.4M
-178,Marcos Senesi,27,Bournemouth,963.0,€20.3M
+178,Marcos Senesi,27,Bournemouth,1008.0,€20.3M
 179,Trevoh Chalobah,25,Chelsea,1060.0,€20.2M
 180,Jake O'Brien,23,Everton FC,1121.0,€19.7M
-181,Lewis Cook,28,Bournemouth,2572.0,€19.5M
+181,Lewis Cook,28,Bournemouth,2662.0,€19.5M
 182,Ederson,31,Manchester City,1960.0,€19.5M
 183,Jack Clarke,24,Ipswich Town,960.0,€19.4M
 184,Ola Aina,28,Nottingham Forest,2569.0,€19.3M
 185,Djed Spence,24,Tottenham,1334.0,€19.2M
 186,Mads Hermansen,24,Leicester City,2205.0,€19.2M
 187,Konstantinos Mavropanos,27,West Ham United,1849.0,€19.1M
-188,Andreas Pereira,29,Fulham FC,1676.0,€18.9M
+188,Andreas Pereira,29,Fulham FC,1744.0,€18.9M
 189,Nicolás Domínguez,26,Nottingham Forest,1567.0,€18.8M
 190,Aaron Ramsdale,26,Southampton,2160.0,€18.7M
 191,Toti Gomes,26,Wolves,2074.0,€18.6M
@@ -201,13 +201,13 @@
 199,Dominic Calvert-Lewin,28,Everton FC,1574.0,€17.8M
 200,Ryan Yates,27,Nottingham Forest,1742.0,€17.5M
 201,Kalvin Phillips,29,Ipswich Town,1214.0,€17.3M
-202,Timothy Castagne,29,Fulham FC,1522.0,€16.8M
+202,Timothy Castagne,29,Fulham FC,1612.0,€16.8M
 203,Kyle Walker-Peters,28,Southampton,2648.0,€16.6M
 204,Caleb Okoli,23,Leicester City,1124.0,€16.6M
 205,Virgil van Dijk,33,Liverpool FC,2880.0,€16.6M
 206,James Justin,27,Leicester City,2526.0,€16.4M
 207,Ryan Christie,30,Bournemouth,2117.0,€16.2M
-208,Bernd Leno,33,Fulham FC,2790.0,€16M
+208,Bernd Leno,33,Fulham FC,2880.0,€16M
 209,Yukinari Sugawara,24,Southampton,1467.0,€15.8M
 210,Chris Richards,25,Crystal Palace,1428.0,€15.7M
 211,James Tarkowski,32,Everton FC,2871.0,€15.5M
@@ -227,11 +227,11 @@
 225,Emerson Palmieri,30,West Ham United,1851.0,€12.7M
 226,Paul Onuachu,30,Southampton,916.0,€12.7M
 227,Ben Johnson,25,Ipswich Town,1222.0,€12.6M
-228,Saša Lukić,28,Fulham FC,1879.0,€12.1M
+228,Saša Lukić,28,Fulham FC,1963.0,€12.1M
 229,Casemiro,33,Manchester United,1271.0,€11.6M
 230,Nick Pope,32,Newcastle United,1890.0,€11.5M
 231,Harry Winks,29,Leicester City,1538.0,€11.5M
-232,Kepa Arrizabalaga,30,Bournemouth,2160.0,€11.4M
+232,Kepa Arrizabalaga,30,Bournemouth,2250.0,€11.4M
 233,Santiago Bueno,26,Wolves,1581.0,€11.3M
 234,Álex Moreno,31,Nottingham Forest,955.0,€11.2M
 235,İlkay Gündoğan,34,Manchester City,1787.0,€11M
@@ -241,9 +241,9 @@
 239,José Sá,32,Wolves,2250.0,€8.6M
 240,Flynn Downes,26,Southampton,1611.0,€8.5M
 241,Dan Burn,32,Newcastle United,2700.0,€8.4M
-242,Rodrigo Muniz,23,Fulham FC,908.0,€8.4M
+242,Rodrigo Muniz,23,Fulham FC,964.0,€8.4M
 243,Nélson Semedo,31,Wolves,2415.0,€8.3M
-244,Adama Traoré,29,Fulham FC,1482.0,€8.2M
+244,Adama Traoré,29,Fulham FC,1516.0,€8.2M
 245,Joe Aribo,28,Southampton,1909.0,€8M
 246,Chris Wood,33,Nottingham Forest,2434.0,€7.9M
 247,Ethan Pinnock,31,Brentford FC,1913.0,€7.6M
@@ -255,7 +255,7 @@
 253,Abdoulaye Doucouré,32,Everton FC,2245.0,€5.8M
 254,Stefan Ortega,32,Manchester City,920.0,€5.8M
 255,Tyrone Mings,32,Aston Villa,961.0,€5.7M
-256,Raúl Jiménez,33,Fulham FC,1927.0,€5.2M
+256,Raúl Jiménez,33,Fulham FC,1961.0,€5.2M
 257,Ben Davies,31,Tottenham,901.0,€5.1M
 258,Kieran Trippier,34,Newcastle United,949.0,€4.5M
 259,Jordan Ayew,33,Leicester City,1310.0,€4.5M
@@ -268,7 +268,7 @@
 266,Jannik Vestergaard,32,Leicester City,1391.0,€2M
 267,Luke Woolfenden,26,Ipswich Town,1007.0,€2M
 268,Cameron Burgess,29,Ipswich Town,1215.0,€1.7M
-269,Adam Smith,33,Bournemouth,1146.0,€1.5M
+269,Adam Smith,33,Bournemouth,1236.0,€1.5M
 270,Craig Dawson,34,Wolves,971.0,€1.5M
 271,Jack Stephens,31,Southampton,984.0,€1.4M
 272,Ashley Young,39,Everton FC,1586.0,€1.3M
