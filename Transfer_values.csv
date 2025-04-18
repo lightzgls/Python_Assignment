@@ -1,277 +1,299 @@
-,Player,Age,Team,Standard_Min,Estimated Value
-0,Erling Haaland,24,Manchester City,2480.0,€199.6M
-1,Martin Ødegaard,26,Arsenal FC,1865.0,€125.8M
-2,Alexander Isak,25,Newcastle United,2265.0,€119.4M
-3,Cole Palmer,22,Chelsea,2652.0,€117.4M
-4,Alexis Mac Allister,26,Liverpool FC,2381.0,€117M
-5,Declan Rice,26,Arsenal FC,2410.0,€116.4M
-6,Bukayo Saka,23,Arsenal FC,1366.0,€113M
-7,Phil Foden,24,Manchester City,1686.0,€99.8M
-8,Ryan Gravenberch,22,Liverpool FC,2741.0,€85.5M
-9,Moisés Caicedo,23,Chelsea,2811.0,€82.8M
-10,Bruno Guimarães,27,Newcastle United,2661.0,€82.3M
-11,Morgan Rogers,23,Aston Villa,2597.0,€79.6M
-12,William Saliba,24,Arsenal FC,2634.0,€79.5M
-13,Joško Gvardiol,23,Manchester City,2737.0,€77.4M
-14,Sávio,21,Manchester City,1657.0,€74.8M
-15,Rúben Dias,27,Manchester City,1731.0,€74.5M
-16,Enzo Fernández,24,Chelsea,2410.0,€74.2M
-17,Lucas Paquetá,27,West Ham United,2077.0,€73.5M
-18,Archie Gray,19,Tottenham,1346.0,€72.5M
-19,Dominik Szoboszlai,24,Liverpool FC,2120.0,€70.5M
-20,Kai Havertz,25,Arsenal FC,1839.0,€70M
-21,Luis Díaz,28,Liverpool FC,2061.0,€69.3M
-22,Cody Gakpo,25,Liverpool FC,1501.0,€67.7M
-23,Brennan Johnson,23,Tottenham,1969.0,€67M
-24,Nicolas Jackson,23,Chelsea,1948.0,€66.9M
-25,Gabriel Magalhães,27,Arsenal FC,2363.0,€66.5M
-26,Leny Yoro,19,Manchester United,967.0,€66.2M
-27,Murillo,22,Nottingham Forest,2748.0,€66M
-28,Amadou Onana,23,Aston Villa,1254.0,€64.4M
-29,Ollie Watkins,29,Aston Villa,2167.0,€63.2M
-30,Mohammed Kudus,24,West Ham United,2167.0,€63M
-31,Jurriën Timber,23,Arsenal FC,2327.0,€62.7M
-32,Rico Lewis,20,Manchester City,1810.0,€62.7M
-33,Matheus Cunha,25,Wolves,2164.0,€62.6M
-34,Eberechi Eze,26,Crystal Palace,2174.0,€62.2M
-35,Micky van de Ven,23,Tottenham,905.0,€62M
-36,Morgan Gibbs-White,25,Nottingham Forest,2288.0,€61.7M
-37,Curtis Jones,24,Liverpool FC,1414.0,€61.6M
-38,João Pedro,23,Brighton & Hove Albion,1888.0,€61.3M
-39,Bruno Fernandes,30,Manchester United,2636.0,€61.2M
-40,Pedro Neto,25,Chelsea,1743.0,€60.4M
-41,Dejan Kulusevski,24,Tottenham,2170.0,€60.3M
-42,Gabriel Martinelli,23,Arsenal FC,1794.0,€60M
-43,Cristian Romero,26,Tottenham,1371.0,€60M
-44,Levi Colwill,22,Chelsea,2609.0,€59.8M
-45,Darwin Núñez,25,Liverpool FC,1010.0,€59.7M
-46,Destiny Udogie,22,Tottenham,1744.0,€59.4M
-47,Alejandro Garnacho,20,Manchester United,1876.0,€59.2M
-48,Marcus Rashford,27,Aston Villa,978.0,€58.6M
-49,Diogo Jota,28,Liverpool FC,1043.0,€58.6M
-50,Bryan Mbeumo,25,Brentford FC,2874.0,€57.6M
-51,James Maddison,28,Tottenham,1764.0,€57.3M
-52,Ibrahima Konaté,25,Liverpool FC,2140.0,€57.2M
-53,Dean Huijsen,20,Bournemouth,1964.0,€56.3M
-54,Pedro Porro,25,Tottenham,2373.0,€55.9M
-55,Trent Alexander-Arnold,26,Liverpool FC,2145.0,€55.4M
-56,Illia Zabarnyi,22,Bournemouth,2572.0,€55.1M
-57,Kobbie Mainoo,19,Manchester United,1294.0,€54.8M
-58,Anthony Gordon,24,Newcastle United,2121.0,€52.4M
-59,Noni Madueke,23,Chelsea,1601.0,€52.3M
-60,Sandro Tonali,24,Newcastle United,2000.0,€52.1M
-61,Christopher Nkunku,27,Chelsea,921.0,€51.3M
-62,Bernardo Silva,30,Manchester City,2131.0,€51.1M
-63,João Gomes,24,Wolves,2511.0,€51.1M
-64,Dominic Solanke,27,Tottenham,2028.0,€51M
-65,Carlos Baleba,21,Brighton & Hove Albion,2147.0,€51M
-66,Matthijs de Ligt,25,Manchester United,2089.0,€50.8M
-67,Pape Matar Sarr,22,Tottenham,1511.0,€50.8M
-68,Adam Wharton,21,Crystal Palace,1088.0,€49.3M
-69,Riccardo Calafiori,22,Arsenal FC,925.0,€49.3M
-70,Kaoru Mitoma,27,Brighton & Hove Albion,2467.0,€49.2M
-71,Lisandro Martínez,27,Manchester United,1751.0,€49.2M
-72,Marc Guéhi,24,Crystal Palace,2609.0,€48.9M
-73,Amad Diallo,22,Manchester United,1594.0,€48.6M
-74,Valentino Livramento,22,Newcastle United,2210.0,€48.4M
-75,Jarrod Bowen,28,West Ham United,2456.0,€48.4M
-76,Elliot Anderson,22,Nottingham Forest,2227.0,€46.2M
-77,Pau Torres,28,Aston Villa,1639.0,€46.1M
-78,Joelinton,28,Newcastle United,2242.0,€45.7M
-79,Jacob Ramsey,23,Aston Villa,1406.0,€45.7M
-80,Anthony Elanga,22,Nottingham Forest,2007.0,€45.6M
-81,Antoine Semenyo,25,Bournemouth,2733.0,€45.4M
-82,Noussair Mazraoui,27,Manchester United,2475.0,€45.3M
-83,Boubacar Kamara,25,Aston Villa,1202.0,€45.2M
-84,Justin Kluivert,25,Bournemouth,1936.0,€44.3M
-85,Ezri Konsa,27,Aston Villa,2396.0,€44.3M
-86,Manuel Akanji,29,Manchester City,1707.0,€43.7M
-87,Joshua Zirkzee,23,Manchester United,1402.0,€43.3M
-88,Youri Tielemans,27,Aston Villa,2735.0,€43.3M
-89,Antonee Robinson,27,Fulham FC,2809.0,€42.7M
-90,Yankuba Minteh,20,Brighton & Hove Albion,1406.0,€42.6M
-91,Harvey Barnes,27,Newcastle United,1172.0,€42.6M
-92,Matheus Nunes,26,Manchester City,1224.0,€42.3M
-93,Jan Paul van Hecke,24,Brighton & Hove Albion,2509.0,€41.9M
-94,Guglielmo Vicario,28,Tottenham,1800.0,€41.6M
-95,Georginio Rutter,22,Brighton & Hove Albion,1656.0,€41.2M
-96,Nikola Milenković,27,Nottingham Forest,2790.0,€40.6M
-97,Bilal El Khannouss,20,Leicester City,1748.0,€40.6M
-98,Emile Smith Rowe,24,Fulham FC,1827.0,€40.4M
-99,Mikel Merino,28,Arsenal FC,1345.0,€39.7M
-100,Marc Cucurella,26,Chelsea,2448.0,€39.6M
-101,Max Kilman,27,West Ham United,2808.0,€39.3M
-102,Leon Bailey,27,Aston Villa,1138.0,€38.6M
-103,Diogo Dalot,26,Manchester United,2756.0,€37.5M
-104,Edson Álvarez,27,West Ham United,1633.0,€36.7M
-105,Jadon Sancho,25,Chelsea,1610.0,€36.2M
-106,Jean-Clair Todibo,25,West Ham United,1305.0,€36.1M
-107,Lewis Hall,20,Newcastle United,2189.0,€36.1M
-108,Malo Gusto,21,Chelsea,1776.0,€36.1M
-109,Myles Lewis-Skelly,18,Arsenal FC,959.0,€35.7M
-110,Pervis Estupiñán,27,Brighton & Hove Albion,1952.0,€35.4M
-111,André Onana,29,Manchester United,2790.0,€34.2M
-112,Vitaliy Mykolenko,25,Everton FC,2542.0,€33.5M
-113,Liam Delap,22,Ipswich Town,2344.0,€33M
-114,Jarrad Branthwaite,22,Everton FC,2078.0,€32.9M
-115,Joachim Andersen,28,Fulham FC,2043.0,€32.9M
-116,Matty Cash,27,Aston Villa,1560.0,€32.8M
-117,Bart Verbruggen,22,Brighton & Hove Albion,2700.0,€32M
-118,Tyler Dibling,19,Southampton,1667.0,€32M
-119,Leandro Trossard,30,Arsenal FC,2091.0,€31.8M
-120,Jean-Philippe Mateta,27,Crystal Palace,2302.0,€31.7M
-121,Rodrigo Bentancur,27,Tottenham,1428.0,€31.4M
-122,Yoane Wissa,28,Brentford FC,2380.0,€31.4M
-123,Lucas Bergvall,19,Tottenham,1112.0,€31.3M
-124,Alex Iwobi,28,Fulham FC,2553.0,€31.2M
-125,Facundo Buonanotte,20,Leicester City,1399.0,€31.1M
-126,Nathan Collins,23,Brentford FC,2880.0,€30.7M
-127,Wesley Fofana,24,Chelsea,1172.0,€30.4M
-128,Jørgen Strand Larsen,25,Wolves,2314.0,€30.3M
-129,Yves Bissouma,28,Tottenham,1210.0,€30M
-130,Taylor Harwood-Bellis,23,Southampton,2390.0,€29.9M
-131,Calvin Bassey,25,Fulham FC,2624.0,€29.9M
-132,Aaron Wan-Bissaka,27,West Ham United,2704.0,€29.7M
-133,Kevin Schade,23,Brentford FC,1845.0,€29.7M
-134,André,23,Wolves,1997.0,€29.4M
-135,Daniel Muñoz,28,Crystal Palace,2598.0,€28.9M
-136,David Raya,29,Arsenal FC,2880.0,€28.7M
-137,Mikkel Damsgaard,24,Brentford FC,2409.0,€28.6M
-138,Leif Davis,25,Ipswich Town,2532.0,€28.4M
-139,Dango Ouattara,23,Bournemouth,1775.0,€28.2M
-140,Sander Berge,27,Fulham FC,1882.0,€27.9M
-141,Keane Lewis-Potter,24,Brentford FC,2639.0,€27.3M
-142,Lesley Ugochukwu,21,Southampton,1267.0,€27.1M
-143,Dwight McNeil,25,Everton FC,1145.0,€27M
-144,Evanilson,25,Bournemouth,1813.0,€26.9M
-145,Sepp van den Berg,23,Brentford FC,2046.0,€26.4M
-146,Maxence Lacroix,25,Crystal Palace,2486.0,€25.8M
-147,Tomáš Souček,30,West Ham United,2150.0,€25.6M
-148,Callum Hudson-Odoi,24,Nottingham Forest,2074.0,€25.4M
-149,Jacob Greaves,24,Ipswich Town,1665.0,€25.4M
-150,Wout Faes,27,Leicester City,2275.0,€25.3M
-151,Mateo Kovačić,30,Manchester City,1857.0,€25.3M
-152,Tyrick Mitchell,25,Crystal Palace,2582.0,€25.1M
-153,Iliman Ndiaye,25,Everton FC,2039.0,€24.9M
-154,Robert Sánchez,27,Chelsea,2340.0,€24.8M
-155,Tosin Adarabioyo,27,Chelsea,1227.0,€24.8M
-156,Tyler Adams,26,Bournemouth,1470.0,€24.5M
-157,Alisson,32,Liverpool FC,1968.0,€24.5M
-158,Jesper Lindstrøm,25,Everton FC,1239.0,€24.4M
-159,Marcus Tavernier,26,Bournemouth,1531.0,€24.4M
-160,Beto,27,Everton FC,1101.0,€24.4M
-161,Orel Mangala,27,Everton FC,1261.0,€24.4M
-162,Jordan Pickford,31,Everton FC,2880.0,€23.8M
-163,Carlos Soler,28,West Ham United,1257.0,€23.3M
-164,James Garner,24,Everton FC,1054.0,€23.2M
-165,Emiliano Martínez,32,Aston Villa,2700.0,€23M
-166,Dean Henderson,28,Crystal Palace,2790.0,€22.7M
-167,Neco Williams,24,Nottingham Forest,2054.0,€22.6M
-168,Mateus Fernandes,20,Southampton,2409.0,€22.5M
-169,Vitaly Janelt,26,Brentford FC,2250.0,€22.2M
-170,Dara O'Shea,26,Ipswich Town,2582.0,€21.8M
-171,John McGinn,30,Aston Villa,1891.0,€21.6M
-172,Kristoffer Ajer,26,Brentford FC,1363.0,€21.5M
-173,Yasin Ayari,21,Brighton & Hove Albion,1633.0,€21.5M
-174,Jean-Ricner Bellegarde,26,Wolves,1479.0,€21.3M
-175,Andrew Robertson,31,Liverpool FC,2218.0,€20.6M
-176,Kevin De Bruyne,33,Manchester City,1279.0,€20.4M
-177,Wilfred Ndidi,28,Leicester City,1885.0,€20.4M
-178,Marcos Senesi,27,Bournemouth,1008.0,€20.3M
-179,Trevoh Chalobah,25,Chelsea,1060.0,€20.2M
-180,Jake O'Brien,23,Everton FC,1121.0,€19.7M
-181,Lewis Cook,28,Bournemouth,2662.0,€19.5M
-182,Ederson,31,Manchester City,1960.0,€19.5M
-183,Jack Clarke,24,Ipswich Town,960.0,€19.4M
-184,Ola Aina,28,Nottingham Forest,2569.0,€19.3M
-185,Djed Spence,24,Tottenham,1334.0,€19.2M
-186,Mads Hermansen,24,Leicester City,2205.0,€19.2M
-187,Konstantinos Mavropanos,27,West Ham United,1849.0,€19.1M
-188,Andreas Pereira,29,Fulham FC,1744.0,€18.9M
-189,Nicolás Domínguez,26,Nottingham Forest,1567.0,€18.8M
-190,Aaron Ramsdale,26,Southampton,2160.0,€18.7M
-191,Toti Gomes,26,Wolves,2074.0,€18.6M
-192,Cameron Archer,23,Southampton,1314.0,€18.6M
-193,Kamaldeen Sulemana,23,Southampton,972.0,€18.5M
-194,Mohamed Salah,32,Liverpool FC,2831.0,€18.3M
-195,Yehor Yarmoliuk,21,Brentford FC,964.0,€18M
-196,Jacob Murphy,30,Newcastle United,1893.0,€17.9M
-197,Issa Diop,28,Fulham FC,1339.0,€17.9M
-198,Jack Harrison,28,Everton FC,1747.0,€17.9M
-199,Dominic Calvert-Lewin,28,Everton FC,1574.0,€17.8M
-200,Ryan Yates,27,Nottingham Forest,1742.0,€17.5M
-201,Kalvin Phillips,29,Ipswich Town,1214.0,€17.3M
-202,Timothy Castagne,29,Fulham FC,1612.0,€16.8M
-203,Kyle Walker-Peters,28,Southampton,2648.0,€16.6M
-204,Caleb Okoli,23,Leicester City,1124.0,€16.6M
-205,Virgil van Dijk,33,Liverpool FC,2880.0,€16.6M
-206,James Justin,27,Leicester City,2526.0,€16.4M
-207,Ryan Christie,30,Bournemouth,2117.0,€16.2M
-208,Bernd Leno,33,Fulham FC,2880.0,€16M
-209,Yukinari Sugawara,24,Southampton,1467.0,€15.8M
-210,Chris Richards,25,Crystal Palace,1428.0,€15.7M
-211,James Tarkowski,32,Everton FC,2871.0,€15.5M
-212,Jens Cajuste,25,Ipswich Town,1694.0,€15.4M
-213,Boubakary Soumaré,26,Leicester City,1818.0,€15.3M
-214,Daichi Kamada,28,Crystal Palace,1198.0,€15.1M
-215,Lucas Digne,31,Aston Villa,2151.0,€14.8M
-216,Thomas Partey,31,Arsenal FC,2347.0,€14.7M
-217,Sammie Szmodics,29,Ipswich Town,979.0,€14.1M
-218,Mark Flekken,31,Brentford FC,2735.0,€13.9M
-219,Harry Maguire,32,Manchester United,1418.0,€13.8M
-220,Guido Rodríguez,31,West Ham United,1018.0,€13.6M
-221,Kenny Tete,29,Fulham FC,1271.0,€13.4M
-222,Stephy Mavididi,26,Leicester City,1531.0,€13.2M
-223,Jan Bednarek,29,Southampton,2171.0,€13M
-224,Jefferson Lerma,30,Crystal Palace,1811.0,€12.8M
-225,Emerson Palmieri,30,West Ham United,1851.0,€12.7M
-226,Paul Onuachu,30,Southampton,916.0,€12.7M
-227,Ben Johnson,25,Ipswich Town,1222.0,€12.6M
-228,Saša Lukić,28,Fulham FC,1963.0,€12.1M
-229,Casemiro,33,Manchester United,1271.0,€11.6M
-230,Nick Pope,32,Newcastle United,1890.0,€11.5M
-231,Harry Winks,29,Leicester City,1538.0,€11.5M
-232,Kepa Arrizabalaga,30,Bournemouth,2250.0,€11.4M
-233,Santiago Bueno,26,Wolves,1581.0,€11.3M
-234,Álex Moreno,31,Nottingham Forest,955.0,€11.2M
-235,İlkay Gündoğan,34,Manchester City,1787.0,€11M
-236,Christian Nørgaard,31,Brentford FC,2279.0,€10.8M
-237,Matz Sels,33,Nottingham Forest,2880.0,€10.2M
-238,Jack Hinshelwood,20,Brighton & Hove Albion,1505.0,€9.2M
-239,José Sá,32,Wolves,2250.0,€8.6M
-240,Flynn Downes,26,Southampton,1611.0,€8.5M
-241,Dan Burn,32,Newcastle United,2700.0,€8.4M
-242,Rodrigo Muniz,23,Fulham FC,964.0,€8.4M
-243,Nélson Semedo,31,Wolves,2415.0,€8.3M
-244,Adama Traoré,29,Fulham FC,1516.0,€8.2M
-245,Joe Aribo,28,Southampton,1909.0,€8M
-246,Chris Wood,33,Nottingham Forest,2434.0,€7.9M
-247,Ethan Pinnock,31,Brentford FC,1913.0,€7.6M
-248,Fabian Schär,33,Newcastle United,2322.0,€7.5M
-249,Will Hughes,29,Crystal Palace,1695.0,€7.3M
-250,Lewis Dunk,33,Brighton & Hove Albion,1813.0,€7.1M
-251,Danny Welbeck,34,Brighton & Hove Albion,1686.0,€5.9M
-252,Joël Veltman,33,Brighton & Hove Albion,1643.0,€5.9M
-253,Abdoulaye Doucouré,32,Everton FC,2245.0,€5.8M
-254,Stefan Ortega,32,Manchester City,920.0,€5.8M
-255,Tyrone Mings,32,Aston Villa,961.0,€5.7M
-256,Raúl Jiménez,33,Fulham FC,1961.0,€5.2M
-257,Ben Davies,31,Tottenham,901.0,€5.1M
-258,Kieran Trippier,34,Newcastle United,949.0,€4.5M
-259,Jordan Ayew,33,Leicester City,1310.0,€4.5M
-260,Axel Tuanzebe,27,Ipswich Town,1355.0,€4.3M
-261,Matt Doherty,33,Wolves,1809.0,€4M
-262,Christian Eriksen,33,Manchester United,903.0,€3.9M
-263,Ryan Manning,28,Southampton,1195.0,€3.8M
-264,Conor Coady,32,Leicester City,1174.0,€2.3M
-265,Wes Burns,30,Ipswich Town,926.0,€2.1M
-266,Jannik Vestergaard,32,Leicester City,1391.0,€2M
-267,Luke Woolfenden,26,Ipswich Town,1007.0,€2M
-268,Cameron Burgess,29,Ipswich Town,1215.0,€1.7M
-269,Adam Smith,33,Bournemouth,1236.0,€1.5M
-270,Craig Dawson,34,Wolves,971.0,€1.5M
-271,Jack Stephens,31,Southampton,984.0,€1.4M
-272,Ashley Young,39,Everton FC,1586.0,€1.3M
-273,Sam Morsy,33,Ipswich Town,2240.0,€1.3M
-274,Jamie Vardy,38,Leicester City,2421.0,€1.2M
-275,Łukasz Fabiański,39,West Ham United,1070.0,€0.9M
+﻿Player,Played Time,Estimated Value
+Aaron Ramsdale,2160.0,€18.7M
+Aaron Wan-Bissaka,2704.0,€29.7M
+Abdoulaye Doucouré,2245.0,€5.8M
+Adam Armstrong,1248.0,
+Adam Smith,1236.0,€1.5M
+Adam Wharton,1088.0,€49.3M
+Adama Traoré,1516.0,€8.2M
+Alejandro Garnacho,1876.0,€59.2M
+Alex Iwobi,2553.0,€31.2M
+Alexander Isak,2265.0,€119.4M
+Alexis Mac Allister,2381.0,€117M
+Alisson,1968.0,€24.5M
+Alphonse Areola,1810.0,€11.6M
+Amad Diallo,1594.0,€48.6M
+Amadou Onana,1254.0,€64.4M
+Andreas Pereira,1744.0,€18.9M
+Andrew Robertson,2218.0,€20.6M
+André,1997.0,€29.4M
+André Onana,2790.0,€34.2M
+Anthony Elanga,2007.0,€45.6M
+Anthony Gordon,2121.0,€52.4M
+Antoine Semenyo,2733.0,€45.4M
+Antonee Robinson,2809.0,€42.7M
+Archie Gray,1346.0,€72.5M
+Arijanet Muric,1620.0,€10.4M
+Ashley Young,1586.0,€1.3M
+Axel Tuanzebe,1355.0,€4.3M
+Bart Verbruggen,2700.0,€32M
+Ben Davies,901.0,€5.1M
+Ben Johnson,1222.0,€12.6M
+Bernardo Silva,2131.0,€51.1M
+Bernd Leno,2880.0,€16M
+Beto,1101.0,€24.4M
+Bilal El Khannouss,1748.0,€40.6M
+Boubacar Kamara,1202.0,€45.2M
+Boubakary Soumaré,1818.0,€15.3M
+Brennan Johnson,1969.0,€67M
+Bruno Fernandes,2636.0,€61.2M
+Bruno Guimarães,2661.0,€82.3M
+Bryan Mbeumo,2874.0,€57.6M
+Bukayo Saka,1366.0,€113M
+Caleb Okoli,1124.0,€16.6M
+Callum Hudson-Odoi,2074.0,€25.4M
+Calvin Bassey,2624.0,€29.9M
+Cameron Archer,1314.0,€18.6M
+Cameron Burgess,1215.0,€1.7M
+Carlos Baleba,2147.0,€51M
+Carlos Soler,1257.0,€23.3M
+Casemiro,1271.0,€11.6M
+Chris Richards,1428.0,€15.7M
+Chris Wood,2434.0,€7.9M
+Christian Eriksen,903.0,€3.9M
+Christian Nørgaard,2279.0,€10.8M
+Christopher Nkunku,921.0,€51.3M
+Cody Gakpo,1501.0,€67.7M
+Cole Palmer,2652.0,€117.4M
+Conor Coady,1174.0,€2.3M
+Craig Dawson,971.0,€1.5M
+Cristian Romero,1371.0,€60M
+Curtis Jones,1414.0,€61.6M
+Daichi Kamada,1198.0,€15.1M
+Dan Burn,2700.0,€8.4M
+Dango Ouattara,1775.0,€28.2M
+Daniel Muñoz,2598.0,€28.9M
+Danny Welbeck,1686.0,€5.9M
+Dara O'Shea,2582.0,€21.8M
+Darwin Núñez,1010.0,€59.7M
+David Raya,2880.0,€28.7M
+Dean Henderson,2790.0,€22.7M
+Dean Huijsen,1964.0,€56.3M
+Declan Rice,2410.0,€116.4M
+Dejan Kulusevski,2170.0,€60.3M
+Destiny Udogie,1744.0,€59.4M
+Diogo Dalot,2756.0,€37.5M
+Diogo Jota,1043.0,€58.6M
+Djed Spence,1334.0,€19.2M
+Dominic Calvert-Lewin,1574.0,€17.8M
+Dominic Solanke,2028.0,€51M
+Dominik Szoboszlai,2120.0,€70.5M
+Dwight McNeil,1145.0,€27M
+Eberechi Eze,2174.0,€62.2M
+Ederson,1960.0,€19.5M
+Edson Álvarez,1633.0,€36.7M
+Elliot Anderson,2227.0,€46.2M
+Emerson Palmieri,1851.0,€12.7M
+Emile Smith Rowe,1827.0,€40.4M
+Emiliano Martínez,2700.0,€23M
+Enzo Fernández,2410.0,€74.2M
+Erling Haaland,2480.0,€199.6M
+Ethan Pinnock,1913.0,€7.6M
+Evanilson,1813.0,€26.9M
+Ezri Konsa,2396.0,€44.3M
+Fabian Schär,2322.0,€7.5M
+Facundo Buonanotte,1399.0,€31.1M
+Flynn Downes,1611.0,€8.5M
+Gabriel Magalhães,2363.0,€66.5M
+Gabriel Martinelli,1794.0,€60M
+Georginio Rutter,1656.0,€41.2M
+Guglielmo Vicario,1800.0,€41.6M
+Guido Rodríguez,1018.0,€13.6M
+Harry Maguire,1418.0,€13.8M
+Harry Winks,1538.0,€11.5M
+Harvey Barnes,1172.0,€42.6M
+Harvey Barnes,1172.0,€0.6M
+Ibrahima Konaté,2140.0,€57.2M
+Idrissa Gana Gueye,2537.0,€4.5M
+Igor,903.0,
+Iliman Ndiaye,2039.0,€24.9M
+Illia Zabarnyi,2572.0,€55.1M
+Ismaila Sarr,2200.0,€24.9M
+Issa Diop,1339.0,€17.9M
+Jack Clarke,960.0,€19.4M
+Jack Harrison,1747.0,€17.9M
+Jack Hinshelwood,1505.0,€9.2M
+Jack Stephens,984.0,€1.4M
+Jacob Greaves,1665.0,€25.4M
+Jacob Murphy,1893.0,€17.9M
+Jacob Ramsey,1406.0,€45.7M
+Jadon Sancho,1610.0,€36.2M
+Jake O'Brien,1121.0,€19.7M
+James Garner,1054.0,€23.2M
+James Justin,2526.0,€16.4M
+James Maddison,1764.0,€57.3M
+James Tarkowski,2871.0,€15.5M
+Jamie Vardy,2421.0,€1.2M
+Jan Bednarek,2171.0,€13M
+Jan Paul van Hecke,2509.0,€41.9M
+Jannik Vestergaard,1391.0,€2M
+Jarrad Branthwaite,2078.0,€32.9M
+Jarrod Bowen,2456.0,€48.4M
+Jean-Clair Todibo,1305.0,€36.1M
+Jean-Philippe Mateta,2302.0,€31.7M
+Jean-Ricner Bellegarde,1479.0,€21.3M
+Jefferson Lerma,1811.0,€12.8M
+Jens Cajuste,1694.0,€15.4M
+Jeremy Doku,1277.0,€66.5M
+Jesper Lindstrøm,1239.0,€24.4M
+Joachim Andersen,2043.0,€32.9M
+Joe Aribo,1909.0,€8M
+Joelinton,2242.0,€45.7M
+John McGinn,1891.0,€21.6M
+Jordan Ayew,1310.0,€4.5M
+Jordan Pickford,2880.0,€23.8M
+Joshua Zirkzee,1402.0,€43.3M
+José Sá,2250.0,€8.6M
+João Gomes,2511.0,€51.1M
+João Pedro,1888.0,€61.3M
+Joël Veltman,1643.0,€5.9M
+Joško Gvardiol,2737.0,€77.4M
+Jurriën Timber,2327.0,€62.7M
+Justin Kluivert,1936.0,€44.3M
+Jørgen Strand Larsen,2314.0,€30.3M
+Kai Havertz,1839.0,€70M
+Kalvin Phillips,1214.0,€17.3M
+Kamaldeen Sulemana,972.0,€18.5M
+Kaoru Mitoma,2467.0,€49.2M
+Keane Lewis-Potter,2639.0,€27.3M
+Kenny Tete,1271.0,€13.4M
+Kepa Arrizabalaga,2250.0,€11.4M
+Kevin De Bruyne,1279.0,€20.4M
+Kevin Schade,1845.0,€29.7M
+Kieran Trippier,949.0,€4.5M
+Kobbie Mainoo,1294.0,€54.8M
+Konstantinos Mavropanos,1849.0,€19.1M
+Kristoffer Ajer,1363.0,€21.5M
+Kyle Walker,970.0,
+Kyle Walker-Peters,2648.0,€16.6M
+Leandro Trossard,2091.0,€31.8M
+Leif Davis,2532.0,€28.4M
+Leny Yoro,967.0,€66.2M
+Leon Bailey,1138.0,€38.6M
+Lesley Ugochukwu,1267.0,€27.1M
+Levi Colwill,2609.0,€59.8M
+Lewis Cook,2662.0,€19.5M
+Lewis Dunk,1813.0,€7.1M
+Lewis Hall,2189.0,€36.1M
+Lewis Hall,2189.0,€2M
+Liam Delap,2344.0,€33M
+Lisandro Martínez,1751.0,€49.2M
+Lucas Bergvall,1112.0,€31.3M
+Lucas Digne,2151.0,€14.8M
+Lucas Paquetá,2077.0,€73.5M
+Luis Díaz,2061.0,€69.3M
+Luke Woolfenden,1007.0,€2M
+Mads Hermansen,2205.0,€19.2M
+Mads Roerslev,1101.0,
+Malo Gusto,1776.0,€36.1M
+Manuel Akanji,1707.0,€43.7M
+Manuel Ugarte Ribeiro,1532.0,€60.3M
+Marc Cucurella,2448.0,€39.6M
+Marc Guéhi,2609.0,€48.9M
+Marc Guéhi,2609.0,€16.7M
+Marcos Senesi,1008.0,€20.3M
+Marcus Rashford,978.0,€58.6M
+Marcus Tavernier,1531.0,€24.4M
+Mario Lemina,1364.0,
+Mark Flekken,2735.0,€13.9M
+Martin Ødegaard,1865.0,€125.8M
+Mateo Kovačić,1857.0,€25.3M
+Mateus Fernandes,2409.0,€22.5M
+Matheus Cunha,2164.0,€62.6M
+Matheus Nunes,1224.0,€42.3M
+Matt Doherty,1809.0,€4M
+Matthijs de Ligt,2089.0,€50.8M
+Matty Cash,1560.0,€32.8M
+Matz Sels,2880.0,€10.2M
+Max Kilman,2808.0,€39.3M
+Maxence Lacroix,2486.0,€25.8M
+Micky van de Ven,905.0,€62M
+Mikel Merino,1345.0,€39.7M
+Mikkel Damsgaard,2409.0,€28.6M
+Milos Kerkez,2807.0,€61.6M
+Mohamed Salah,2831.0,€18.3M
+Mohammed Kudus,2167.0,€63M
+Moisés Caicedo,2811.0,€82.8M
+Morgan Gibbs-White,2288.0,€61.7M
+Morgan Rogers,2597.0,€79.6M
+Murillo,2748.0,€66M
+Myles Lewis-Skelly,959.0,€35.7M
+Nathan Collins,2880.0,€30.7M
+Neco Williams,2054.0,€22.6M
+Nick Pope,1890.0,€11.5M
+Nicolas Jackson,1948.0,€66.9M
+Nicolás Domínguez,1567.0,€18.8M
+Nikola Milenković,2790.0,€40.6M
+Noni Madueke,1601.0,€52.3M
+Noussair Mazraoui,2475.0,€45.3M
+Nélson Semedo,2415.0,€8.3M
+Ola Aina,2569.0,€19.3M
+Ollie Watkins,2167.0,€63.2M
+Omari Hutchinson,2223.0,€27.6M
+Orel Mangala,1261.0,€24.4M
+Pape Matar Sarr,1511.0,€50.8M
+Pau Torres,1639.0,€46.1M
+Paul Onuachu,916.0,€12.7M
+Pedro Neto,1743.0,€60.4M
+Pedro Porro,2373.0,€55.9M
+Pervis Estupiñán,1952.0,€35.4M
+Phil Foden,1686.0,€99.8M
+Radu Drăgușin,1252.0,€28.4M
+Rasmus Højlund,1585.0,€60M
+Rayan Aït-Nouri,2618.0,€44M
+Raúl Jiménez,1961.0,€5.2M
+Riccardo Calafiori,925.0,€49.3M
+Rico Lewis,1810.0,€62.7M
+Robert Sánchez,2340.0,€24.8M
+Rodrigo Bentancur,1428.0,€31.4M
+Rodrigo Muniz,964.0,€8.4M
+Ryan Christie,2117.0,€16.2M
+Ryan Gravenberch,2741.0,€85.5M
+Ryan Manning,1195.0,€3.8M
+Ryan Yates,1742.0,€17.5M
+Rúben Dias,1731.0,€74.5M
+Sam Morsy,2240.0,€1.3M
+Sammie Szmodics,979.0,€14.1M
+Sander Berge,1882.0,€27.9M
+Sandro Tonali,2000.0,€52.1M
+Santiago Bueno,1581.0,€11.3M
+Saša Lukić,1963.0,€12.1M
+Sepp van den Berg,2046.0,€26.4M
+Son Heung-min,2004.0,€28.6M
+Stefan Ortega,920.0,€5.8M
+Stephy Mavididi,1531.0,€13.2M
+Sávio,1657.0,€74.8M
+Taylor Harwood-Bellis,2390.0,€29.9M
+Thomas Partey,2347.0,€14.7M
+Timothy Castagne,1612.0,€16.8M
+Tomáš Souček,2150.0,€25.6M
+Tosin Adarabioyo,1227.0,€24.8M
+Toti Gomes,2074.0,€18.6M
+Trent Alexander-Arnold,2145.0,€55.4M
+Trevoh Chalobah,1060.0,€20.2M
+Tyler Adams,1470.0,€24.5M
+Tyler Dibling,1667.0,€32M
+Tyrick Mitchell,2582.0,€25.1M
+Tyrone Mings,961.0,€5.7M
+Valentino Livramento,2210.0,€48.4M
+Victor Bernth Kristiansen,2380.0,€23.9M
+Virgil van Dijk,2880.0,€16.6M
+Vitaliy Mykolenko,2542.0,€33.5M
+Vitaly Janelt,2250.0,€22.2M
+Wes Burns,926.0,€2.1M
+Wesley Fofana,1172.0,€30.4M
+Wilfred Ndidi,1885.0,€20.4M
+Will Hughes,1695.0,€7.3M
+William Saliba,2634.0,€79.5M
+William Saliba,2634.0,€11.9M
+Wout Faes,2275.0,€25.3M
+Yankuba Minteh,1406.0,€42.6M
+Yasin Ayari,1633.0,€21.5M
+Yehor Yarmoliuk,964.0,€18M
+Yoane Wissa,2380.0,€31.4M
+Youri Tielemans,2735.0,€43.3M
+Yukinari Sugawara,1467.0,€15.8M
+Yves Bissouma,1210.0,€30M
+Álex Moreno,955.0,€11.2M
+İlkay Gündoğan,1787.0,€11M
+Łukasz Fabiański,1070.0,€0.9M

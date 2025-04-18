@@ -1,6 +1,9 @@
-#!/home/lightzgls/code/Python-Assignment/venv/bin/python
 import requests
 import pandas as pd
+import unicodedata
+from utils import *
+from rapidfuzz import process, fuzz
+
 
 url = 'https://www.footballtransfers.com/us/values/actions/most-valuable-football-players/overview'
 
@@ -35,31 +38,76 @@ for page in range(1, 23):
     response = requests.post(url, headers=headers, data=payload)
     data = response.json()
     records = data["records"]
-    df = pd.DataFrame(records)
-    df = df[["player_name", "age", "team_name", "estimated_value"]]
-    all_transfers.append(df)
+    df_page = pd.DataFrame(records)
+    df_page = df_page[["player_name", "age", "team_name", "estimated_value"]]
+    df_page["player_name"] = df_page["player_name"].str.replace("\u00a0", "")
+    all_transfers.append(df_page)
     print(f"Done reading page {page}!")
 
 # Concatenate all transfer data into a single DataFrame
 df = pd.concat(all_transfers)
-df.columns = ["Player", "Age", "Team","Estimated Value"]
+df.columns = ["Player", "Age", "Team", "Estimated Value"]
+df.to_csv("Unfiltered.csv", index=True)
 
 # Read minute data CSV
-df1 = pd.read_csv("result.csv")
-
-# Filter players with more than 900 minutes
-df1_filtered = df1[df1['Standard_Min'] > 900]
+df1 = pd.read_csv("result.csv", encoding="utf-8")
 print("Done filtering playing with play time > 900 minutes!")
-# Filter transfer list to keep only those players
-df1_players = df1_filtered['Player'].tolist()
-filtered_df = df[df['Player'].isin(df1_players)]
 
-# Merge transfer data with minute data
-result_df = pd.merge(filtered_df, df1_filtered[['Player', 'Standard_Min']], on='Player', how='left')
-result_df = result_df[["Player", "Age", "Team","Standard_Min","Estimated Value"]]
+df["Canonical_Player"] = df["Player"].apply(canonical_name)
+df1["Canonical_Player"] = df1["Player"].apply(canonical_name)
 
-# Display result
+
+# For df1, create a list of canonical names
+df1_players = df1["Canonical_Player"].tolist()
+
+filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df1_players), axis=1)]
+
+# Ensure 'Team' column exists in both DataFrames before merging
+if 'Team' not in filtered_df.columns:
+    raise KeyError("'Team' column is missing in filtered_df")
+if 'Team' not in df1.columns:
+    raise KeyError("'Team' column is missing in df1")
+# Use .loc to avoid SettingWithCopyWarning and ensure proper assignment
+filtered_df = filtered_df.copy()  # Create a copy to avoid chained assignment issues
+filtered_df["Best_Match"] = filtered_df["Canonical_Player"].apply(lambda n: get_best_match(n, df1_players))
+
+# Ensure 'Match' column exists in df1 before merging
+df1 = df1.rename(columns={'Canonical_Player': 'Match'})
+
+# Merge DataFrames on 'Best_Match' (without using Team as a key)
+result_df = pd.merge(
+    df1[['Player', 'Standard_Min', 'Match']],
+    filtered_df[['Player', 'Best_Match', 'Estimated Value']],
+    left_on=["Match"],
+    right_on=["Best_Match"],
+    how='left'
+)
+
+# Save the merged DataFrame to a CSV file
+result_df.to_csv("match.csv", index=False)
+
+# Choose the desired columns:
+result_df = result_df[["Player_x", "Standard_Min", "Estimated Value"]]
+result_df = result_df.rename(columns={"Player_x": "Player", "Standard_Min": "Played Time"})
+result_df = result_df[result_df["Played Time"] > 900]
+
+# Find players in result_df missing the Estimated Value
+missing_values_df = result_df[result_df["Estimated Value"].isna()]
+
+# Iterate through missing players and find the best match in df
+for index, row in missing_values_df.iterrows():
+    player_name = row["Player"]
+
+    # Use fuzzy matching to find the best match for the player
+    best_match = process.extractOne(player_name, df["Player"], scorer=fuzz.ratio)
+    
+    if best_match and best_match[1] > 80:  # Match confidence threshold
+        matched_player = df[df["Player"] == best_match[0]]
+        if not matched_player.empty:
+            # Fill the missing Estimated Value
+            result_df.loc[index, "Estimated Value"] = matched_player["Estimated Value"].values[0]
+
+# Save the updated DataFrame
+result_df.to_csv("Transfer_values.csv", index=False, encoding="utf-8-sig")
+
 print(result_df)
-
-result_df.to_csv("Transfer_values.csv")
-print("Data saved to Trandfer_values.csv")
