@@ -48,24 +48,24 @@ df = pd.concat(all_transfers)
 df.columns = ["Player", "Age", "Team", "Estimated Value"]
 
 # Read minute data CSV
-df1 = pd.read_csv("result.csv", encoding="utf-8")
+df_from_fbref = pd.read_csv("result.csv", encoding="utf-8")
 
 
 df["Canonical_Player"] = df["Player"].apply(canonical_name)
-df1["Canonical_Player"] = df1["Player"].apply(canonical_name)
+df_from_fbref["Canonical_Player"] = df_from_fbref["Player"].apply(canonical_name)
 
 
 # For df1, create a list of canonical names
-df1_players = df1["Canonical_Player"].tolist()
+df_from_fbref_players = df_from_fbref["Canonical_Player"].tolist()
 
-filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df1_players), axis=1)]
+filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df_from_fbref_players), axis=1)]
 
 # Use .loc to avoid SettingWithCopyWarning and ensure proper assignment
 filtered_df = filtered_df.copy()  # Create a copy to avoid chained assignment issues
-filtered_df["Best_Match"] = filtered_df["Canonical_Player"].apply(lambda n: get_best_match(n, df1_players))
+filtered_df["Best_Match"] = filtered_df["Canonical_Player"].apply(lambda n: get_best_match(n, df_from_fbref_players))
 
 # Ensure 'Match' column exists in df1 before merging
-df1 = df1.rename(columns={'Canonical_Player': 'Match'})
+df1 = df_from_fbref.rename(columns={'Canonical_Player': 'Match'})
 
 # Merge DataFrames on 'Best_Match' (without using Team as a key)
 result_df = pd.merge(
