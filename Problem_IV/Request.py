@@ -46,11 +46,10 @@ for page in range(1, 23):
 # Concatenate all transfer data into a single DataFrame
 df = pd.concat(all_transfers)
 df.columns = ["Player", "Age", "Team", "Estimated Value"]
-df.to_csv("Unfiltered.csv", index=True)
 
 # Read minute data CSV
 df1 = pd.read_csv("result.csv", encoding="utf-8")
-print("Done filtering playing with play time > 900 minutes!")
+
 
 df["Canonical_Player"] = df["Player"].apply(canonical_name)
 df1["Canonical_Player"] = df1["Player"].apply(canonical_name)
@@ -60,8 +59,6 @@ df1["Canonical_Player"] = df1["Player"].apply(canonical_name)
 df1_players = df1["Canonical_Player"].tolist()
 
 filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df1_players), axis=1)]
-
-
 
 # Use .loc to avoid SettingWithCopyWarning and ensure proper assignment
 filtered_df = filtered_df.copy()  # Create a copy to avoid chained assignment issues

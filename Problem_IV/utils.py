@@ -23,7 +23,7 @@ def canonical_name(name):
 
 
 # Define a function to match names using fuzzy matching
-def match_name(name, choices, threshold=75):
+def match_name(name, choices, threshold=90):
     # Returns the best match if score is above threshold, else returns None
     match, score, _ = process.extractOne(name, choices, scorer=fuzz.token_sort_ratio)
     if score >= threshold:
@@ -37,7 +37,7 @@ def fuzzy_filter(row, valid_names):
     return matched is not None
 
 
-def get_best_match(name, choices, threshold=75):
+def get_best_match(name, choices, threshold=90):
     match, score, _ = process.extractOne(name, choices, scorer=fuzz.token_sort_ratio)
     if score >= threshold:
         return match
