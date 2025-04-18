@@ -1,8 +1,7 @@
 import requests
 import pandas as pd
-import unicodedata
 from utils import *
-from rapidfuzz import process, fuzz
+
 
 
 url = 'https://www.footballtransfers.com/us/values/actions/most-valuable-football-players/overview'
@@ -62,11 +61,8 @@ df1_players = df1["Canonical_Player"].tolist()
 
 filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df1_players), axis=1)]
 
-# Ensure 'Team' column exists in both DataFrames before merging
-if 'Team' not in filtered_df.columns:
-    raise KeyError("'Team' column is missing in filtered_df")
-if 'Team' not in df1.columns:
-    raise KeyError("'Team' column is missing in df1")
+
+
 # Use .loc to avoid SettingWithCopyWarning and ensure proper assignment
 filtered_df = filtered_df.copy()  # Create a copy to avoid chained assignment issues
 filtered_df["Best_Match"] = filtered_df["Canonical_Player"].apply(lambda n: get_best_match(n, df1_players))
@@ -76,36 +72,34 @@ df1 = df1.rename(columns={'Canonical_Player': 'Match'})
 
 # Merge DataFrames on 'Best_Match' (without using Team as a key)
 result_df = pd.merge(
-    df1[['Player', 'Standard_Min', 'Match']],
+    df1[['Player',"Team" ,'Standard_Min', 'Match']],
     filtered_df[['Player', 'Best_Match', 'Estimated Value']],
     left_on=["Match"],
     right_on=["Best_Match"],
     how='left'
 )
 
-# Save the merged DataFrame to a CSV file
-result_df.to_csv("match.csv", index=False)
-
 # Choose the desired columns:
-result_df = result_df[["Player_x", "Standard_Min", "Estimated Value"]]
+result_df = result_df[["Player_x", "Standard_Min", "Team", "Estimated Value"]]
 result_df = result_df.rename(columns={"Player_x": "Player", "Standard_Min": "Played Time"})
 result_df = result_df[result_df["Played Time"] > 900]
-
 # Find players in result_df missing the Estimated Value
 missing_values_df = result_df[result_df["Estimated Value"].isna()]
 
 # Iterate through missing players and find the best match in df
 for index, row in missing_values_df.iterrows():
     player_name = row["Player"]
-
-    # Use fuzzy matching to find the best match for the player
-    best_match = process.extractOne(player_name, df["Player"], scorer=fuzz.ratio)
+    player_team = row["Team"]
+    print(f"Tranfer value of player {player_name} in {player_team} is missing, starts to find on website")
+    # Perform external lookup to get the estimated value
+    estimated_value = external_lookup(player_name, player_team)
     
-    if best_match and best_match[1] > 80:  # Match confidence threshold
-        matched_player = df[df["Player"] == best_match[0]]
-        if not matched_player.empty:
-            # Fill the missing Estimated Value
-            result_df.loc[index, "Estimated Value"] = matched_player["Estimated Value"].values[0]
+    # Update the result_df with the retrieved value
+    if estimated_value:
+        print("Found!")
+        result_df.loc[index, "Estimated Value"] = estimated_value
+    else:
+        print("Not found!")
 
 # Save the updated DataFrame
 result_df.to_csv("Transfer_values.csv", index=False, encoding="utf-8-sig")

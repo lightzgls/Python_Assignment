@@ -1,6 +1,8 @@
-import pandas as pd
+
 import unicodedata
 from rapidfuzz import process, fuzz
+import re
+import requests
 
 # Example canonical name function (you can adjust as needed)
 def canonical_name(name):
@@ -17,6 +19,9 @@ def canonical_name(name):
         # For example, return the one with fewer characters (or choose your preferred rule)
         return option1 if len(option1) <= len(option2) else option2
     return name.lower().strip()
+
+
+
 # Define a function to match names using fuzzy matching
 def match_name(name, choices, threshold=75):
     # Returns the best match if score is above threshold, else returns None
@@ -31,27 +36,37 @@ def fuzzy_filter(row, valid_names):
     matched = match_name(row["Canonical_Player"], valid_names)
     return matched is not None
 
-# Then merge using (for example) the original "Player" column, or merge based on best fuzzy matches.
-# One way is to add a column with the best match from df1:
+
 def get_best_match(name, choices, threshold=75):
     match, score, _ = process.extractOne(name, choices, scorer=fuzz.token_sort_ratio)
     if score >= threshold:
         return match
     return None
-import unicodedata
-import pandas as pd
-
-def normalize_name(name: str) -> str:
-    """
-    Normalize a string by removing diacritics and converting to lower case.
-    """
-    if not isinstance(name, str):
-        return ""
-    # Normalize Unicode and remove diacritics
-    normalized = unicodedata.normalize('NFKD', name)
-    normalized = "".join(c for c in normalized if not unicodedata.combining(c))
-    return normalized.lower().strip()
 
 
-# Example usage:
-# compare_player_names_in_dfs(compare_df, result_df)
+def external_lookup(player_name, team_name):
+    url_api = "https://www.footballtransfers.com/us/search/actions/search"
+    suffix = str(player_name) + " " + str(team_name)
+    resuffix = re.sub(r'\s', '%20', suffix)
+    headers = {
+        "referer" : f"https://www.footballtransfers.com/us/search?search_value={resuffix}",
+        "x-requested-with" : "XMLHttpRequest",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",
+        "content-type":"application/x-www-form-urlencoded; charset=UTF-8"
+    }
+    payload ={
+        "search_page" : "1",
+        "search_value" : suffix,
+        "players" : 1,
+        "teams" : 1
+    }
+    response = requests.post(url=url_api,headers=headers,data=payload)
+    price = response.json()
+    data = response.json()
+    if data.get("found", 0) > 0 and data.get("hits"):
+        # Assumes that the transfer value is in the first hit's document field as "transfer_value"
+        transfer_value = data["hits"][0]["document"].get("transfer_value")
+        return transfer_value
+    return None
+
+
