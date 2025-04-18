@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
-
+from kneed import KneeLocator
 # Load data
 df = pd.read_csv("result.csv")
 df = df.iloc[:, 4:]  # Select columns starting from the 5th column
 
 # Change NaN value
-df.replace("N/a",pd.NA)
+df = df.apply(pd.to_numeric, errors='coerce')
 df = df.fillna(0)
 
 # Select only numeric columns
@@ -21,7 +21,7 @@ scaler = StandardScaler()
 data_scaled = scaler.fit_transform(data)
 
 # Try different values of k
-range_n_clusters = range(2, len(df.columns))
+range_n_clusters = range(2,df.shape[0])
 
 inertias = []
 silhouette_avgs = []
@@ -32,11 +32,19 @@ for k in range_n_clusters:
     inertias.append(kmeans.inertia_)
     silhouette_avgs.append(silhouette_score(data_scaled, cluster_labels))
 
+
+# Determine the optimal k using the elbow method (KneeLocator)
+kelbow = KneeLocator(range_n_clusters, inertias, curve='convex', direction="decreasing")
+optimal_k = kelbow.knee
+print("Optimal k (Elbow/Inertia):", optimal_k)
+
+
 # Plot
 fig, ax = plt.subplots(1, 2, figsize=(14, 5))
 
 # Elbow plot (inertia)
 ax[0].plot(range_n_clusters, inertias, marker='o')
+ax[0].axvline(optimal_k, linestyle='--', color='red', label=f'Optimal k = {optimal_k}')
 ax[0].set_title("Elbow Method (Inertia)")
 ax[0].set_xlabel("Number of Clusters (k)")
 ax[0].set_ylabel("Inertia (WCSS)")
