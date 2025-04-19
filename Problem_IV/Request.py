@@ -1,7 +1,7 @@
 import requests
 import pandas as pd
 from utils import *
-
+from unidecode import unidecode
 
 
 url = 'https://www.footballtransfers.com/us/values/actions/most-valuable-football-players/overview'
@@ -50,36 +50,15 @@ df.columns = ["Player", "Age", "Team", "Estimated Value"]
 # Read minute data CSV
 df_from_fbref = pd.read_csv("result.csv", encoding="utf-8")
 
-
-df["Canonical_Player"] = df["Player"].apply(canonical_name)
-df_from_fbref["Canonical_Player"] = df_from_fbref["Player"].apply(canonical_name)
-
-
-# For df1, create a list of canonical names
-df_from_fbref_players = df_from_fbref["Canonical_Player"].tolist()
-
-filtered_df = df[df.apply(lambda row: fuzzy_filter(row, df_from_fbref_players), axis=1)]
-
-# Use .loc to avoid SettingWithCopyWarning and ensure proper assignment
-filtered_df = filtered_df.copy()  # Create a copy to avoid chained assignment issues
-filtered_df["Best_Match"] = filtered_df["Canonical_Player"].apply(lambda n: get_best_match(n, df_from_fbref_players))
-
-# Ensure 'Match' column exists in df1 before merging
-df1 = df_from_fbref.rename(columns={'Canonical_Player': 'Match'})
-
-# Merge DataFrames on 'Best_Match' (without using Team as a key)
 result_df = pd.merge(
-    df1[['Player',"Team" ,'Standard_Min', 'Match']],
-    filtered_df[['Player', 'Best_Match', 'Estimated Value']],
-    left_on=["Match"],
-    right_on=["Best_Match"],
+    df_from_fbref[['Player',"Team",'Standard_Min']],
+    df[['Player', 'Estimated Value']],
+    on="Player",
     how='left'
 )
-
-# Choose the desired columns:
-result_df = result_df[["Player_x", "Standard_Min", "Team", "Estimated Value"]]
-result_df = result_df.rename(columns={"Player_x": "Player", "Standard_Min": "Played Time"})
+result_df = result_df.rename(columns={"Standard_Min": "Played Time"})
 result_df = result_df[result_df["Played Time"] > 900]
+
 # Find players in result_df missing the Estimated Value
 missing_values_df = result_df[result_df["Estimated Value"].isna()]
 
@@ -87,9 +66,11 @@ missing_values_df = result_df[result_df["Estimated Value"].isna()]
 for index, row in missing_values_df.iterrows():
     player_name = row["Player"]
     player_team = row["Team"]
+    # Normalize player name to remove special characters
+    normalized_name = unidecode(player_name)
     print(f"Tranfer value of player {player_name} in {player_team} is missing, starts to find on website")
-    # Perform external lookup to get the estimated value
-    estimated_value = external_lookup(player_name, player_team)
+    # Perform external lookup to get the estimated value using the normalized name
+    estimated_value = external_lookup(normalized_name, player_team)
     
     # Update the result_df with the retrieved value
     if estimated_value:
@@ -99,6 +80,7 @@ for index, row in missing_values_df.iterrows():
         print("Not found!")
 
 # Save the updated DataFrame
+result_df = result_df[["Player","Team","Estimated Value"]]
 result_df.to_csv("Transfer_values.csv", index=False, encoding="utf-8-sig")
 
 print(result_df)
