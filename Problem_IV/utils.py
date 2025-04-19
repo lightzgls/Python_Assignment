@@ -18,7 +18,6 @@ def external_lookup(player_name, team_name):
         "players" : 1,
         "teams" : 1
     }
-    print(suffix)
     response = requests.post(url=url_api,headers=headers,data=payload)
     price = response.json()
     data = response.json()

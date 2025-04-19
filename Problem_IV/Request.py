@@ -80,7 +80,7 @@ for index, row in missing_values_df.iterrows():
         print("Not found!")
 
 # Save the updated DataFrame
-result_df = result_df[["Player","Team","Estimated Value"]]
+result_df = result_df[["Player","Team","Played Time","Estimated Value"]]
 result_df.to_csv("Transfer_values.csv", index=False, encoding="utf-8-sig")
 
 print(result_df)
