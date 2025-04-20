@@ -1,24 +1,38 @@
 import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+# from selenium import webdriver
+# from selenium.webdriver.chrome.service import Service
+# from webdriver_manager.chrome import ChromeDriverManager
+import undetected_chromedriver as uc
 from bs4 import BeautifulSoup
 import time
 from ultils import rename_duplicates
 
-# Set up Chrome options for headless mode
-options = webdriver.ChromeOptions()
-options.add_argument("--headless")  # Run without GUI
-options.add_argument("--disable-gpu")  # Required for some systems
-options.add_argument("--no-sandbox")  # Helps avoid permission errors in Linux
-options.add_argument("--disable-dev-shm-usage")  # Prevents memory issues
-options.add_argument("--ignore-certificate-errors")  # Ignore SSL certificate errors
-options.add_argument("--disable-software-rasterizer")
-options.add_argument("--disable-webgl")  # Disable WebGL to avoid warnings
+# # Set up Chrome options for headless mode
+# options = webdriver.ChromeOptions()
+# # options.add_argument("--headless")  # Run without GUI
+# options.add_argument("--disable-gpu")  # Required for some systems
+# options.add_argument("--no-sandbox")  # Helps avoid permission errors in Linux
+# options.add_argument("--disable-dev-shm-usage")  # Prevents memory issues
+# options.add_argument("--ignore-certificate-errors")  # Ignore SSL certificate errors
+# options.add_argument("--disable-software-rasterizer")
+# options.add_argument("--disable-webgl")  # Disable WebGL to avoid warnings
+# options.add_argument("--log-level=3")  # Suppress all logs except fatal errors
+# # options.add_argument("user-data-dir=/path/to/your/chrome/profile")
+
+# # Create the WebDriver
+# service = Service(ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=service, options=options)
+
+
+
+# Setup undetected Chrome
+options = uc.ChromeOptions()
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("--log-level=3")  # Suppress all logs except fatal errors
-# Create the WebDriver
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=options)
+# options.add_argument("--headless")  # Optional, but not recommended if CAPTCHA needs to be solved manually
+
+driver = uc.Chrome(options=options)
 
 # Links and id to scrape
 links = {
@@ -36,7 +50,7 @@ links = {
 tables = {}
 for link, id in links.items():
     driver.get(link)
-    time.sleep(3)
+    time.sleep(20)
     soup = BeautifulSoup(driver.page_source, "html.parser")
 
     #find the table by the tag name
@@ -60,7 +74,8 @@ for link, id in links.items():
     tables[id] = table_data
     print(f"Fetched table {id}")
 
-
+# Close the WebDriver
+driver.quit()
 
 # Read dataframes directly from the scraped tables
 standard_df = pd.DataFrame(tables["stats_standard"][1:], columns=tables["stats_standard"][0])
