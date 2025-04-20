@@ -139,7 +139,7 @@ result_header = ['Player', 'Nation', 'Pos', 'Squad',
 result_df = standard_df
 for df in DFs[1:]:
     result_df = pd.merge(result_df, df, how="left", on=["Player", "Nation", "Pos", "Squad"])
-
+# result_df.to_csv("Unfiltered_stats.csv")
 #keep the columns listed in result_header
 result_df = result_df[result_header]
 

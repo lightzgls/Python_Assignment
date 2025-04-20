@@ -57,7 +57,7 @@ result_df = pd.merge(
     how='left'
 )
 result_df = result_df.rename(columns={"Standard_Min": "Played Time"})
-result_df = result_df[result_df["Played Time"] > 900]
+# result_df = result_df[result_df["Played Time"] > 900]
 
 # Find players in result_df missing the Estimated Value
 missing_values_df = result_df[result_df["Estimated Value"].isna()]
@@ -81,6 +81,6 @@ for index, row in missing_values_df.iterrows():
 
 # Save the updated DataFrame
 result_df = result_df[["Player","Team","Played Time","Estimated Value"]]
-result_df.to_csv("Transfer_values.csv", index=False, encoding="utf-8-sig")
+result_df.to_csv("Transfer_values_unfiltered.csv", index=False, encoding="utf-8-sig")
 
 print(result_df)
