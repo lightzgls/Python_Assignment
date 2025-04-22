@@ -57,7 +57,7 @@ result_df = pd.merge(
     how='left'
 )
 result_df = result_df.rename(columns={"Standard_Min": "Played Time"})
-# result_df = result_df[result_df["Played Time"] > 900]
+result_df = result_df[result_df["Played Time"] > 900]
 
 # Find players in result_df missing the Estimated Value
 missing_values_df = result_df[result_df["Estimated Value"].isna()]
