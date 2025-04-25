@@ -49,4 +49,4 @@ for team, group in grouped:
 result_df = result_df.replace("","N/a").fillna("N/a")
 
 #convert Dataframe to csv file
-result_df.to_csv("result2.csv",index=True)
+result_df.to_csv("results2.csv",index=True)
