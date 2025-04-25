@@ -8,7 +8,7 @@ def make_header(criterias):
     return res
 
 
-df = pd.read_csv("result.csv")
+df = pd.read_csv("results.csv")
 criterias = df.columns[4:]
 
     

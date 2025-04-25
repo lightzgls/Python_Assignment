@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the CSV file
-df = pd.read_csv("result2.csv", index_col=False)
+df = pd.read_csv("results2.csv", index_col=False)
 
 #remove the "all" rwo and reset the index
 df = df.drop(0).reset_index(drop=True)

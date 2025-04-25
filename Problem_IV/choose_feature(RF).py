@@ -22,7 +22,7 @@ def convert_value(val):
 
 # === Load datasets ===
 try:
-    stats = pd.read_csv('result.csv')
+    stats = pd.read_csv('results.csv')
     price = pd.read_csv("Transfer_values.csv")
 except FileNotFoundError as e:
     raise FileNotFoundError(f"Dataset not found: {e}")

@@ -3,7 +3,7 @@ from prettytable import PrettyTable
 
 # Try reading CSV file
 try:
-    df = pd.read_csv("result.csv")
+    df = pd.read_csv("results.csv")
 except FileNotFoundError:
     print("Result.csv file not found")
     exit()

@@ -48,7 +48,7 @@ df = pd.concat(all_transfers)
 df.columns = ["Player", "Age", "Team", "Estimated Value"]
 
 # Read minute data CSV
-df_from_fbref = pd.read_csv("result.csv", encoding="utf-8")
+df_from_fbref = pd.read_csv("results.csv", encoding="utf-8")
 
 result_df = pd.merge(
     df_from_fbref[['Player',"Team",'Standard_Min']],

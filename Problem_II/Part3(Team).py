@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 
 
-df = pd.read_csv("result.csv")
+df = pd.read_csv("results.csv")
 
 criterias = ["Shooting_SoT%", "Shooting_SoT/90", "Shooting_G/Sh","Defense_Att","Defense_Lost","Defense_Blocks"]  # List of criteria columns
   # List of criteria columns
