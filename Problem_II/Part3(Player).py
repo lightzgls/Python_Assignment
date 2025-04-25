@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv("result.csv")
 
 #get the criteria except name, team, pos, nation
-criterias = df.columns[4:]
+criterias = ["Shooting_SoT%", "Shooting_SoT/90", "Shooting_G/Sh","Defense_Att","Defense_Lost","Defense_Blocks"]
 
 for criteria in criterias:
 

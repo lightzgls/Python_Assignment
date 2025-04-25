@@ -191,7 +191,7 @@ result_df = result_df.sort_values(by="Player")
 result_df.columns = newheader[:len(newheader)]
 
 # Save the resulting DataFrame to a CSV file
-result_df.to_csv("result.csv", index=False)
+result_df.to_csv("results.csv", index=False)
 
 # Close the WebDriver
 driver.quit()

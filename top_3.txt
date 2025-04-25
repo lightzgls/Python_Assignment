@@ -2,27 +2,27 @@ Top 3 players with the criteria 'Age':
 +------------------+-------+----------+-------+
 |      Player      |  Pos  |   Team   |  Age  |
 +------------------+-------+----------+-------+
-| Łukasz Fabiański |   GK  | West Ham | 39.99 |
-|   Ashley Young   | DF,FW | Everton  | 39.77 |
-|   James Milner   |   MF  | Brighton | 39.28 |
+| Łukasz Fabiański |   GK  | West Ham | 40.02 |
+|   Ashley Young   | DF,FW | Everton  | 39.79 |
+|   James Milner   |   MF  | Brighton |  39.3 |
 +------------------+-------+----------+-------+
 Bottom 3 players with the criteria 'Age':
-+--------------------+-------+-----------+-------+
-|       Player       |  Pos  |    Team   |  Age  |
-+--------------------+-------+-----------+-------+
-|    Mikey Moore     | FW,MF | Tottenham | 17.68 |
-|   Ethan Nwaneri    | FW,MF |  Arsenal  | 18.07 |
-| Myles Lewis-Skelly |   DF  |  Arsenal  | 18.55 |
-+--------------------+-------+-----------+-------+
++---------------+-------+----------------+-------+
+|     Player    |  Pos  |      Team      |  Age  |
++---------------+-------+----------------+-------+
+|  Mikey Moore  | FW,MF |   Tottenham    |  17.7 |
+| Ethan Nwaneri | FW,MF |    Arsenal     | 18.09 |
+|  Harry Amass  |   DF  | Manchester Utd | 18.11 |
++---------------+-------+----------------+-------+
 
 Top 3 players with the criteria 'Standard_MP':
-+------------------+-------+-----------------+-------------+
-|      Player      |  Pos  |       Team      | Standard_MP |
-+------------------+-------+-----------------+-------------+
-|    Alex Iwobi    | FW,MF |      Fulham     |      32     |
-|  Anthony Elanga  |   FW  | Nott'ham Forest |      32     |
-| Antonee Robinson |   DF  |      Fulham     |      32     |
-+------------------+-------+-----------------+-------------+
++----------------+-------+----------------+-------------+
+|     Player     |  Pos  |      Team      | Standard_MP |
++----------------+-------+----------------+-------------+
+|   David Raya   |   GK  |    Arsenal     |      34     |
+| Dean Henderson |   GK  | Crystal Palace |      34     |
+|  Ismaila Sarr  | MF,FW | Crystal Palace |      34     |
++----------------+-------+----------------+-------------+
 Bottom 3 players with the criteria 'Standard_MP':
 +---------------+-----+----------------+-------------+
 |     Player    | Pos |      Team      | Standard_MP |
@@ -33,13 +33,13 @@ Bottom 3 players with the criteria 'Standard_MP':
 +---------------+-----+----------------+-------------+
 
 Top 3 players with the criteria 'Standard_Starts':
-+--------------+-----+-----------+-----------------+
-|    Player    | Pos |    Team   | Standard_Starts |
-+--------------+-----+-----------+-----------------+
-|  Bernd Leno  |  GK |   Fulham  |        32       |
-| Bryan Mbeumo |  FW | Brentford |        32       |
-|  David Raya  |  GK |  Arsenal  |        32       |
-+--------------+-----+-----------+-----------------+
++-----------------+-----+----------------+-----------------+
+|      Player     | Pos |      Team      | Standard_Starts |
++-----------------+-----+----------------+-----------------+
+|    David Raya   |  GK |    Arsenal     |        34       |
+|  Dean Henderson |  GK | Crystal Palace |        34       |
+| Tyrick Mitchell |  DF | Crystal Palace |        34       |
++-----------------+-----+----------------+-----------------+
 Bottom 3 players with the criteria 'Standard_Starts':
 +---------------+-------+----------------+-----------------+
 |     Player    |  Pos  |      Team      | Standard_Starts |
@@ -50,13 +50,13 @@ Bottom 3 players with the criteria 'Standard_Starts':
 +---------------+-------+----------------+-----------------+
 
 Top 3 players with the criteria 'Standard_Min':
-+-----------------+-----+---------+--------------+
-|      Player     | Pos |   Team  | Standard_Min |
-+-----------------+-----+---------+--------------+
-|    Bernd Leno   |  GK |  Fulham |    2880.0    |
-|    David Raya   |  GK | Arsenal |    2880.0    |
-| Jordan Pickford |  GK | Everton |    2880.0    |
-+-----------------+-----+---------+--------------+
++----------------+-----+----------------+--------------+
+|     Player     | Pos |      Team      | Standard_Min |
++----------------+-----+----------------+--------------+
+|   David Raya   |  GK |    Arsenal     |    3060.0    |
+| Dean Henderson |  GK | Crystal Palace |    3060.0    |
+|   Bernd Leno   |  GK |     Fulham     |    2970.0    |
++----------------+-----+----------------+--------------+
 Bottom 3 players with the criteria 'Standard_Min':
 +----------------------+-----+-----------------+--------------+
 |        Player        | Pos |       Team      | Standard_Min |
@@ -71,8 +71,8 @@ Top 3 players with the criteria 'Standard_Gls':
 |     Player     | Pos |       Team      | Standard_Gls |
 +----------------+-----+-----------------+--------------+
 | Mohamed Salah  |  FW |    Liverpool    |      27      |
+| Alexander Isak |  FW |  Newcastle Utd  |      21      |
 | Erling Haaland |  FW | Manchester City |      21      |
-| Alexander Isak |  FW |  Newcastle Utd  |      20      |
 +----------------+-----+-----------------+--------------+
 Bottom 3 players with the criteria 'Standard_Gls':
 +--------------------+-----+-----------------+--------------+
@@ -84,13 +84,13 @@ Bottom 3 players with the criteria 'Standard_Gls':
 +--------------------+-----+-----------------+--------------+
 
 Top 3 players with the criteria 'Standard_Ast':
-+------------------+-------+-----------+--------------+
-|      Player      |  Pos  |    Team   | Standard_Ast |
-+------------------+-------+-----------+--------------+
-|  Mohamed Salah   |   FW  | Liverpool |      18      |
-| Antonee Robinson |   DF  |   Fulham  |      10      |
-|   Bukayo Saka    | FW,MF |  Arsenal  |      10      |
-+------------------+-------+-----------+--------------+
++------------------+-----+---------------+--------------+
+|      Player      | Pos |      Team     | Standard_Ast |
++------------------+-----+---------------+--------------+
+|  Mohamed Salah   |  FW |   Liverpool   |      18      |
+|   Jacob Murphy   |  FW | Newcastle Utd |      11      |
+| Antonee Robinson |  DF |     Fulham    |      10      |
++------------------+-----+---------------+--------------+
 Bottom 3 players with the criteria 'Standard_Ast':
 +--------------------+-----+-----------------+--------------+
 |       Player       | Pos |       Team      | Standard_Ast |
@@ -101,13 +101,13 @@ Bottom 3 players with the criteria 'Standard_Ast':
 +--------------------+-----+-----------------+--------------+
 
 Top 3 players with the criteria 'Standard_CrdY':
-+--------------+-----+-------------+---------------+
-|    Player    | Pos |     Team    | Standard_CrdY |
-+--------------+-----+-------------+---------------+
-|  Saša Lukić  |  MF |    Fulham   |       12      |
-| Flynn Downes |  MF | Southampton |       10      |
-|  João Gomes  |  MF |    Wolves   |       10      |
-+--------------+-----+-------------+---------------+
++--------------+-----+----------------+---------------+
+|    Player    | Pos |      Team      | Standard_CrdY |
++--------------+-----+----------------+---------------+
+|  Saša Lukić  |  MF |     Fulham     |       12      |
+| Will Hughes  |  MF | Crystal Palace |       11      |
+| Flynn Downes |  MF |  Southampton   |       10      |
++--------------+-----+----------------+---------------+
 Bottom 3 players with the criteria 'Standard_CrdY':
 +-----------------------+-------+----------------+---------------+
 |         Player        |  Pos  |      Team      | Standard_CrdY |
@@ -138,9 +138,9 @@ Top 3 players with the criteria 'Standard_xG':
 +----------------+-----+-----------------+-------------+
 |     Player     | Pos |       Team      | Standard_xG |
 +----------------+-----+-----------------+-------------+
-| Mohamed Salah  |  FW |    Liverpool    |     22.6    |
+| Mohamed Salah  |  FW |    Liverpool    |     23.7    |
 | Erling Haaland |  FW | Manchester City |     20.8    |
-| Alexander Isak |  FW |  Newcastle Utd  |     16.6    |
+| Alexander Isak |  FW |  Newcastle Utd  |     17.5    |
 +----------------+-----+-----------------+-------------+
 Bottom 3 players with the criteria 'Standard_xG':
 +--------------------+-----+-----------------+-------------+
@@ -172,9 +172,9 @@ Top 3 players with the criteria 'Standard_PrgC':
 +---------------+-------+-----------------+---------------+
 |     Player    |  Pos  |       Team      | Standard_PrgC |
 +---------------+-------+-----------------+---------------+
-|  Jeremy Doku  | FW,MF | Manchester City |      169      |
-|  Kaoru Mitoma | FW,MF |     Brighton    |      135      |
-| Mohamed Salah |   FW  |    Liverpool    |      133      |
+|  Jeremy Doku  | FW,MF | Manchester City |      176      |
+| Mohamed Salah |   FW  |    Liverpool    |      138      |
+|  Kaoru Mitoma | FW,MF |     Brighton    |      136      |
 +---------------+-------+-----------------+---------------+
 Bottom 3 players with the criteria 'Standard_PrgC':
 +----------------+-----+--------------+---------------+
@@ -189,9 +189,9 @@ Top 3 players with the criteria 'Standard_PrgP':
 +-----------------+-----+-----------------+---------------+
 |      Player     | Pos |       Team      | Standard_PrgP |
 +-----------------+-----+-----------------+---------------+
-| Bruno Fernandes |  MF |  Manchester Utd |      254      |
-|  Joško Gvardiol |  DF | Manchester City |      225      |
-| Bruno Guimarães |  MF |  Newcastle Utd  |      217      |
+| Bruno Fernandes |  MF |  Manchester Utd |      264      |
+|  Joško Gvardiol |  DF | Manchester City |      240      |
+| Martin Ødegaard |  MF |     Arsenal     |      231      |
 +-----------------+-----+-----------------+---------------+
 Bottom 3 players with the criteria 'Standard_PrgP':
 +----------------+-----+-------------+---------------+
@@ -206,8 +206,8 @@ Top 3 players with the criteria 'Standard_PrgR':
 +---------------+-------+-----------+---------------+
 |     Player    |  Pos  |    Team   | Standard_PrgR |
 +---------------+-------+-----------+---------------+
-| Mohamed Salah |   FW  | Liverpool |      398      |
-|  Bryan Mbeumo |   FW  | Brentford |      292      |
+| Mohamed Salah |   FW  | Liverpool |      407      |
+|  Bryan Mbeumo |   FW  | Brentford |      300      |
 |  Kaoru Mitoma | FW,MF |  Brighton |      274      |
 +---------------+-------+-----------+---------------+
 Bottom 3 players with the criteria 'Standard_PrgR':
@@ -220,13 +220,13 @@ Bottom 3 players with the criteria 'Standard_PrgR':
 +----------------+-----+--------------+---------------+
 
 Top 3 players with the criteria 'Standard_Gls/90':
-+----------------+-------+-----------------+-----------------+
-|     Player     |  Pos  |       Team      | Standard_Gls/90 |
-+----------------+-------+-----------------+-----------------+
-|  James Mcatee  | MF,FW | Manchester City |       1.21      |
-| Ryan Sessegnon | FW,DF |      Fulham     |       1.09      |
-| Donyell Malen  |   FW  |   Aston Villa   |       1.04      |
-+----------------+-------+-----------------+-----------------+
++---------------+-----+-------------+-----------------+
+|     Player    | Pos |     Team    | Standard_Gls/90 |
++---------------+-----+-------------+-----------------+
+| Donyell Malen |  FW | Aston Villa |       0.99      |
+|  Jáder Durán  |  FW | Aston Villa |       0.99      |
+|  Richarlison  |  FW |  Tottenham  |       0.94      |
++---------------+-----+-------------+-----------------+
 Bottom 3 players with the criteria 'Standard_Gls/90':
 +--------------------+-----+-----------------+-----------------+
 |       Player       | Pos |       Team      | Standard_Gls/90 |
@@ -237,13 +237,13 @@ Bottom 3 players with the criteria 'Standard_Gls/90':
 +--------------------+-----+-----------------+-----------------+
 
 Top 3 players with the criteria 'Standard_Ast/90':
-+---------------+-------+-----------+-----------------+
-|     Player    |  Pos  |    Team   | Standard_Ast/90 |
-+---------------+-------+-----------+-----------------+
-|  Bukayo Saka  | FW,MF |  Arsenal  |       0.66      |
-|   Danny Ings  | FW,MF |  West Ham |       0.63      |
-| Mohamed Salah |   FW  | Liverpool |       0.57      |
-+---------------+-------+-----------+-----------------+
++----------------+-------+----------+-----------------+
+|     Player     |  Pos  |   Team   | Standard_Ast/90 |
++----------------+-------+----------+-----------------+
+| Tyrique George |   FW  | Chelsea  |       0.88      |
+|   Danny Ings   | FW,MF | West Ham |       0.63      |
+|  Bukayo Saka   | FW,MF | Arsenal  |       0.62      |
++----------------+-------+----------+-----------------+
 Bottom 3 players with the criteria 'Standard_Ast/90':
 +--------------------+-----+-----------------+-----------------+
 |       Player       | Pos |       Team      | Standard_Ast/90 |
@@ -254,13 +254,13 @@ Bottom 3 players with the criteria 'Standard_Ast/90':
 +--------------------+-----+-----------------+-----------------+
 
 Top 3 players with the criteria 'Standard_xG/90':
-+----------------+-------+-----------------+----------------+
-|     Player     |  Pos  |       Team      | Standard_xG/90 |
-+----------------+-------+-----------------+----------------+
-|  James Mcatee  | MF,FW | Manchester City |      1.1       |
-| Marco Asensio  | MF,FW |   Aston Villa   |      0.86      |
-| Erling Haaland |   FW  | Manchester City |      0.76      |
-+----------------+-------+-----------------+----------------+
++---------------+-------+-----------------+----------------+
+|     Player    |  Pos  |       Team      | Standard_xG/90 |
++---------------+-------+-----------------+----------------+
+|  James Mcatee | MF,FW | Manchester City |      0.85      |
+|  Richarlison  |   FW  |    Tottenham    |      0.83      |
+| Marco Asensio | MF,FW |   Aston Villa   |      0.78      |
++---------------+-------+-----------------+----------------+
 Bottom 3 players with the criteria 'Standard_xG/90':
 +--------------------+-----+-----------------+----------------+
 |       Player       | Pos |       Team      | Standard_xG/90 |
@@ -274,9 +274,9 @@ Top 3 players with the criteria 'Standard_xAG/90':
 +-----------------+-------+-------------+-----------------+
 |      Player     |  Pos  |     Team    | Standard_xAG/90 |
 +-----------------+-------+-------------+-----------------+
+|  Tyrique George |   FW  |   Chelsea   |       0.63      |
 | Mykhailo Mudryk |   FW  |   Chelsea   |       0.58      |
 | Luis Sinisterra | FW,MF | Bournemouth |       0.54      |
-|  Philip Billing |   MF  | Bournemouth |       0.54      |
 +-----------------+-------+-------------+-----------------+
 Bottom 3 players with the criteria 'Standard_xAG/90':
 +----------------+-----+--------------+-----------------+
@@ -300,8 +300,8 @@ Bottom 3 players with the criteria 'Goalkeeping_GA90':
 |    Player    | Pos |    Team   | Goalkeeping_GA90 |
 +--------------+-----+-----------+------------------+
 | Jason Steele |  GK |  Brighton |       0.5        |
-|  David Raya  |  GK |  Arsenal  |       0.84       |
-|   Alisson    |  GK | Liverpool |       0.87       |
+|   Alisson    |  GK | Liverpool |       0.83       |
+|  David Raya  |  GK |  Arsenal  |       0.85       |
 +--------------+-----+-----------+------------------+
 
 Top 3 players with the criteria 'Goalkeeping_Save%':
@@ -310,7 +310,7 @@ Top 3 players with the criteria 'Goalkeeping_Save%':
 +----------------+-----+-------------+-------------------+
 |      Neto      |  GK | Bournemouth |        84.6       |
 |  Mark Travers  |  GK | Bournemouth |        80.0       |
-| Robert Sánchez |  GK |   Chelsea   |        76.8       |
+| Robert Sánchez |  GK |   Chelsea   |        76.1       |
 +----------------+-----+-------------+-------------------+
 Bottom 3 players with the criteria 'Goalkeeping_Save%':
 +-------------------------+-----+----------------+-------------------+
@@ -377,7 +377,7 @@ Top 3 players with the criteria 'Shooting_SoT/90':
 |      Player     |  Pos  |     Team    | Shooting_SoT/90 |
 +-----------------+-------+-------------+-----------------+
 |   Julio Enciso  | MF,FW |   Brighton  |       3.37      |
-|  Donyell Malen  |   FW  | Aston Villa |       2.43      |
+|  Donyell Malen  |   FW  | Aston Villa |       2.64      |
 | Luis Sinisterra | FW,MF | Bournemouth |       2.29      |
 +-----------------+-------+-------------+-----------------+
 Bottom 3 players with the criteria 'Shooting_SoT/90':
@@ -394,8 +394,8 @@ Top 3 players with the criteria 'Shooting_G/Sh':
 |       Player       |  Pos  |       Team      | Shooting_G/Sh |
 +--------------------+-------+-----------------+---------------+
 |    John Stones     | DF,MF | Manchester City |      1.0      |
-| Myles Lewis-Skelly |   DF  |     Arsenal     |      1.0      |
 |    Axel Disasi     |   DF  |     Chelsea     |      0.5      |
+| Myles Lewis-Skelly |   DF  |     Arsenal     |      0.5      |
 +--------------------+-------+-----------------+---------------+
 Bottom 3 players with the criteria 'Shooting_G/Sh':
 +-----------------------+-----+-----------------+---------------+
@@ -411,25 +411,25 @@ Top 3 players with the criteria 'Shooting_Dist':
 |      Player     |  Pos  |       Team      | Shooting_Dist |
 +-----------------+-------+-----------------+---------------+
 | Ibrahim Sangaré |   MF  | Nott'ham Forest |      32.0     |
-|    Welington    | DF,MF |   Southampton   |      31.9     |
 |   Ryan Fraser   | FW,DF |   Southampton   |      31.6     |
+| Nathaniel Clyne | DF,MF |  Crystal Palace |      31.4     |
 +-----------------+-------+-----------------+---------------+
 Bottom 3 players with the criteria 'Shooting_Dist':
-+----------------+-------+--------------+---------------+
-|     Player     |  Pos  |     Team     | Shooting_Dist |
-+----------------+-------+--------------+---------------+
-| Kieran Tierney | DF,FW |   Arsenal    |      2.6      |
-|  Harry Clarke  |   DF  | Ipswich Town |      4.5      |
-| William Saliba |   DF  |   Arsenal    |      4.5      |
-+----------------+-------+--------------+---------------+
++----------------+-------+-----------------+---------------+
+|     Player     |  Pos  |       Team      | Shooting_Dist |
++----------------+-------+-----------------+---------------+
+| Kieran Tierney | DF,FW |     Arsenal     |      2.6      |
+|  Harry Clarke  |   DF  |   Ipswich Town  |      4.5      |
+|  John Stones   | DF,MF | Manchester City |      5.1      |
++----------------+-------+-----------------+---------------+
 
 Top 3 players with the criteria 'Passing_Cmp':
 +-----------------+-----+-----------------+-------------+
 |      Player     | Pos |       Team      | Passing_Cmp |
 +-----------------+-----+-----------------+-------------+
-| Virgil van Dijk |  DF |    Liverpool    |     2294    |
-|  Joško Gvardiol |  DF | Manchester City |     2079    |
-|   Levi Colwill  |  DF |     Chelsea     |     2036    |
+| Virgil van Dijk |  DF |    Liverpool    |     2371    |
+|  William Saliba |  DF |     Arsenal     |     2273    |
+|  Joško Gvardiol |  DF | Manchester City |     2240    |
 +-----------------+-----+-----------------+-------------+
 Bottom 3 players with the criteria 'Passing_Cmp':
 +-----------------+-------+----------------+-------------+
@@ -437,33 +437,33 @@ Bottom 3 players with the criteria 'Passing_Cmp':
 +-----------------+-------+----------------+-------------+
 | Albert Grønbaek | FW,MF |  Southampton   |      13     |
 | Odsonne Édouard | MF,FW | Crystal Palace |      17     |
-|  Callum Wilson  |   FW  | Newcastle Utd  |      23     |
+|  Ali Al Hamadi  |   FW  |  Ipswich Town  |      25     |
 +-----------------+-------+----------------+-------------+
 
 Top 3 players with the criteria 'Passing_Total_Cmp%':
 +----------------+-----+-----------------+--------------------+
 |     Player     | Pos |       Team      | Passing_Total_Cmp% |
 +----------------+-----+-----------------+--------------------+
+| William Saliba |  DF |     Arsenal     |        94.2        |
 | Manuel Akanji  |  DF | Manchester City |        93.9        |
 |   Nathan Aké   |  DF | Manchester City |        93.9        |
-| William Saliba |  DF |     Arsenal     |        93.7        |
 +----------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Passing_Total_Cmp%':
 +--------------+-----+-----------------+--------------------+
 |    Player    | Pos |       Team      | Passing_Total_Cmp% |
 +--------------+-----+-----------------+--------------------+
-|  Matz Sels   |  GK | Nott'ham Forest |        50.6        |
-| George Hirst |  FW |   Ipswich Town  |        54.1        |
-|     Beto     |  FW |     Everton     |        57.2        |
+|  Matz Sels   |  GK | Nott'ham Forest |        50.1        |
+| George Hirst |  FW |   Ipswich Town  |        53.1        |
+|     Beto     |  FW |     Everton     |        56.9        |
 +--------------+-----+-----------------+--------------------+
 
 Top 3 players with the criteria 'Passing_TotDist':
 +-----------------+-----+-----------+-----------------+
 |      Player     | Pos |    Team   | Passing_TotDist |
 +-----------------+-----+-----------+-----------------+
-| Virgil van Dijk |  DF | Liverpool |      41794      |
-|   Levi Colwill  |  DF |  Chelsea  |      36960      |
-|  William Saliba |  DF |  Arsenal  |      34672      |
+| Virgil van Dijk |  DF | Liverpool |      43424      |
+|  William Saliba |  DF |  Arsenal  |      39201      |
+|   Levi Colwill  |  DF |  Chelsea  |      38297      |
 +-----------------+-----+-----------+-----------------+
 Bottom 3 players with the criteria 'Passing_TotDist':
 +-----------------+-------+----------------+-----------------+
@@ -475,21 +475,21 @@ Bottom 3 players with the criteria 'Passing_TotDist':
 +-----------------+-------+----------------+-----------------+
 
 Top 3 players with the criteria 'Passing_Short_Cmp%':
-+----------------+-----+--------------+--------------------+
-|     Player     | Pos |     Team     | Passing_Short_Cmp% |
-+----------------+-----+--------------+--------------------+
-| Aaron Ramsdale |  GK | Southampton  |       100.0        |
-| Antonín Kinský |  GK |  Tottenham   |       100.0        |
-| Arijanet Muric |  GK | Ipswich Town |       100.0        |
-+----------------+-----+--------------+--------------------+
++-------------------+-----+--------------+--------------------+
+|       Player      | Pos |     Team     | Passing_Short_Cmp% |
++-------------------+-----+--------------+--------------------+
+|   Antonín Kinský  |  GK |  Tottenham   |       100.0        |
+|   Arijanet Muric  |  GK | Ipswich Town |       100.0        |
+| Caoimhín Kelleher |  GK |  Liverpool   |       100.0        |
++-------------------+-----+--------------+--------------------+
 Bottom 3 players with the criteria 'Passing_Short_Cmp%':
-+---------------+-------+-----------------+--------------------+
-|     Player    |  Pos  |       Team      | Passing_Short_Cmp% |
-+---------------+-------+-----------------+--------------------+
-|  Paul Onuachu |   FW  |   Southampton   |        62.9        |
-| Rodrigo Muniz |   FW  |      Fulham     |        67.6        |
-|   Ramón Sosa  | FW,MF | Nott'ham Forest |        68.2        |
-+---------------+-------+-----------------+--------------------+
++---------------+-----+--------------+--------------------+
+|     Player    | Pos |     Team     | Passing_Short_Cmp% |
++---------------+-----+--------------+--------------------+
+|  Paul Onuachu |  FW | Southampton  |        63.8        |
+|  George Hirst |  FW | Ipswich Town |        65.5        |
+| Rodrigo Muniz |  FW |    Fulham    |        67.6        |
++---------------+-----+--------------+--------------------+
 
 Top 3 players with the criteria 'Passing_Medium_Cmp%':
 +-------------------+-----+----------------+---------------------+
@@ -503,7 +503,7 @@ Bottom 3 players with the criteria 'Passing_Medium_Cmp%':
 +-----------------+-------+--------------+---------------------+
 |      Player     |  Pos  |     Team     | Passing_Medium_Cmp% |
 +-----------------+-------+--------------+---------------------+
-|   George Hirst  |   FW  | Ipswich Town |         42.9        |
+|   George Hirst  |   FW  | Ipswich Town |         45.5        |
 |       Beto      |   FW  |   Everton    |         49.2        |
 | Albert Grønbaek | FW,MF | Southampton  |         50.0        |
 +-----------------+-------+--------------+---------------------+
@@ -517,21 +517,21 @@ Top 3 players with the criteria 'Passing_Long_Cmp%':
 | Chiedozie Ogbene |   FW  |  Ipswich Town  |       100.0       |
 +------------------+-------+----------------+-------------------+
 Bottom 3 players with the criteria 'Passing_Long_Cmp%':
-+---------------+-------+--------------+-------------------+
-|     Player    |  Pos  |     Team     | Passing_Long_Cmp% |
-+---------------+-------+--------------+-------------------+
-|   Enes Ünal   | FW,MF | Bournemouth  |        0.0        |
-| Evan Ferguson |   FW  |   West Ham   |        0.0        |
-|  George Hirst |   FW  | Ipswich Town |        0.0        |
-+---------------+-------+--------------+-------------------+
++------------------+-------+-------------+-------------------+
+|      Player      |  Pos  |     Team    | Passing_Long_Cmp% |
++------------------+-------+-------------+-------------------+
+|    Enes Ünal     | FW,MF | Bournemouth |        0.0        |
+|  Evan Ferguson   |   FW  |   West Ham  |        0.0        |
+| Marshall Munetsi | MF,FW |    Wolves   |        0.0        |
++------------------+-------+-------------+-------------------+
 
 Top 3 players with the criteria 'Passing_KP':
 +-----------------+-----+----------------+------------+
 |      Player     | Pos |      Team      | Passing_KP |
 +-----------------+-----+----------------+------------+
 | Bruno Fernandes |  MF | Manchester Utd |     77     |
-|   Cole Palmer   |  MF |    Chelsea     |     75     |
-|  Mohamed Salah  |  FW |   Liverpool    |     73     |
+|   Cole Palmer   |  MF |    Chelsea     |     76     |
+|  Mohamed Salah  |  FW |   Liverpool    |     75     |
 +-----------------+-----+----------------+------------+
 Bottom 3 players with the criteria 'Passing_KP':
 +-----------------+-----+-------------+------------+
@@ -543,13 +543,13 @@ Bottom 3 players with the criteria 'Passing_KP':
 +-----------------+-----+-------------+------------+
 
 Top 3 players with the criteria 'Passing_1/3':
-+-----------------+-----+-------------+-------------+
-|      Player     | Pos |     Team    | Passing_1/3 |
-+-----------------+-----+-------------+-------------+
-| Virgil van Dijk |  DF |  Liverpool  |     245     |
-| Youri Tielemans |  MF | Aston Villa |     206     |
-|  Moisés Caicedo |  MF |   Chelsea   |     204     |
-+-----------------+-----+-------------+-------------+
++-----------------+-----+-----------------+-------------+
+|      Player     | Pos |       Team      | Passing_1/3 |
++-----------------+-----+-----------------+-------------+
+| Virgil van Dijk |  DF |    Liverpool    |     258     |
+|  Joško Gvardiol |  DF | Manchester City |     225     |
+| Youri Tielemans |  MF |   Aston Villa   |     221     |
++-----------------+-----+-----------------+-------------+
 Bottom 3 players with the criteria 'Passing_1/3':
 +------------------+-----+--------------+-------------+
 |      Player      | Pos |     Team     | Passing_1/3 |
@@ -563,9 +563,9 @@ Top 3 players with the criteria 'Passing_PPA':
 +-----------------+-------+-----------+-------------+
 |      Player     |  Pos  |    Team   | Passing_PPA |
 +-----------------+-------+-----------+-------------+
-|  Mohamed Salah  |   FW  | Liverpool |      78     |
+|  Mohamed Salah  |   FW  | Liverpool |      80     |
+| Martin Ødegaard |   MF  |  Arsenal  |      78     |
 |    Alex Iwobi   | FW,MF |   Fulham  |      74     |
-| Martin Ødegaard |   MF  |  Arsenal  |      65     |
 +-----------------+-------+-----------+-------------+
 Bottom 3 players with the criteria 'Passing_PPA':
 +--------------------+-------+-----------------+-------------+
@@ -581,8 +581,8 @@ Top 3 players with the criteria 'Passing_CrsPA':
 |      Player      | Pos |     Team    | Passing_CrsPA |
 +------------------+-----+-------------+---------------+
 | Antonee Robinson |  DF |    Fulham   |       26      |
-|   Pedro Porro    |  DF |  Tottenham  |       22      |
-|   Milos Kerkez   |  DF | Bournemouth |       21      |
+|   Pedro Porro    |  DF |  Tottenham  |       26      |
+|   Milos Kerkez   |  DF | Bournemouth |       22      |
 +------------------+-----+-------------+---------------+
 Bottom 3 players with the criteria 'Passing_CrsPA':
 +--------------------+-----+-----------------+---------------+
@@ -597,9 +597,9 @@ Top 3 players with the criteria 'Passing_PrgP':
 +-----------------+-----+-----------------+--------------+
 |      Player     | Pos |       Team      | Passing_PrgP |
 +-----------------+-----+-----------------+--------------+
-| Bruno Fernandes |  MF |  Manchester Utd |     254      |
-|  Joško Gvardiol |  DF | Manchester City |     225      |
-| Bruno Guimarães |  MF |  Newcastle Utd  |     217      |
+| Bruno Fernandes |  MF |  Manchester Utd |     264      |
+|  Joško Gvardiol |  DF | Manchester City |     240      |
+| Martin Ødegaard |  MF |     Arsenal     |     231      |
 +-----------------+-----+-----------------+--------------+
 Bottom 3 players with the criteria 'Passing_PrgP':
 +----------------+-----+-------------+--------------+
@@ -614,9 +614,9 @@ Top 3 players with the criteria 'GCA_SCA':
 +-----------------+-----+----------------+---------+
 |      Player     | Pos |      Team      | GCA_SCA |
 +-----------------+-----+----------------+---------+
-|   Cole Palmer   |  MF |    Chelsea     |   175   |
-| Bruno Fernandes |  MF | Manchester Utd |   156   |
-|  Mohamed Salah  |  FW |   Liverpool    |   139   |
+|   Cole Palmer   |  MF |    Chelsea     |   177   |
+| Bruno Fernandes |  MF | Manchester Utd |   157   |
+|  Mohamed Salah  |  FW |   Liverpool    |   144   |
 +-----------------+-----+----------------+---------+
 Bottom 3 players with the criteria 'GCA_SCA':
 +-------------------+-----+-------------+---------+
@@ -632,8 +632,8 @@ Top 3 players with the criteria 'GCA_SCA90':
 |      Player     |  Pos  |       Team      | GCA_SCA90 |
 +-----------------+-------+-----------------+-----------+
 |  Philip Billing |   MF  |   Bournemouth   |    7.83   |
-|  Luis Guilherme | MF,FW |     West Ham    |    7.38   |
-| Kevin De Bruyne |   MF  | Manchester City |    6.4    |
+|  Luis Guilherme | MF,FW |     West Ham    |    6.52   |
+| Kevin De Bruyne | MF,FW | Manchester City |    6.24   |
 +-----------------+-------+-----------------+-----------+
 Bottom 3 players with the criteria 'GCA_SCA90':
 +-------------------+-----+-------------+-----------+
@@ -649,8 +649,8 @@ Top 3 players with the criteria 'GCA_GCA':
 |      Player      |  Pos  |    Team   | GCA_GCA |
 +------------------+-------+-----------+---------+
 |  Mohamed Salah   |   FW  | Liverpool |    24   |
-|   Bukayo Saka    | FW,MF |  Arsenal  |    21   |
-| Mikkel Damsgaard | MF,FW | Brentford |    18   |
+|   Bukayo Saka    | FW,MF |  Arsenal  |    22   |
+| Mikkel Damsgaard | MF,FW | Brentford |    21   |
 +------------------+-------+-----------+---------+
 Bottom 3 players with the criteria 'GCA_GCA':
 +--------------------+-----+-----------------+---------+
@@ -665,9 +665,9 @@ Top 3 players with the criteria 'GCA_GCA90':
 +----------------+-------+-----------+-----------+
 |     Player     |  Pos  |    Team   | GCA_GCA90 |
 +----------------+-------+-----------+-----------+
-|  Bukayo Saka   | FW,MF |  Arsenal  |    1.38   |
-| Harvey Elliott | MF,FW | Liverpool |    1.1    |
-|  Mikey Moore   | FW,MF | Tottenham |    0.97   |
+|  Solly March   | FW,MF |  Brighton |    1.7    |
+|  Bukayo Saka   | FW,MF |  Arsenal  |    1.36   |
+| Harvey Elliott | MF,FW | Liverpool |    0.98   |
 +----------------+-------+-----------+-----------+
 Bottom 3 players with the criteria 'GCA_GCA90':
 +--------------------+-----+-----------------+-----------+
@@ -682,9 +682,9 @@ Top 3 players with the criteria 'Defense_Tkl':
 +--------------------+-----+----------------+-------------+
 |       Player       | Pos |      Team      | Defense_Tkl |
 +--------------------+-----+----------------+-------------+
-| Idrissa Gana Gueye |  MF |    Everton     |     116     |
-|    Daniel Muñoz    |  DF | Crystal Palace |     100     |
-| Noussair Mazraoui  |  DF | Manchester Utd |      95     |
+| Idrissa Gana Gueye |  MF |    Everton     |     119     |
+|    Daniel Muñoz    |  DF | Crystal Palace |     109     |
+| Noussair Mazraoui  |  DF | Manchester Utd |     100     |
 +--------------------+-----+----------------+-------------+
 Bottom 3 players with the criteria 'Defense_Tkl':
 +----------------+-----+--------------+-------------+
@@ -699,9 +699,9 @@ Top 3 players with the criteria 'Defense_TklW':
 +--------------------+-----+----------------+--------------+
 |       Player       | Pos |      Team      | Defense_TklW |
 +--------------------+-----+----------------+--------------+
+|    Daniel Muñoz    |  DF | Crystal Palace |      70      |
 | Idrissa Gana Gueye |  MF |    Everton     |      70      |
-|    Daniel Muñoz    |  DF | Crystal Palace |      65      |
-|   Moisés Caicedo   |  MF |    Chelsea     |      58      |
+|   Moisés Caicedo   |  MF |    Chelsea     |      61      |
 +--------------------+-----+----------------+--------------+
 Bottom 3 players with the criteria 'Defense_TklW':
 +----------------+-----+--------------+--------------+
@@ -716,9 +716,9 @@ Top 3 players with the criteria 'Defense_Att':
 +------------------------+-----+-----------------+-------------+
 |         Player         | Pos |       Team      | Defense_Att |
 +------------------------+-----+-----------------+-------------+
-| Trent Alexander-Arnold |  DF |    Liverpool    |      99     |
-|  Alexis Mac Allister   |  MF |    Liverpool    |      91     |
-|    Elliot Anderson     |  MF | Nott'ham Forest |      90     |
+| Trent Alexander-Arnold |  DF |    Liverpool    |     100     |
+|    Elliot Anderson     |  MF | Nott'ham Forest |      93     |
+|       João Gomes       |  MF |      Wolves     |      93     |
 +------------------------+-----+-----------------+-------------+
 Bottom 3 players with the criteria 'Defense_Att':
 +---------------+-----+--------------+-------------+
@@ -733,9 +733,9 @@ Top 3 players with the criteria 'Defense_Lost':
 +------------------------+-----+-----------------+--------------+
 |         Player         | Pos |       Team      | Defense_Lost |
 +------------------------+-----+-----------------+--------------+
-|       João Gomes       |  MF |      Wolves     |      54      |
+|       João Gomes       |  MF |      Wolves     |      56      |
 | Trent Alexander-Arnold |  DF |    Liverpool    |      53      |
-|    Elliot Anderson     |  MF | Nott'ham Forest |      49      |
+|    Elliot Anderson     |  MF | Nott'ham Forest |      51      |
 +------------------------+-----+-----------------+--------------+
 Bottom 3 players with the criteria 'Defense_Lost':
 +----------------+-----+--------------+--------------+
@@ -747,13 +747,13 @@ Bottom 3 players with the criteria 'Defense_Lost':
 +----------------+-----+--------------+--------------+
 
 Top 3 players with the criteria 'Defense_Blocks':
-+---------------------+-----+-----------------+----------------+
-|        Player       | Pos |       Team      | Defense_Blocks |
-+---------------------+-----+-----------------+----------------+
-|    Nathan Collins   |  DF |    Brentford    |       68       |
-|       Murillo       |  DF | Nott'ham Forest |       64       |
-| Alexis Mac Allister |  MF |    Liverpool    |       57       |
-+---------------------+-----+-----------------+----------------+
++-----------------+-----+-----------------+----------------+
+|      Player     | Pos |       Team      | Defense_Blocks |
++-----------------+-----+-----------------+----------------+
+|  Nathan Collins |  DF |    Brentford    |       68       |
+|     Murillo     |  DF | Nott'ham Forest |       66       |
+| Tyrick Mitchell |  DF |  Crystal Palace |       62       |
++-----------------+-----+-----------------+----------------+
 Bottom 3 players with the criteria 'Defense_Blocks':
 +----------------+-----+--------------+----------------+
 |     Player     | Pos |     Team     | Defense_Blocks |
@@ -764,13 +764,13 @@ Bottom 3 players with the criteria 'Defense_Blocks':
 +----------------+-----+--------------+----------------+
 
 Top 3 players with the criteria 'Defense_Sh':
-+-----------------+-----+--------------+------------+
-|      Player     | Pos |     Team     | Defense_Sh |
-+-----------------+-----+--------------+------------+
-|  Nathan Collins |  DF |  Brentford   |     48     |
-|   Dara O'Shea   |  DF | Ipswich Town |     45     |
-| James Tarkowski |  DF |   Everton    |     42     |
-+-----------------+-----+--------------+------------+
++----------------+-----+-----------------+------------+
+|     Player     | Pos |       Team      | Defense_Sh |
++----------------+-----+-----------------+------------+
+| Nathan Collins |  DF |    Brentford    |     48     |
+|  Dara O'Shea   |  DF |   Ipswich Town  |     45     |
+|    Murillo     |  DF | Nott'ham Forest |     43     |
++----------------+-----+-----------------+------------+
 Bottom 3 players with the criteria 'Defense_Sh':
 +-----------------------+-------+----------------+------------+
 |         Player        |  Pos  |      Team      | Defense_Sh |
@@ -784,9 +784,9 @@ Top 3 players with the criteria 'Defense_Pass':
 +---------------------+-----+----------------+--------------+
 |        Player       | Pos |      Team      | Defense_Pass |
 +---------------------+-----+----------------+--------------+
-| Alexis Mac Allister |  MF |   Liverpool    |      52      |
-|   Antoine Semenyo   |  FW |  Bournemouth   |      47      |
-|   Tyrick Mitchell   |  DF | Crystal Palace |      45      |
+| Alexis Mac Allister |  MF |   Liverpool    |      53      |
+|   Tyrick Mitchell   |  DF | Crystal Palace |      50      |
+|   Antoine Semenyo   |  FW |  Bournemouth   |      48      |
 +---------------------+-----+----------------+--------------+
 Bottom 3 players with the criteria 'Defense_Pass':
 +-----------------+-------+-------------+--------------+
@@ -802,8 +802,8 @@ Top 3 players with the criteria 'Defense_Int':
 |       Player      | Pos |    Team   | Defense_Int |
 +-------------------+-----+-----------+-------------+
 | Aaron Wan-Bissaka |  DF |  West Ham |      57     |
-|  Antonee Robinson |  DF |   Fulham  |      54     |
-|  Ryan Gravenberch |  MF | Liverpool |      54     |
+|  Antonee Robinson |  DF |   Fulham  |      56     |
+|  Ryan Gravenberch |  MF | Liverpool |      56     |
 +-------------------+-----+-----------+-------------+
 Bottom 3 players with the criteria 'Defense_Int':
 +-----------------+-------+--------------+-------------+
@@ -818,9 +818,9 @@ Top 3 players with the criteria 'Possession_Touches':
 +-----------------+-----+-----------------+--------------------+
 |      Player     | Pos |       Team      | Possession_Touches |
 +-----------------+-----+-----------------+--------------------+
-| Virgil van Dijk |  DF |    Liverpool    |        2819        |
-|  Joško Gvardiol |  DF | Manchester City |        2615        |
-|   Levi Colwill  |  DF |     Chelsea     |        2506        |
+| Virgil van Dijk |  DF |    Liverpool    |        2915        |
+|  Joško Gvardiol |  DF | Manchester City |        2808        |
+|  William Saliba |  DF |     Arsenal     |        2657        |
 +-----------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Touches':
 +-----------------+-------+----------------+--------------------+
@@ -832,29 +832,29 @@ Bottom 3 players with the criteria 'Possession_Touches':
 +-----------------+-------+----------------+--------------------+
 
 Top 3 players with the criteria 'Possession_Def Pen':
-+--------------+-----+----------------+--------------------+
-|    Player    | Pos |      Team      | Possession_Def Pen |
-+--------------+-----+----------------+--------------------+
-| Mark Flekken |  GK |   Brentford    |        1225        |
-|  Bernd Leno  |  GK |     Fulham     |        1001        |
-| André Onana  |  GK | Manchester Utd |        951         |
-+--------------+-----+----------------+--------------------+
++-------------------+-----+-------------+--------------------+
+|       Player      | Pos |     Team    | Possession_Def Pen |
++-------------------+-----+-------------+--------------------+
+|    Mark Flekken   |  GK |  Brentford  |        1261        |
+|     Bernd Leno    |  GK |    Fulham   |        1046        |
+| Emiliano Martínez |  GK | Aston Villa |        990         |
++-------------------+-----+-------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Def Pen':
 +---------------+-------+---------------+--------------------+
 |     Player    |  Pos  |      Team     | Possession_Def Pen |
 +---------------+-------+---------------+--------------------+
 |  Emi Buendía  | MF,FW |  Aston Villa  |         0          |
+|  Solly March  | FW,MF |    Brighton   |         0          |
 | Callum Wilson |   FW  | Newcastle Utd |         1          |
-| Evan Ferguson |   FW  |    West Ham   |         1          |
 +---------------+-------+---------------+--------------------+
 
 Top 3 players with the criteria 'Possession_Def 3rd':
 +-----------------+-----+-----------+--------------------+
 |      Player     | Pos |    Team   | Possession_Def 3rd |
 +-----------------+-----+-----------+--------------------+
-|   Mark Flekken  |  GK | Brentford |        1521        |
-| Jordan Pickford |  GK |  Everton  |        1355        |
-|    Bernd Leno   |  GK |   Fulham  |        1250        |
+|   Mark Flekken  |  GK | Brentford |        1569        |
+| Jordan Pickford |  GK |  Everton  |        1401        |
+|    Bernd Leno   |  GK |   Fulham  |        1296        |
 +-----------------+-----+-----------+--------------------+
 Bottom 3 players with the criteria 'Possession_Def 3rd':
 +-----------------+-------+----------------+--------------------+
@@ -862,17 +862,17 @@ Bottom 3 players with the criteria 'Possession_Def 3rd':
 +-----------------+-------+----------------+--------------------+
 | Odsonne Édouard | MF,FW | Crystal Palace |         4          |
 |  Callum Wilson  |   FW  | Newcastle Utd  |         5          |
-|  Ali Al Hamadi  |   FW  |  Ipswich Town  |         6          |
+|   Solly March   | FW,MF |    Brighton    |         5          |
 +-----------------+-------+----------------+--------------------+
 
 Top 3 players with the criteria 'Possession_Mid 3rd':
-+-----------------+-----+-----------+--------------------+
-|      Player     | Pos |    Team   | Possession_Mid 3rd |
-+-----------------+-----+-----------+--------------------+
-| Virgil van Dijk |  DF | Liverpool |        1561        |
-|  Moisés Caicedo |  MF |  Chelsea  |        1348        |
-|  William Saliba |  DF |  Arsenal  |        1324        |
-+-----------------+-----+-----------+--------------------+
++-----------------+-----+-----------------+--------------------+
+|      Player     | Pos |       Team      | Possession_Mid 3rd |
++-----------------+-----+-----------------+--------------------+
+| Virgil van Dijk |  DF |    Liverpool    |        1624        |
+|  William Saliba |  DF |     Arsenal     |        1495        |
+|  Joško Gvardiol |  DF | Manchester City |        1412        |
++-----------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Mid 3rd':
 +----------------+-----+----------------+--------------------+
 |     Player     | Pos |      Team      | Possession_Mid 3rd |
@@ -886,9 +886,9 @@ Top 3 players with the criteria 'Possession_Att 3rd':
 +-----------------+-----+----------------+--------------------+
 |      Player     | Pos |      Team      | Possession_Att 3rd |
 +-----------------+-----+----------------+--------------------+
-|  Mohamed Salah  |  FW |   Liverpool    |        943         |
-| Bruno Fernandes |  MF | Manchester Utd |        825         |
-|   Bryan Mbeumo  |  FW |   Brentford    |        820         |
+|  Mohamed Salah  |  FW |   Liverpool    |        967         |
+|   Bryan Mbeumo  |  FW |   Brentford    |        851         |
+| Bruno Fernandes |  MF | Manchester Utd |        848         |
 +-----------------+-----+----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Att 3rd':
 +----------------+-----+--------------+--------------------+
@@ -903,8 +903,8 @@ Top 3 players with the criteria 'Possession_Att Pen':
 +-----------------+-----+-----------------+--------------------+
 |      Player     | Pos |       Team      | Possession_Att Pen |
 +-----------------+-----+-----------------+--------------------+
-|  Mohamed Salah  |  FW |    Liverpool    |        298         |
-| Antoine Semenyo |  FW |   Bournemouth   |        171         |
+|  Mohamed Salah  |  FW |    Liverpool    |        310         |
+| Antoine Semenyo |  FW |   Bournemouth   |        174         |
 |  Erling Haaland |  FW | Manchester City |        170         |
 +-----------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Att Pen':
@@ -920,9 +920,9 @@ Top 3 players with the criteria 'Possession_Att':
 +----------------+-------+-----------------+----------------+
 |     Player     |  Pos  |       Team      | Possession_Att |
 +----------------+-------+-----------------+----------------+
-| Mohammed Kudus | FW,MF |     West Ham    |      175       |
-|  Jeremy Doku   | FW,MF | Manchester City |      168       |
-| Morgan Rogers  | FW,MF |   Aston Villa   |      142       |
+| Mohammed Kudus | FW,MF |     West Ham    |      177       |
+|  Jeremy Doku   | FW,MF | Manchester City |      175       |
+| Morgan Rogers  | FW,MF |   Aston Villa   |      145       |
 +----------------+-------+-----------------+----------------+
 Bottom 3 players with the criteria 'Possession_Att':
 +----------------+-----+--------------+----------------+
@@ -968,46 +968,46 @@ Bottom 3 players with the criteria 'Possession_Tkld%':
 +-----------------+-----+-----------+------------------+
 
 Top 3 players with the criteria 'Possession_Carries':
-+--------------------+-----+-----------------+--------------------+
-|       Player       | Pos |       Team      | Possession_Carries |
-+--------------------+-----+-----------------+--------------------+
-|   Joško Gvardiol   |  DF | Manchester City |        1688        |
-|  Virgil van Dijk   |  DF |    Liverpool    |        1589        |
-| Jan Paul van Hecke |  DF |     Brighton    |        1471        |
-+--------------------+-----+-----------------+--------------------+
++-----------------+-----+-----------------+--------------------+
+|      Player     | Pos |       Team      | Possession_Carries |
++-----------------+-----+-----------------+--------------------+
+|  Joško Gvardiol |  DF | Manchester City |        1826        |
+|  William Saliba |  DF |     Arsenal     |        1642        |
+| Virgil van Dijk |  DF |    Liverpool    |        1640        |
++-----------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_Carries':
-+-------------------+-------+----------------+--------------------+
-|       Player      |  Pos  |      Team      | Possession_Carries |
-+-------------------+-------+----------------+--------------------+
-|  Albert Grønbaek  | FW,MF |  Southampton   |         18         |
-|  Odsonne Édouard  | MF,FW | Crystal Palace |         23         |
-| Kosta Nedeljković |   DF  |  Aston Villa   |         27         |
-+-------------------+-------+----------------+--------------------+
++-----------------+-------+-----------------+--------------------+
+|      Player     |  Pos  |       Team      | Possession_Carries |
++-----------------+-------+-----------------+--------------------+
+|  Harry Toffolo  |   DF  | Nott'ham Forest |         17         |
+| Albert Grønbaek | FW,MF |   Southampton   |         18         |
+| Odsonne Édouard | MF,FW |  Crystal Palace |         23         |
++-----------------+-------+-----------------+--------------------+
 
 Top 3 players with the criteria 'Possession_PrgDist':
 +--------------------+-----+-----------------+--------------------+
 |       Player       | Pos |       Team      | Possession_PrgDist |
 +--------------------+-----+-----------------+--------------------+
-| Jan Paul van Hecke |  DF |     Brighton    |        6356        |
-|   Joško Gvardiol   |  DF | Manchester City |        4938        |
-|     Rúben Dias     |  DF | Manchester City |        4615        |
+| Jan Paul van Hecke |  DF |     Brighton    |        6643        |
+|   Joško Gvardiol   |  DF | Manchester City |        5505        |
+|     Rúben Dias     |  DF | Manchester City |        5097        |
 +--------------------+-----+-----------------+--------------------+
 Bottom 3 players with the criteria 'Possession_PrgDist':
-+-----------------+-------+--------------+--------------------+
-|      Player     |  Pos  |     Team     | Possession_PrgDist |
-+-----------------+-------+--------------+--------------------+
-| Albert Grønbaek | FW,MF | Southampton  |         15         |
-|  Massimo Luongo |   MF  | Ipswich Town |         25         |
-|  Harrison Reed  |   MF  |    Fulham    |         27         |
-+-----------------+-------+--------------+--------------------+
++-----------------+-------+-----------------+--------------------+
+|      Player     |  Pos  |       Team      | Possession_PrgDist |
++-----------------+-------+-----------------+--------------------+
+| Albert Grønbaek | FW,MF |   Southampton   |         15         |
+|  Harry Toffolo  |   DF  | Nott'ham Forest |         23         |
+|  Massimo Luongo |   MF  |   Ipswich Town  |         25         |
++-----------------+-------+-----------------+--------------------+
 
 Top 3 players with the criteria 'Possession_PrgC':
 +---------------+-------+-----------------+-----------------+
 |     Player    |  Pos  |       Team      | Possession_PrgC |
 +---------------+-------+-----------------+-----------------+
-|  Jeremy Doku  | FW,MF | Manchester City |       169       |
-|  Kaoru Mitoma | FW,MF |     Brighton    |       135       |
-| Mohamed Salah |   FW  |    Liverpool    |       133       |
+|  Jeremy Doku  | FW,MF | Manchester City |       176       |
+| Mohamed Salah |   FW  |    Liverpool    |       138       |
+|  Kaoru Mitoma | FW,MF |     Brighton    |       136       |
 +---------------+-------+-----------------+-----------------+
 Bottom 3 players with the criteria 'Possession_PrgC':
 +----------------+-----+--------------+-----------------+
@@ -1022,9 +1022,9 @@ Top 3 players with the criteria 'Possession_1/3':
 +----------------+-------+-----------------+----------------+
 |     Player     |  Pos  |       Team      | Possession_1/3 |
 +----------------+-------+-----------------+----------------+
-|   Alex Iwobi   | FW,MF |      Fulham     |       91       |
-| Joško Gvardiol |   DF  | Manchester City |       89       |
-|  Jeremy Doku   | FW,MF | Manchester City |       79       |
+|   Alex Iwobi   | FW,MF |      Fulham     |       94       |
+| Joško Gvardiol |   DF  | Manchester City |       91       |
+|  Jeremy Doku   | FW,MF | Manchester City |       83       |
 +----------------+-------+-----------------+----------------+
 Bottom 3 players with the criteria 'Possession_1/3':
 +-----------------+-------+-------------+----------------+
@@ -1039,9 +1039,9 @@ Top 3 players with the criteria 'Possession_CPA':
 +---------------+-------+-----------------+----------------+
 |     Player    |  Pos  |       Team      | Possession_CPA |
 +---------------+-------+-----------------+----------------+
-| Mohamed Salah |   FW  |    Liverpool    |      107       |
-|  Jeremy Doku  | FW,MF | Manchester City |       77       |
-|  Noni Madueke |   FW  |     Chelsea     |       74       |
+| Mohamed Salah |   FW  |    Liverpool    |      110       |
+|  Jeremy Doku  | FW,MF | Manchester City |       80       |
+|  Noni Madueke |   FW  |     Chelsea     |       75       |
 +---------------+-------+-----------------+----------------+
 Bottom 3 players with the criteria 'Possession_CPA':
 +--------------------+-----+-----------------+----------------+
@@ -1056,9 +1056,9 @@ Top 3 players with the criteria 'Possession_Mis':
 +---------------+-------+--------------+----------------+
 |     Player    |  Pos  |     Team     | Possession_Mis |
 +---------------+-------+--------------+----------------+
-| Mohamed Salah |   FW  |  Liverpool   |       99       |
+| Mohamed Salah |   FW  |  Liverpool   |      102       |
+| Morgan Rogers | FW,MF | Aston Villa  |      102       |
 |   Liam Delap  |   FW  | Ipswich Town |       92       |
-| Morgan Rogers | FW,MF | Aston Villa  |       89       |
 +---------------+-------+--------------+----------------+
 Bottom 3 players with the criteria 'Possession_Mis':
 +-----------------+-----+-------------+----------------+
@@ -1073,9 +1073,9 @@ Top 3 players with the criteria 'Possession_Dis':
 +------------------+-------+---------------+----------------+
 |      Player      |  Pos  |      Team     | Possession_Dis |
 +------------------+-------+---------------+----------------+
-|  Mohammed Kudus  | FW,MF |    West Ham   |       83       |
-| Bruno Guimarães  |   MF  | Newcastle Utd |       71       |
-| Dejan Kulusevski | MF,FW |   Tottenham   |       70       |
+|  Mohammed Kudus  | FW,MF |    West Ham   |       84       |
+| Bruno Guimarães  |   MF  | Newcastle Utd |       72       |
+| Dejan Kulusevski | MF,FW |   Tottenham   |       72       |
 +------------------+-------+---------------+----------------+
 Bottom 3 players with the criteria 'Possession_Dis':
 +-----------------+-----+-------------+----------------+
@@ -1090,9 +1090,9 @@ Top 3 players with the criteria 'Possession_Rec':
 +-----------------+-----+-----------------+----------------+
 |      Player     | Pos |       Team      | Possession_Rec |
 +-----------------+-----+-----------------+----------------+
-| Virgil van Dijk |  DF |    Liverpool    |      1931      |
-|  Joško Gvardiol |  DF | Manchester City |      1911      |
-|   Levi Colwill  |  DF |     Chelsea     |      1835      |
+|  Joško Gvardiol |  DF | Manchester City |      2062      |
+|  William Saliba |  DF |     Arsenal     |      2013      |
+| Virgil van Dijk |  DF |    Liverpool    |      1996      |
 +-----------------+-----+-----------------+----------------+
 Bottom 3 players with the criteria 'Possession_Rec':
 +-----------------+-------+----------------+----------------+
@@ -1107,8 +1107,8 @@ Top 3 players with the criteria 'Possession_PrgR':
 +---------------+-------+-----------+-----------------+
 |     Player    |  Pos  |    Team   | Possession_PrgR |
 +---------------+-------+-----------+-----------------+
-| Mohamed Salah |   FW  | Liverpool |       398       |
-|  Bryan Mbeumo |   FW  | Brentford |       292       |
+| Mohamed Salah |   FW  | Liverpool |       407       |
+|  Bryan Mbeumo |   FW  | Brentford |       300       |
 |  Kaoru Mitoma | FW,MF |  Brighton |       274       |
 +---------------+-------+-----------+-----------------+
 Bottom 3 players with the criteria 'Possession_PrgR':
@@ -1124,9 +1124,9 @@ Top 3 players with the criteria 'Misc_Fls':
 +-----------------+-----+--------------+----------+
 |      Player     | Pos |     Team     | Misc_Fls |
 +-----------------+-----+--------------+----------+
-| Antoine Semenyo |  FW | Bournemouth  |    63    |
-|    Liam Delap   |  FW | Ipswich Town |    63    |
-|    João Gomes   |  MF |    Wolves    |    62    |
+| Antoine Semenyo |  FW | Bournemouth  |    64    |
+|    João Gomes   |  MF |    Wolves    |    64    |
+|    Liam Delap   |  FW | Ipswich Town |    64    |
 +-----------------+-----+--------------+----------+
 Bottom 3 players with the criteria 'Misc_Fls':
 +-----------------+-------+-------------+----------+
@@ -1141,9 +1141,9 @@ Top 3 players with the criteria 'Misc_Fld':
 +-----------------+-------+---------------+----------+
 |      Player     |  Pos  |      Team     | Misc_Fld |
 +-----------------+-------+---------------+----------+
-| Bruno Guimarães |   MF  | Newcastle Utd |    94    |
+| Bruno Guimarães |   MF  | Newcastle Utd |    98    |
 |  James Maddison |   MF  |   Tottenham   |    63    |
-|   John McGinn   | MF,FW |  Aston Villa  |    60    |
+|   John McGinn   | MF,FW |  Aston Villa  |    63    |
 +-----------------+-------+---------------+----------+
 Bottom 3 players with the criteria 'Misc_Fld':
 +-----------------+-------+-------------+----------+
@@ -1159,8 +1159,8 @@ Top 3 players with the criteria 'Misc_Off':
 |         Player        | Pos |       Team      | Misc_Off |
 +-----------------------+-----+-----------------+----------+
 | Dominic Calvert-Lewin |  FW |     Everton     |    27    |
+|       Chris Wood      |  FW | Nott'ham Forest |    24    |
 |      Jamie Vardy      |  FW |  Leicester City |    23    |
-|       Chris Wood      |  FW | Nott'ham Forest |    22    |
 +-----------------------+-----+-----------------+----------+
 Bottom 3 players with the criteria 'Misc_Off':
 +--------------------+-----+-----------------+----------+
@@ -1175,9 +1175,9 @@ Top 3 players with the criteria 'Misc_Crs':
 +-----------------+-----+----------------+----------+
 |      Player     | Pos |      Team      | Misc_Crs |
 +-----------------+-----+----------------+----------+
-|   Pedro Porro   |  DF |   Tottenham    |   168    |
-|   Bryan Mbeumo  |  FW |   Brentford    |   163    |
-| Bruno Fernandes |  MF | Manchester Utd |   162    |
+|   Pedro Porro   |  DF |   Tottenham    |   191    |
+|   Bryan Mbeumo  |  FW |   Brentford    |   171    |
+| Bruno Fernandes |  MF | Manchester Utd |   164    |
 +-----------------+-----+----------------+----------+
 Bottom 3 players with the criteria 'Misc_Crs':
 +----------------+-----+--------------+----------+
@@ -1192,8 +1192,8 @@ Top 3 players with the criteria 'Misc_Recov':
 +-----------------+-----+----------------+------------+
 |      Player     | Pos |      Team      | Misc_Recov |
 +-----------------+-----+----------------+------------+
-|  Moisés Caicedo |  MF |    Chelsea     |    184     |
-| Bruno Fernandes |  MF | Manchester Utd |    182     |
+|  Moisés Caicedo |  MF |    Chelsea     |    192     |
+| Bruno Fernandes |  MF | Manchester Utd |    187     |
 |  Ryan Christie  |  MF |  Bournemouth   |    182     |
 +-----------------+-----+----------------+------------+
 Bottom 3 players with the criteria 'Misc_Recov':
@@ -1209,9 +1209,9 @@ Top 3 players with the criteria 'Misc_Won':
 +-----------------+-----+---------------+----------+
 |      Player     | Pos |      Team     | Misc_Won |
 +-----------------+-----+---------------+----------+
-|     Dan Burn    |  DF | Newcastle Utd |   115    |
-| Virgil van Dijk |  DF |   Liverpool   |   102    |
-| James Tarkowski |  DF |    Everton    |   100    |
+|     Dan Burn    |  DF | Newcastle Utd |   122    |
+| Virgil van Dijk |  DF |   Liverpool   |   109    |
+|  Nathan Collins |  DF |   Brentford   |   103    |
 +-----------------+-----+---------------+----------+
 Bottom 3 players with the criteria 'Misc_Won':
 +---------------+-------+----------------+----------+
@@ -1227,8 +1227,8 @@ Top 3 players with the criteria 'Misc_Lost':
 |        Player        | Pos |       Team      | Misc_Lost |
 +----------------------+-----+-----------------+-----------+
 |      Chris Wood      |  FW | Nott'ham Forest |    117    |
-| Jean-Philippe Mateta |  FW |  Crystal Palace |     93    |
-| Jørgen Strand Larsen |  FW |      Wolves     |     91    |
+| Jean-Philippe Mateta |  FW |  Crystal Palace |     95    |
+| Jørgen Strand Larsen |  FW |      Wolves     |     94    |
 +----------------------+-----+-----------------+-----------+
 Bottom 3 players with the criteria 'Misc_Lost':
 +-----------------+-------+-------------+-----------+
