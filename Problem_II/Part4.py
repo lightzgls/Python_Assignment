@@ -37,6 +37,8 @@ for criteria, team in highest_per_criteria.items():
 
 # Find the best-performing team
 best_team = max(score_check, key=score_check.get)
-
+print("Score check")
+for key, value in score_check.items():
+    print(f"{key}: {value} scored")
 
 print(f"The best-performing team in the 2024-2025 Premier League season is {best_team}")

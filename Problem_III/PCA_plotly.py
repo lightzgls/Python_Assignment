@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 import plotly.express as px
 
 # Step 1: Load and preprocess the data
-data = pd.read_csv("result.csv")  # Replace with actual file path if needed
+data = pd.read_csv("results.csv") 
 
 # Select the features used in the plot
 features = [
@@ -52,7 +52,7 @@ data_pca = pca.fit_transform(data_scaled)
 pca_df = pd.DataFrame(data_pca, columns=['PC1', 'PC2'])
 
 # Step 4: Apply K-means clustering\
-n_cluster = [11,12,13,14,15]
+n_cluster = [10,11,12]
 for k in n_cluster:
     kmeans = KMeans(n_clusters=k, random_state=k)
     clusters = kmeans.fit_predict(data_pca)
@@ -72,7 +72,7 @@ for k in n_cluster:
         title=f'K-means Clustering (K={k}) with PCA Projection (Interactive) - {data.shape[0]} samples',
         labels={'PC1': 'Principal Component 1', 'PC2': 'Principal Component 2'}
     )
-    fig.update_traces(marker=dict(size=8, opacity=0.6))
+    fig.update_traces(marker=dict(size=8, opacity=1))
     fig.update_layout(
         width=1000, 
         height=800,
