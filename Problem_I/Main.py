@@ -186,6 +186,7 @@ result_df = result_df.replace("","N/a").fillna("N/a")
 #sort player base on their first name
 
 result_df = result_df.sort_values(by="Player")
+result_df["Nation"] = result_df["Nation"].apply(lambda nation: ''.join([c for c in nation if c.isupper()]))
 
 #rename the header
 result_df.columns = newheader[:len(newheader)]
