@@ -3,7 +3,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
 # === Helper function to convert string price to numeric ===
 def convert_value(val):
