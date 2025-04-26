@@ -48,8 +48,8 @@ param_dist = {
     'learning_rate': [0.01, 0.02, 0.05, 0.1, 0.2, 0.3],
     'n_estimators': [100, 200, 300, 500, 800],
     'min_child_weight': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'subsample': [0.6, 0.7, 0.8, 0.9, 1.0],
-    'colsample_bytree': [0.6, 0.7, 0.8, 0.9, 1.0],
+    'subsample': [0.5,0.6, 0.7, 0.8, 0.9, 1.0],
+    'colsample_bytree': [0.5,0.6, 0.7, 0.8, 0.9, 1.0],
     'gamma': [0, 1, 5],
     'reg_alpha': [0, 0.1, 0.5],
     'reg_lambda': [1, 5, 10]
