@@ -45,11 +45,11 @@ model = xgb.XGBRegressor(
 )
 
 param_dist = {
-    'learning_rate': [0.01, 0.02, 0.05, 0.1, 0.2, 0.3],
+    'learning_rate': [0.01, 0.02, 0.03 ,0.05, 0.1, 0.2, 0.3],
     'n_estimators': [100, 200, 300, 500, 800],
     'min_child_weight': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    'subsample': [0.5,0.6, 0.7, 0.8, 0.9, 1.0],
-    'colsample_bytree': [0.5,0.6, 0.7, 0.8, 0.9, 1.0],
+    'subsample': [0.4,0.5,0.6, 0.7, 0.8, 0.9, 1.0],
+    'colsample_bytree': [0.4,0.5,0.6, 0.7, 0.8, 0.9, 1.0],
     'gamma': [0, 1, 5],
     'reg_alpha': [0, 0.1, 0.5],
     'reg_lambda': [1, 5, 10]
@@ -59,7 +59,7 @@ print("\n🔹 Starting Randomized Search (rough tuning)...")
 random_search = RandomizedSearchCV(
     estimator=model,
     param_distributions=param_dist,
-    n_iter=50,
+    n_iter=100,
     scoring='neg_mean_squared_error',
     n_jobs=-1,
     cv=3,
@@ -106,6 +106,11 @@ except Exception as e:
     exit()
 
 # === Final best model ===
+# Best Hyperparameters after fine tuning: {'colsample_bytree': 0.6, 'gamma': 5, 'learning_rate': 0.08000000000000002, 'min_child_weight': 1, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+# XGBoost Final Tuned Model Performance:
+# MSE: 142375383054921.7500
+# MAE: 9219452.3278
+# R²: 0.6754
 best_model = grid_search.best_estimator_
 print("\nBest Hyperparameters after fine tuning:", grid_search.best_params_)
 
@@ -122,17 +127,10 @@ print(f"MSE: {mse:.4f}")
 print(f"MAE: {mae:.4f}")
 print(f"R²: {r2:.4f}")
 
-# === Save the model ===
-try:
-    pickle.dump(best_model, open('Model_file/final_xgb_model.pkl', 'wb'))
-    print("\nModel saved successfully as 'xgb_model.pkl'.")
-except Exception as e:
-    print(f"Error saving model: {e}")
-
 # === Visualize feature importance with performance metrics ===
 try:
     fig, ax = plt.subplots(figsize=(10, 8))
-    xgb.plot_importance(best_model, max_num_features=10, ax=ax)
+    xgb.plot_importance(best_model, max_num_features=20, ax=ax)
     plt.title("Feature Importance (Final Tuned XGBoost)")
 
     # Add performance metrics as a textbox inside the plot
