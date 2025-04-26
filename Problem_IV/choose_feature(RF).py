@@ -75,7 +75,7 @@ df[numeric_columns] = df[numeric_columns].fillna(df[numeric_columns].median())
 print("Numeric columns:", numeric_columns)
 
 # === Save processed dataset ===
-df.to_csv("Model_file\Random2.csv", index=False)
+df.to_csv("Model_file/Random2.csv", index=False)
 
 # === Select only numeric columns ===
 df_numeric = df.select_dtypes(include=['number'])

@@ -35,7 +35,7 @@ X = df[top_features]
 y = df['Estimated Value']
 
 # === Split data into training and testing ===
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=40)
 print("Data split into training and testing sets.")
 
 # === Define the XGBoost model ===
@@ -92,22 +92,6 @@ print(f"MSE: {mse:.4f}")
 print(f"MAE: {mae:.4f}")
 print(f"R²: {r2:.4f}")
 
-# === Save the tuned model ===
-try:
-    with open('xgboost_tuned_model.pkl', 'wb') as file:
-        pickle.dump(best_model, file)
-    print("💾 Tuned model saved as 'Model_file\xgboost_tuned_model.pkl'")
-except Exception as e:
-    print(f"Error saving model: {e}")
-
-# === Save best hyperparameters ===
-try:
-    hyperparams_df = pd.DataFrame([random_search.best_params_])
-    hyperparams_df.to_csv('Model_file\xgboost_best_hyperparameters.csv', index=False)
-    print("Best hyperparameters saved to 'Model_file\xgboost_best_hyperparameters.csv'")
-except Exception as e:
-    print(f"Error saving hyperparameters: {e}")
-
 # === Visualize feature importance with performance metrics ===
 try:
     fig, ax = plt.subplots(figsize=(10, 8))
@@ -124,19 +108,8 @@ try:
     plt.gcf().text(0.75, 0.25, textstr, fontsize=12, bbox=props)
 
     plt.tight_layout()
-    plt.savefig('Model_file\xgboost_tuned_feature_importance.png')
+    plt.savefig('Model_file/xgboost_tuned_feature_importance.png')
     plt.show()
 except Exception as e:
     print(f"Error plotting feature importance: {e}")
 
-# === Save feature importance to a file ===
-try:
-    importance = best_model.get_booster().get_score(importance_type='weight')
-    importance_df = pd.DataFrame({
-        'Feature': list(importance.keys()),
-        'Importance': list(importance.values())
-    }).sort_values(by='Importance', ascending=False)
-    importance_df.to_csv('Model_file\xgboost_tuned_feature_importance.csv', index=False)
-    print("Feature importance saved to 'Model_file\xgboost_tuned_feature_importance.csv'")
-except Exception as e:
-    print(f"Error saving feature importance: {e}")
