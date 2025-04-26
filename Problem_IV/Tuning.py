@@ -106,11 +106,11 @@ except Exception as e:
     exit()
 
 # === Final best model ===
-# Best Hyperparameters after fine tuning: {'colsample_bytree': 0.6, 'gamma': 5, 'learning_rate': 0.08000000000000002, 'min_child_weight': 1, 'n_estimators': 200, 'reg_alpha': 0, 'reg_lambda': 1, 'subsample': 0.8}
+# Best Hyperparameters after fine tuning: {'colsample_bytree': 1.0, 'gamma': 1, 'learning_rate': 0.02, 'min_child_weight': 1, 'n_estimators': 400, 'reg_alpha': 0.1, 'reg_lambda': 1, 'subsample': 0.5}
 # XGBoost Final Tuned Model Performance:
-# MSE: 142375383054921.7500
-# MAE: 9219452.3278
-# R²: 0.6754
+# MSE: 144671147314298.9688
+# MAE: 9099555.6111
+# R²: 0.6701
 best_model = grid_search.best_estimator_
 print("\nBest Hyperparameters after fine tuning:", grid_search.best_params_)
 
