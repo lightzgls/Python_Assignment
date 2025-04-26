@@ -1,6 +1,6 @@
 import pandas as pd
 import pickle
-from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import xgboost as xgb
 import matplotlib.pyplot as plt
@@ -35,46 +35,49 @@ X = df[top_features]
 y = df['Estimated Value']
 
 # === Split data into training and testing ===
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 print("Data split into training and testing sets.")
 
 # === Define the XGBoost model ===
-model = xgb.XGBRegressor(objective='reg:squarederror', random_state=42, verbosity=0)
+model = xgb.XGBRegressor(objective='reg:squarederror', verbosity=0)
 
-# === Define the hyperparameter grid ===
-param_grid = {
-    'learning_rate': [0.01, 0.05,0.1,0.3],        # Step size shrinkage
-    'n_estimators': [100, 200, 500, 1000],          # Number of boosting rounds
-    'max_depth': [3, 6, 10],                  # Maximum tree depth
-    'min_child_weight': [1, 5, 10],           # Minimum sum of instance weight
-    'subsample': [0.7, 0.8, 1.0],             # Fraction of samples used per tree
-    'colsample_bytree': [0.7, 0.8, 1.0]       # Fraction of features used per tree
+# === Define the hyperparameter grid for RandomizedSearchCV ===
+param_dist = {
+    'learning_rate': [0.01, 0.02, 0.03, 0.1, 0.2, 0.3],
+    'n_estimators': [100, 200, 500, 1000],
+    'min_child_weight': [1, 5, 8],
+    'subsample': [0.7, 0.8, 1.0],
+    'colsample_bytree': [0.7, 0.8, 1.0],
+    'gamma': [0, 1, 5],
+    'reg_alpha': [0.1, 1, 5],
+    'reg_lambda': [1, 5, 10]
 }
 
-# === Set up GridSearchCV ===
-grid_search = GridSearchCV(
+# === Set up RandomizedSearchCV ===
+random_search = RandomizedSearchCV(
     estimator=model,
-    param_grid=param_grid,
-    cv=3,                              # 3-fold cross-validation
-    scoring='neg_mean_squared_error',  # Optimize for MSE
-    n_jobs=-1,                         # Use all available cores
-    verbose=2                          # Print progress
+    param_distributions=param_dist,
+    n_iter=250,
+    cv=3,
+    scoring='neg_mean_squared_error',
+    n_jobs=-1,
+    verbose=2,
 )
 
-# === Fit GridSearchCV ===
+# === Fit RandomizedSearchCV ===
 print("🔹 Starting hyperparameter tuning for XGBoost...")
 try:
-    grid_search.fit(X_train, y_train)
+    random_search.fit(X_train, y_train)
     print("Hyperparameter tuning completed.")
 except Exception as e:
-    print(f"Error during grid search: {e}")
+    print(f"Error during random search: {e}")
     exit()
 
 # === Best hyperparameters ===
-print("Best Hyperparameters:", grid_search.best_params_)
+print("Best Hyperparameters:", random_search.best_params_)
 
 # === Best model ===
-best_model = grid_search.best_estimator_
+best_model = random_search.best_estimator_
 
 # === Make predictions on test set ===
 y_pred = best_model.predict(X_test)
@@ -93,24 +96,35 @@ print(f"R²: {r2:.4f}")
 try:
     with open('xgboost_tuned_model.pkl', 'wb') as file:
         pickle.dump(best_model, file)
-    print("💾 Tuned model saved as 'xgboost_tuned_model.pkl'")
+    print("💾 Tuned model saved as 'Model_file\xgboost_tuned_model.pkl'")
 except Exception as e:
     print(f"Error saving model: {e}")
 
 # === Save best hyperparameters ===
 try:
-    hyperparams_df = pd.DataFrame([grid_search.best_params_])
-    hyperparams_df.to_csv('xgboost_best_hyperparameters.csv', index=False)
-    print("Best hyperparameters saved to 'xgboost_best_hyperparameters.csv'")
+    hyperparams_df = pd.DataFrame([random_search.best_params_])
+    hyperparams_df.to_csv('Model_file\xgboost_best_hyperparameters.csv', index=False)
+    print("Best hyperparameters saved to 'Model_file\xgboost_best_hyperparameters.csv'")
 except Exception as e:
     print(f"Error saving hyperparameters: {e}")
 
-# === Visualize feature importance ===
+# === Visualize feature importance with performance metrics ===
 try:
-    xgb.plot_importance(best_model, max_num_features=10)  # Show top 10 features
+    fig, ax = plt.subplots(figsize=(10, 8))
+    xgb.plot_importance(best_model, max_num_features=10, ax=ax)
     plt.title("Feature Importance (Tuned XGBoost)")
+
+    # Add performance metrics as a textbox inside the plot
+    textstr = '\n'.join((
+        f'MSE: {mse:.4f}',
+        f'MAE: {mae:.4f}',
+        f'R²: {r2:.4f}',
+    ))
+    props = dict(boxstyle='round', facecolor='white', alpha=0.7)
+    plt.gcf().text(0.75, 0.25, textstr, fontsize=12, bbox=props)
+
     plt.tight_layout()
-    plt.savefig('xgboost_tuned_feature_importance.png')
+    plt.savefig('Model_file\xgboost_tuned_feature_importance.png')
     plt.show()
 except Exception as e:
     print(f"Error plotting feature importance: {e}")
@@ -122,7 +136,7 @@ try:
         'Feature': list(importance.keys()),
         'Importance': list(importance.values())
     }).sort_values(by='Importance', ascending=False)
-    importance_df.to_csv('xgboost_tuned_feature_importance.csv', index=False)
-    print("Feature importance saved to 'xgboost_tuned_feature_importance.csv'")
+    importance_df.to_csv('Model_file\xgboost_tuned_feature_importance.csv', index=False)
+    print("Feature importance saved to 'Model_file\xgboost_tuned_feature_importance.csv'")
 except Exception as e:
     print(f"Error saving feature importance: {e}")
