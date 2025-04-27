@@ -21,8 +21,8 @@ def convert_value(val):
 
 # === Load datasets ===
 try:
-    stats = pd.read_csv('results.csv')
-    price = pd.read_csv("Transfer_values.csv")
+    stats = pd.read_csv('source code\\results.csv')
+    price = pd.read_csv("source code\\Transfer_values.csv")
 except FileNotFoundError as e:
     raise FileNotFoundError(f"Dataset not found: {e}")
 
@@ -75,7 +75,7 @@ df[numeric_columns] = df[numeric_columns].fillna(df[numeric_columns].median())
 print("Numeric columns:", numeric_columns)
 
 # === Save processed dataset ===
-df.to_csv("Model_file/Random2.csv", index=False)
+df.to_csv("source code\\Model_file\\Random2.csv", index=False)
 
 # === Select only numeric columns ===
 df_numeric = df.select_dtypes(include=['number'])
@@ -89,7 +89,7 @@ X = df_numeric.drop(columns=['Estimated Value'])
 y = df_numeric['Estimated Value']
 
 # === Split into training and testing sets ===
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15,random_state=0)
 
 # === Train Random Forest Regressor ===
 model = RandomForestRegressor(n_estimators=100)
@@ -119,7 +119,7 @@ top_20_feature_importance_df = pd.DataFrame({
 # === Print and save top 20 features ===
 print("\nTop 20 Feature Importances:")
 print(top_20_feature_importance_df)
-top_20_feature_importance_df.to_csv('top_20_feature_importance.csv', index=False)
+top_20_feature_importance_df.to_csv('source code\\Model_file\\top_20_feature_importance.csv', index=False)
 
 # === Plot the top 20 most important features ===
 plt.figure(figsize=(14, 10))
