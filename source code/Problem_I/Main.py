@@ -192,7 +192,4 @@ result_df["Nation"] = result_df["Nation"].apply(lambda nation: ''.join([c for c 
 result_df.columns = newheader[:len(newheader)]
 
 # Save the resulting DataFrame to a CSV file
-result_df.to_csv("results.csv", index=False)
-
-# Close the WebDriver
-driver.quit()
+result_df.to_csv("source code\\results.csv", index=False)

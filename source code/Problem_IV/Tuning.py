@@ -12,11 +12,34 @@ try:
 except Exception as e:
     print(f"Error loading dataset: {e}")
     exit()
+df = df[df["Player"] != "Mohamed Salah"]
 
 # === Load important features ===
 try:
     importance_df = pd.read_csv("source code\\Model_file\\top_20_feature_importance.csv")
-    top_features = importance_df['Feature'].tolist()
+    top_features = [
+    "Age",
+    "Shooting_SoT%",
+    "Passing_Long_Cmp%",
+    "Standard_MP",
+    "Passing_Total_Cmp%",
+    "Shooting_Dist",
+    "Shooting_SoT/90",
+    "Standard_xG",
+    "Passing_Short_Cmp%",
+    "Standard_Gls/90",
+    "Standard_PrgP",
+    "Possession_Succ%",
+    "Possession_Tkld%",
+    "Misc_Fls",
+    "Passing_Medium_Cmp%",
+    "Standard_PrgC",
+    "Standard_xAG",
+    "Standard_xG/90",
+    "Passing_1/3",
+    "Misc_Won%"
+]
+
     print("Top features loaded successfully.")
 except Exception as e:
     print(f"Error loading feature importance: {e}")
@@ -45,14 +68,14 @@ model = xgb.XGBRegressor(
 )
 
 param_dist = {
-    'learning_rate': [0.01, 0.02, 0.03, 0.04 ,0.05,0.06, 0.07, 0.08, 0.1, 0.2, 0.3],
-    'n_estimators': [100, 200, 300,400, 500,600,700, 800],
+    'learning_rate': [0.01, 0.02, 0.03, 0.04,0.05,0.06,0.07,0.08,0.09,0.1, 0.2, 0.3],
+    'n_estimators': [100, 200, 300,400, 500,600,700, 800,900,1000],
     'min_child_weight': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     'subsample': [0.1,0.2,0.3,0.4,0.5,0.6, 0.7, 0.8, 0.9, 1.0],
     'colsample_bytree': [0.1,0.2,0.3,0.4,0.5,0.6, 0.7, 0.8, 0.9, 1.0],
     'gamma': [0, 1, 2, 3, 4, 5, 6, 7],
-    'reg_alpha': [0, 0.1, 0.5],
-    'reg_lambda': [1,2,3,4, 5,6,7,8, 10]
+    'reg_alpha': [0, 0.1, 0.2,0.3,0.4, 0.5,0.6,0.7,0.8],
+    'reg_lambda': [1,2,3,4, 5,6,7,8,9, 10]
 }
 
 print("\n🔹 Starting Randomized Search (rough tuning)...")
@@ -106,18 +129,12 @@ except Exception as e:
     exit()
 
 # === Final best model ===
-# Best Hyperparameters after fine tuning: {'colsample_bytree': 1.0, 'gamma': 1, 'learning_rate': 0.03, 'min_child_weight': 10, 'n_estimators': 200, 'reg_alpha': 0.5, 'reg_lambda': 2, 'subsample': 0.7}
-# XGBoost Final Tuned Model Performance:
-# MSE: 193783120417102.8438
-# MAE: 10356604.2625
-# R²: 0.7124
 
-
-# Best Hyperparameters after fine tuning: {'colsample_bytree': 1.0, 'gamma': 1, 'learning_rate': 0.02, 'min_child_weight': 1, 'n_estimators': 400, 'reg_alpha': 0.1, 'reg_lambda': 1, 'subsample': 0.5}
+#Best Hyperparameters after fine tuning: {'colsample_bytree': 0.7, 'gamma': 0, 'learning_rate': 0.012, 'min_child_weight': 3, 'n_estimators': 700, 'reg_alpha': 0.6, 'reg_lambda': 1, 'subsample': 0.7}
 # XGBoost Final Tuned Model Performance:
-# MSE: 144671147314298.9688
-# MAE: 9099555.6111
-# R²: 0.6701
+# MSE: 98760671447596.6250
+# MAE: 7517331.1250
+# R²: 0.7337
 
 best_model = grid_search.best_estimator_
 print("\nBest Hyperparameters after fine tuning:", grid_search.best_params_)
