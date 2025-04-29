@@ -15,9 +15,8 @@ except Exception as e:
 df = df[df["Player"] != "Mohamed Salah"]
 
 # === Load important features ===
-try:
-    importance_df = pd.read_csv("source code\\Model_file\\top_20_feature_importance.csv")
-    top_features = [
+
+top_features = [
     "Age",
     "Shooting_SoT%",
     "Passing_Long_Cmp%",
@@ -39,12 +38,6 @@ try:
     "Passing_1/3",
     "Misc_Won%"
 ]
-
-    print("Top features loaded successfully.")
-except Exception as e:
-    print(f"Error loading feature importance: {e}")
-    exit()
-
 # === Filter dataset ===
 required_columns = top_features + ['Estimated Value']
 df = df[required_columns + ['Player']] if 'Player' in df.columns else df[required_columns]
@@ -168,7 +161,7 @@ try:
     plt.gcf().text(0.75, 0.25, textstr, fontsize=12, bbox=props)
 
     plt.tight_layout()
-    plt.savefig('source code\\Model_file\\xgboost_tuned_feature_importance.png2.png')
+    plt.savefig('source code\\Model_file\\xgboost_tuned_feature_importance.png')
     plt.show()
 except Exception as e:
     print(f"Error plotting feature importance: {e}")
